@@ -42,6 +42,7 @@ DEFAULT_SETTINGS = {
     "show_phone_field": "0",
     "maintenance_mode": "0",
     "vip_enabled": "0",
+    "announcement_on": "1",
     "donation_email": "",
     "inquiry_email": "",
     # Homepage section visibility, in the owner's order. 1 = show.
@@ -421,6 +422,13 @@ def api_lists():
 
 @app.route("/api/tools")
 def api_tools():
+    try:
+        with open(os.path.join(BASE_DIR, "data", "tools.json"), encoding="utf-8") as f:
+            data = json.load(f)
+        if isinstance(data, list) and data:
+            return jsonify(data)
+    except Exception:
+        pass
     return jsonify(TOOLS)
 
 @app.route("/api/figures")
@@ -500,7 +508,7 @@ def api_jobs():
 def api_ads():
     init_db()
     db = get_db()
-    rows = db.execute("SELECT * FROM ads WHERE visible=1 ORDER BY id").fetchall()
+    rows = db.execute("SELECT * FROM ads WHERE visible=1 AND status='approved' ORDER BY id").fetchall()
     return jsonify([dict(r) for r in rows])
 
 @app.route("/api/leaderboard")
@@ -551,7 +559,15 @@ def api_job_portals():
     # Portals only, never employers: no employer is named here, so no
     # alcohol, pork, gambling, or doubtful employer can appear in this list.
     # Checked 2026-10-27 (see build report for per-portal method).
-    return jsonify({"checked": "2026-10-27", "note": "Official government job portals only. These are places to search for jobs, not employer listings from this site. Always read the requirements on the official posting before you apply.", "portals": JOB_PORTALS})
+    portals = JOB_PORTALS
+    try:
+        with open(os.path.join(BASE_DIR, "data", "portals.json"), encoding="utf-8") as f:
+            data = json.load(f)
+        if isinstance(data, list) and data:
+            portals = data
+    except Exception:
+        pass
+    return jsonify({"checked": "2026-10-27", "note": "Official government job portals only. These are places to search for jobs, not employer listings from this site. Always read the requirements on the official posting before you apply.", "portals": portals})
 
 COMMUNITY_RESOURCES = [
     {"name": "IRCC — Find free newcomer services near you", "kind": "Settlement services", "url": "http://ircc.canada.ca/english/newcomers/services", "description": "The federal service finder for free settlement help near you, for people who are eligible for federally funded services."},
@@ -563,7 +579,15 @@ COMMUNITY_RESOURCES = [
 
 @app.route("/api/community-resources")
 def api_community_resources():
-    return jsonify({"checked": "2026-10-27", "note": "Official resources only, listed separately from user posts. User questions, posts, and events below are from visitors, not from these organisations.", "resources": COMMUNITY_RESOURCES})
+    resources = COMMUNITY_RESOURCES
+    try:
+        with open(os.path.join(BASE_DIR, "data", "resources.json"), encoding="utf-8") as f:
+            data = json.load(f)
+        if isinstance(data, list) and data:
+            resources = data
+    except Exception:
+        pass
+    return jsonify({"checked": "2026-10-27", "note": "Official resources only, listed separately from user posts. User questions, posts, and events below are from visitors, not from these organisations.", "resources": resources})
 
 # ---------------------------------------------------------------- accounts
 @app.route("/api/register", methods=["POST"])
@@ -911,6 +935,11 @@ table{width:100%;border-collapse:collapse} td,th{border-bottom:1px solid #24465A
 <button class="sec" onclick="showCat('messages')">Messages</button>
 <button class="sec" onclick="showCat('rentals')">Rentals and Services</button>
 <button class="sec" onclick="showCat('settings')">Settings</button>
+<button class="sec" onclick="showCat('content')">Content</button>
+<button class="sec" onclick="showCat('stats')">Stats</button>
+<button class="sec" onclick="showCat('moderation')">Moderation</button>
+<button class="sec" onclick="showCat('homepage')">Homepage</button>
+<button class="sec" onclick="showCat('backup')">Backup / Export</button>
 </nav>
 <div id="cat-overview" class="card"><h2>Overview</h2>
 <div class="card"><h3>Visits (first)</h3><div id="ov-visits">Loading…</div></div>
@@ -931,9 +960,57 @@ table{width:100%;border-collapse:collapse} td,th{border-bottom:1px solid #24465A
 <p>Filter: <select id="rs-kind" onchange="loadRentals()"><option value="rentals">Rentals</option><option value="services">Services</option></select>
 <select id="rs-status" onchange="loadRentals()"><option value="pending">Pending</option><option value="approved">Approved</option><option value="rejected">Rejected</option></select></p><div id="rs-list">Loading…</div></div>
 <div id="cat-settings" class="card" style="display:none"><h2>Settings</h2><div id="set-form">Loading…</div></div>
+<div id="cat-content" class="card" style="display:none"><h2>Content</h2><p>Each form below is its own subcategory. All changes are saved to the site data files. No password hash or secret is ever shown here.</p>
+<div class="card"><h3>Courses and lessons</h3><p>Add a course to a category, or add / edit / delete a lesson inside a course.</p>
+<label>Category name<input id="c-cat"></label><label>Course title<input id="c-title"></label><label>Course id (for a new course)<input id="c-id"></label><button onclick="contentCourse('add')">Add course</button>
+<label>Course id<input id="c-course"></label><label>Lesson title<input id="l-title"></label><label>Lesson body<textarea id="l-body"></textarea></label><label>Lesson id (for a new lesson)<input id="l-id"></label><button onclick="contentLesson('add')">Add lesson</button><button class="sec" onclick="contentLesson('edit')">Edit lesson</button><button class="sec" onclick="contentLesson('delete')">Delete lesson</button><p id="content-msg"></p></div>
+<div class="card"><h3>Driving — questions, fines, signs</h3><p>Province must be one of the 10 provinces. Signs may only use an image file already in static/signs/ — a real official sign image, never a drawn substitute.</p>
+<label>Province<input id="d-prov" placeholder="Ontario"></label><label>Question<input id="d-q"></label><label>Options (separated by | )<input id="d-opts"></label><label>Correct option index (0 = first)<input id="d-ans" type="number" value="0"></label><label>Explanation<input id="d-exp"></label><button onclick="contentDrivingQ('add')">Add question</button><button class="sec" onclick="contentDrivingQ('delete')">Delete question by index</button><label>Index<input id="d-idx" type="number" value="0"></label>
+<label>Fine — violation<input id="f-viol"></label><label>Fine amount<input id="f-amt"></label><label>Source (required)<input id="f-src"></label><button onclick="contentFine('add')">Add fine</button>
+<label>Sign — name<input id="s-name"></label><label>Sign meaning<input id="s-mean"></label><label>Sign image file in static/signs/<input id="s-img" placeholder="stop.svg"></label><button onclick="contentSign('add')">Add sign</button><p id="driving-msg"></p></div>
+<div class="card"><h3>Guides and consulates</h3><p>Ramadan and Zakat guides are not expanded or deleted in this build. Consulates take a name and an Ottawa address only — no phone numbers or hours, because the official directory lists addresses only.</p>
+<label>Guide slug<input id="g-slug" placeholder="pregnancy"></label><label>Guide body<textarea id="g-body"></textarea></label><button onclick="contentGuide('edit')">Edit guide</button><button class="sec" onclick="contentGuide('delete')">Delete guide</button>
+<label>Consulate name<input id="co-name"></label><label>Consulate address<input id="co-addr"></label><button onclick="contentCons('add')">Add consulate</button><p id="guide-msg"></p></div>
+<div class="card"><h3>Tools, job portals, community resources</h3><p>Interest-based tools are never added. Job portals must be official government portals with an https:// address.</p>
+<label>Tool id<input id="t-id"></label><label>Tool group<input id="t-group"></label><label>Tool name<input id="t-name"></label><button onclick="contentTool('add')">Add tool</button>
+<label>Portal name<input id="p-name"></label><label>Portal region<input id="p-region"></label><label>Portal URL<input id="p-url"></label><button onclick="contentPortal('add')">Add portal</button>
+<label>Resource name<input id="r-name"></label><label>Resource kind<input id="r-kind"></label><label>Resource URL<input id="r-url"></label><button onclick="contentResource('add')">Add resource</button><p id="tool-msg"></p></div></div>
+<div id="cat-stats" class="card" style="display:none"><h2>Stats</h2>
+<div class="card"><h3>Total views and unique sessions</h3><div id="st-main">Loading…</div></div>
+<div class="card"><h3>Per-page views</h3><div id="st-route">Loading…</div></div>
+<div class="card"><h3>Views by device and by country</h3><div id="st-dev">Loading…</div></div>
+<div class="card"><h3>Registrations</h3><div id="st-reg">Loading…</div></div></div>
+<div id="cat-moderation" class="card" style="display:none"><h2>Moderation</h2><p>Each kind below is its own subcategory: job posts, community Q&amp;A, community posts, events. Approved items show to visitors; rejected and hidden items do not. Delete removes the item from the database.</p>
+<label>Kind<select id="mod-kind" onchange="loadModeration()"><option value="job_posts">Job posts</option><option value="qa">Community Q&amp;A</option><option value="posts">Community posts</option><option value="events">Events</option></select></label><div id="mod-list">Loading…</div></div>
+<div id="cat-homepage" class="card" style="display:none"><h2>Homepage</h2>
+<div class="card"><h3>Carousel / ads</h3><p>Only approved ads ever show on the visitor site. Ads are screened: alcohol, pork, gambling or haram/doubtful businesses are never listed. Add an ad below — it stays pending until you approve it.</p>
+<label>Ad caption<input id="ad-cap"></label><label>Ad image URL<input id="ad-img"></label><label>Ad link<input id="ad-link"></label><button onclick="addAd()">Add ad (pending)</button><div id="hp-ads">Loading…</div></div>
+<div class="card"><h3>Site announcements</h3><p>An announcement shows on the visitor site, clearly labelled, only when it is active and the announcement switch in Settings is On.</p>
+<label>Announcement title<input id="an-title"></label><label>Announcement body<textarea id="an-body"></textarea></label><button onclick="addAnn()">Add announcement</button><div id="hp-ann">Loading…</div></div></div>
+<div id="cat-backup" class="card" style="display:none"><h2>Backup / Export</h2>
+<div class="card"><h3>Export site data (admin only)</h3><p>Downloads one JSON file with courses, driving, guides, consulates, tools, portals, resources and sign sources. It contains no user passwords, no password hashes, and no server secrets.</p><a href="/admin/export.json"><button>Download export (JSON)</button></a></div>
+<div class="card"><h3>Backup</h3><p>Before it runs, here is exactly what it does: it copies ONLY the public data JSON files into a new timestamped folder under instance/backups/. It does NOT download the live database file, and it never includes a secret or password hash. After it runs it reports the backup name, timestamp, file list and total size.</p><button onclick="runBackup()">Create backup now</button><p id="backup-msg"></p></div></div>
 <script>
 function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
-function showCat(c){document.querySelectorAll('[id^="cat-"]').forEach(function(e){e.style.display='none';});document.getElementById('cat-'+c).style.display='block';if(c==='overview')loadOverview();if(c==='jobs')loadJobs();if(c==='ads')loadAds();if(c==='members')loadMembers();if(c==='community')loadCommunity();if(c==='messages')loadMessages();if(c==='rentals')loadRentals();if(c==='settings')loadSettings();}
+function showCat(c){document.querySelectorAll('[id^="cat-"]').forEach(function(e){e.style.display='none';});document.getElementById('cat-'+c).style.display='block';if(c==='overview')
+function loadContentMsg(){document.getElementById('content-msg').textContent='Content forms are ready. Use the subcategory forms above; every save is validated on the server.';}
+function contentCourse(a){post('/admin/content/courses',{action:a,name:document.getElementById('c-cat').value,title:document.getElementById('c-title').value,id:document.getElementById('c-id').value}).then(function(j){document.getElementById('content-msg').textContent=j.ok?'Course saved.':(j.error||'Could not save.');});}
+function contentLesson(a){post('/admin/content/lessons',{action:a,course_id:document.getElementById('c-course').value,id:document.getElementById('l-id').value,title:document.getElementById('l-title').value,body:document.getElementById('l-body').value}).then(function(j){document.getElementById('content-msg').textContent=j.ok?'Lesson saved.':(j.error||'Could not save.');});}
+function contentDrivingQ(a){post('/admin/content/driving-questions',{action:a,province:document.getElementById('d-prov').value,question:document.getElementById('d-q').value,options:document.getElementById('d-opts').value.split('|'),answer:document.getElementById('d-ans').value,explanation:document.getElementById('d-exp').value,index:document.getElementById('d-idx').value}).then(function(j){document.getElementById('driving-msg').textContent=j.ok?'Driving question saved.':(j.error||'Could not save.');});}
+function contentFine(a){post('/admin/content/fines',{action:a,province:document.getElementById('d-prov').value,violation:document.getElementById('f-viol').value,fine:document.getElementById('f-amt').value,source:document.getElementById('f-src').value}).then(function(j){document.getElementById('driving-msg').textContent=j.ok?'Fine saved.':(j.error||'Could not save.');});}
+function contentSign(a){post('/admin/content/signs',{action:a,province:document.getElementById('d-prov').value,name:document.getElementById('s-name').value,meaning:document.getElementById('s-mean').value,image:document.getElementById('s-img').value}).then(function(j){document.getElementById('driving-msg').textContent=j.ok?'Sign saved.':(j.error||'Could not save.');});}
+function contentGuide(a){post('/admin/content/guides',{action:a,slug:document.getElementById('g-slug').value,body:document.getElementById('g-body').value}).then(function(j){document.getElementById('guide-msg').textContent=j.ok?'Guide saved.':(j.error||'Could not save.');});}
+function contentCons(a){post('/admin/content/consulates',{action:a,name:document.getElementById('co-name').value,address:document.getElementById('co-addr').value}).then(function(j){document.getElementById('guide-msg').textContent=j.ok?'Consulate saved.':(j.error||'Could not save.');});}
+function contentTool(a){post('/admin/content/tools',{action:a,id:document.getElementById('t-id').value,group:document.getElementById('t-group').value,name:document.getElementById('t-name').value}).then(function(j){document.getElementById('tool-msg').textContent=j.ok?'Tool saved.':(j.error||'Could not save.');});}
+function contentPortal(a){post('/admin/content/portals',{action:a,name:document.getElementById('p-name').value,region:document.getElementById('p-region').value,description:'Official government portal.',url:document.getElementById('p-url').value}).then(function(j){document.getElementById('tool-msg').textContent=j.ok?'Portal saved.':(j.error||'Could not save.');});}
+function contentResource(a){post('/admin/content/resources',{action:a,name:document.getElementById('r-name').value,kind:document.getElementById('r-kind').value,description:'Official resource.',url:document.getElementById('r-url').value}).then(function(j){document.getElementById('tool-msg').textContent=j.ok?'Resource saved.':(j.error||'Could not save.');});}
+function loadStats(){fetch('/admin/stats.json').then(function(r){return r.json();}).then(function(j){document.getElementById('st-main').innerHTML='<p>Total views: <b class="count">'+j.views.total+'</b> &nbsp; Unique sessions: <b class="count">'+j.views.unique_sessions+'</b></p>';document.getElementById('st-route').innerHTML=j.views.per_route.length?j.views.per_route.map(function(r){return '<p>'+esc(r.route)+': '+r.c+'</p>';}).join(''):'<p class="empty">No page views yet.</p>';document.getElementById('st-dev').innerHTML='<p>By device:</p>'+j.views.per_device.map(function(r){return '<p>'+esc(r.device_class)+': '+r.c+'</p>';}).join('')+'<p>By country:</p>'+j.views.per_country.map(function(r){return '<p>'+esc(r.country)+': '+r.c+'</p>';}).join('');document.getElementById('st-reg').innerHTML='<p>Total registrations: <b class="count">'+j.registrations.total+'</b></p><p>'+esc(j.registrations.note)+'</p>'+(j.registrations.per_day.length?j.registrations.per_day.map(function(r){return '<p>'+esc(r.day)+': '+r.c+'</p>';}).join(''):'<p class="empty">No sign-ups over time to show.</p>');});}
+function loadModeration(){var k=document.getElementById('mod-kind').value;fetch('/admin/moderation.json').then(function(r){return r.json();}).then(function(j){var list=j[k]||[];document.getElementById('mod-list').innerHTML=list.length?list.map(function(x){var t=x.title||x.body||'';return '<div class="card"><p>'+esc(t)+'</p><button onclick="post(&quot;/admin/moderation/'+k+'/'+x.id+'/approve&quot;).then(loadModeration)">Approve</button><button class="sec" onclick="post(&quot;/admin/moderation/'+k+'/'+x.id+'/reject&quot;).then(loadModeration)">Reject</button><button class="sec" onclick="post(&quot;/admin/moderation/'+k+'/'+x.id+'/hide&quot;).then(loadModeration)">Hide</button><button class="sec" onclick="post(&quot;/admin/moderation/'+k+'/'+x.id+'/unhide&quot;).then(loadModeration)">Unhide</button><button class="sec" onclick="post(&quot;/admin/moderation/'+k+'/'+x.id+'/delete&quot;).then(loadModeration)">Delete</button></div>';}).join(''):'<p class="empty">Nothing in this moderation category.</p>';});}
+function loadHomepage(){fetch('/admin/ads?status=pending').then(function(r){return r.json();}).then(function(j){var list=j.ads||[];document.getElementById('hp-ads').innerHTML=list.length?list.map(function(x){return '<div class="card"><p>'+esc(x.caption||'')+' — '+esc(x.link||'')+'</p><button onclick="post(&quot;/admin/ads/'+x.id+'/approve&quot;).then(loadHomepage)">Approve</button><button class="sec" onclick="post(&quot;/admin/ads/'+x.id+'/reject&quot;).then(loadHomepage)">Reject</button><button class="sec" onclick="post(&quot;/admin/ads/'+x.id+'/delete&quot;).then(loadHomepage)">Delete</button></div>';}).join(''):'<p class="empty">No pending ads.</p>';});fetch('/admin/announcements').then(function(r){return r.json();}).then(function(j){document.getElementById('hp-ann').innerHTML=j.length?j.map(function(x){return '<div class="card"><p><b>'+esc(x.title)+'</b> — '+(x.active?'Active':'Inactive')+'</p><p>'+esc(x.body)+'</p><button class="sec" onclick="post(&quot;/admin/announcements/'+x.id+'/toggle&quot;).then(loadHomepage)">Toggle active</button><button class="sec" onclick="post(&quot;/admin/announcements/'+x.id+'/delete&quot;).then(loadHomepage)">Delete</button></div>';}).join(''):'<p class="empty">No announcements yet.</p>';});}
+function addAd(){post('/admin/ads',{caption:document.getElementById('ad-cap').value,image_url:document.getElementById('ad-img').value,link:document.getElementById('ad-link').value}).then(function(j){alert(j.ok?'Ad added as pending.':(j.error||'Could not add ad.'));loadHomepage();});}
+function addAnn(){post('/admin/announcements',{title:document.getElementById('an-title').value,body:document.getElementById('an-body').value,active:1}).then(function(j){alert(j.ok?'Announcement added.':(j.error||'Could not add announcement.'));loadHomepage();});}
+function runBackup(){post('/admin/backup',{}).then(function(j){document.getElementById('backup-msg').textContent=j.ok?('Backup created: '+j.backup+' — '+j.total_bytes+' bytes across '+j.files.length+' files.'):'Backup failed.';});}
+loadOverview();if(c==='jobs')loadJobs();if(c==='ads')loadAds();if(c==='members')loadMembers();if(c==='community')loadCommunity();if(c==='messages')loadMessages();if(c==='rentals')loadRentals();if(c==='settings')loadSettings();if(c==='content')loadContentMsg();if(c==='stats')loadStats();if(c==='moderation')loadModeration();if(c==='homepage')loadHomepage();}
 function post(url,body){return fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body||{})}).then(function(r){return r.json();});}
 function loadOverview(){fetch('/admin/overview.json').then(function(r){return r.json();}).then(function(j){document.getElementById('ov-visits').innerHTML='<p>Total visit entries: <b class="count">'+j.visits.total+'</b> &nbsp; Unique sessions: <b class="count">'+j.visits.unique_sessions+'</b></p>'+j.visits.by_route.map(function(r){return '<p>'+esc(r.route)+': '+r.c+'</p>';}).join('');document.getElementById('ov-usage').innerHTML='<p>By device:</p>'+j.visits.by_device.map(function(r){return '<p>'+esc(r.device_class)+': '+r.c+'</p>';}).join('')+'<p>By country:</p>'+j.visits.by_country.map(function(r){return '<p>'+esc(r.country)+': '+r.c+'</p>';}).join('');});fetch('/admin/news.json').then(function(r){return r.json();}).then(function(j){document.getElementById('ov-news').innerHTML=j.length?j.slice(0,20).map(function(x){return '<p>'+esc(x.type||'')+' — '+esc(x.at||'')+'</p>';}).join(''):'<p class="empty">No administrative news yet.</p>';});}
 function loadJobs(){var st=document.getElementById('job-status').value;fetch('/admin/jobs/list?status='+st).then(function(r){return r.json();}).then(function(j){document.getElementById('job-list').innerHTML=j.length?j.map(function(x){return '<div class="card"><p><b>'+esc(x.title)+'</b> — '+esc(x.company||'')+' ('+esc(x.city||'')+')</p><button onclick="post(&quot;/admin/jobs/'+x.id+'/approve&quot;).then(loadJobs)">Approve</button><button class="sec" onclick="post(&quot;/admin/jobs/'+x.id+'/reject&quot;).then(loadJobs)">Reject</button><button class="sec" onclick="post(&quot;/admin/jobs/'+x.id+'/hide&quot;).then(loadJobs)">Hide</button></div>';}).join(''):'<p class="empty">No jobs in this category.</p>';});}
@@ -942,8 +1019,8 @@ function loadMembers(){var q=(document.getElementById('member-q').value||'');fet
 function loadCommunity(){var k=document.getElementById('com-kind').value;fetch('/admin/community').then(function(r){return r.json();}).then(function(j){var list=(k==='qa'?j.qa:(k==='posts'?j.posts:j.events));document.getElementById('com-list').innerHTML=list.length?list.map(function(x){return '<div class="card"><p>'+esc(x.title||x.body||'')+'</p><button class="sec" onclick="post(&quot;/admin/community/'+k+'/'+x.id+'/hide&quot;).then(loadCommunity)">Hide</button></div>';}).join(''):'<p class="empty">Nothing in this community category.</p>';});}
 function loadMessages(){var k=document.getElementById('msg-kind').value;fetch('/admin/messages').then(function(r){return r.json();}).then(function(j){var list=j[k]||[];document.getElementById('msg-list').innerHTML=list.length?list.map(function(x){return '<div class="card"><p>'+esc(x.body||x.message||x.email||'')+'</p></div>';}).join(''):'<p class="empty">No messages in this category.</p>';});}
 function loadRentals(){var k=document.getElementById('rs-kind').value,st=document.getElementById('rs-status').value;fetch('/admin/rentals-services?kind='+k+'&status='+st).then(function(r){return r.json();}).then(function(j){var list=j.items||[];document.getElementById('rs-list').innerHTML=list.length?list.map(function(x){return '<div class="card"><p>'+esc(x.name||'')+' — '+esc(x.city||x.trade||'')+'</p><button onclick="post(&quot;/admin/rentals-services/'+k+'/'+x.id+'/approve&quot;).then(loadRentals)">Approve</button><button class="sec" onclick="post(&quot;/admin/rentals-services/'+k+'/'+x.id+'/reject&quot;).then(loadRentals)">Reject</button></div>';}).join(''):'<p class="empty">Nothing in this category.</p>';});}
-function loadSettings(){fetch('/admin/settings').then(function(r){return r.json();}).then(function(j){var s=j.settings||{};document.getElementById('set-form').innerHTML='<label>Registration open<select id="s-registration_open"><option value="1">On</option><option value="0">Off</option></select></label><label>Show ticker<select id="s-show_ticker"><option value="1">On</option><option value="0">Off</option></select></label><label>Show carousel<select id="s-show_carousel"><option value="1">On</option><option value="0">Off</option></select></label><label>Show top helpers<select id="s-show_top_helpers"><option value="1">On</option><option value="0">Off</option></select></label><label>VIP enabled (manual activation only)<select id="s-vip_enabled"><option value="1">On</option><option value="0">Off</option></select></label><label>Donation email<input id="s-donation_email"></label><label>Inquiry email<input id="s-inquiry_email"></label><button onclick="saveSettings()">Save settings</button><p id="set-msg"></p>';['registration_open','show_ticker','show_carousel','show_top_helpers','vip_enabled'].forEach(function(k){document.getElementById('s-'+k).value=s[k]||'0';});document.getElementById('s-donation_email').value=s.donation_email||'';document.getElementById('s-inquiry_email').value=s.inquiry_email||'';});}
-function saveSettings(){var body={};['registration_open','show_ticker','show_carousel','show_top_helpers','vip_enabled'].forEach(function(k){body[k]=document.getElementById('s-'+k).value;});body.donation_email=document.getElementById('s-donation_email').value;body.inquiry_email=document.getElementById('s-inquiry_email').value;post('/admin/settings',body).then(function(){document.getElementById('set-msg').textContent='Settings saved.';});}
+function loadSettings(){fetch('/admin/settings').then(function(r){return r.json();}).then(function(j){var s=j.settings||{};document.getElementById('set-form').innerHTML='<label>Registration open<select id="s-registration_open"><option value="1">On</option><option value="0">Off</option></select></label><label>Show ticker<select id="s-show_ticker"><option value="1">On</option><option value="0">Off</option></select></label><label>Show carousel<select id="s-show_carousel"><option value="1">On</option><option value="0">Off</option></select></label><label>Show top helpers<select id="s-show_top_helpers"><option value="1">On</option><option value="0">Off</option></select></label><label>VIP enabled (manual activation only)<select id="s-vip_enabled"><option value="1">On</option><option value="0">Off</option></select></label><label>Donation email<input id="s-donation_email"></label><label>Inquiry email<input id="s-inquiry_email"></label><button onclick="saveSettings()">Save settings</button><p id="set-msg"></p>';['registration_open','show_ticker','show_carousel','show_top_helpers','vip_enabled','announcement_on'].forEach(function(k){document.getElementById('s-'+k).value=s[k]||'0';});document.getElementById('s-donation_email').value=s.donation_email||'';document.getElementById('s-inquiry_email').value=s.inquiry_email||'';});}
+function saveSettings(){var body={};['registration_open','show_ticker','show_carousel','show_top_helpers','vip_enabled','announcement_on'].forEach(function(k){body[k]=document.getElementById('s-'+k).value;});body.donation_email=document.getElementById('s-donation_email').value;body.inquiry_email=document.getElementById('s-inquiry_email').value;post('/admin/settings',body).then(function(){document.getElementById('set-msg').textContent='Settings saved.';});}
 loadOverview();
 </script></body></html>"""
 @app.route("/admin/jobs/list")
@@ -1383,3 +1460,734 @@ if __name__ == "__main__":
     with app.app_context():
         init_db()
     app.run(host="127.0.0.1", port=5000, debug=False)
+
+# ---------------------------------------------------------------- admin extension (2026-10-28)
+# Extends the existing 8-category panel. Nothing here changes the admin
+# password mechanism, and every endpoint below is guarded by admin_guard()
+# (anonymous = 403). No endpoint returns a password hash or any secret.
+import shutil as _shutil
+
+INTEREST_TOOL_KEYS = ["compound-interest", "mortgage", "credit-card-utilization",
+                      "debt-payoff", "rrsp-refund"]
+ISLAMIC_GUIDE_SLUGS = ["ramadan", "zakat"]
+SIGN_DIR = os.path.join(BASE_DIR, "static", "signs")
+
+def _ext_tables(db):
+    db.execute("CREATE TABLE IF NOT EXISTS announcements (id INTEGER PRIMARY KEY, title TEXT, body TEXT, active INTEGER DEFAULT 0, created_at TEXT)")
+    db.execute("CREATE TABLE IF NOT EXISTS admin_audit (id INTEGER PRIMARY KEY, action TEXT, target TEXT, created_at TEXT)")
+
+def _json_path(name):
+    return os.path.join(BASE_DIR, "data", name)
+
+def _load_json_file(name, default):
+    try:
+        with open(_json_path(name), encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return default
+
+def _save_json_file(name, data):
+    tmp = _json_path(name) + ".tmp"
+    with open(tmp, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+    os.replace(tmp, _json_path(name))
+
+def _load_tools_data():
+    data = _load_json_file("tools.json", None)
+    if isinstance(data, list) and data:
+        return data
+    return [{"id": t["id"], "group": t["group"], "name": t["name"]} for t in TOOLS]
+
+def _load_portals_data():
+    data = _load_json_file("portals.json", None)
+    if isinstance(data, list) and data:
+        return data
+    return [dict(p) for p in JOB_PORTALS]
+
+def _load_resources_data():
+    data = _load_json_file("resources.json", None)
+    if isinstance(data, list) and data:
+        return data
+    return [dict(r) for r in COMMUNITY_RESOURCES]
+
+def _clean(s, n=500):
+    return (str(s or "").strip())[:n]
+
+def _require_fields(d, fields):
+    missing = [f for f in fields if not str(d.get(f) or "").strip()]
+    return missing
+
+def _audit(db, action, target):
+    try:
+        db.execute("INSERT INTO admin_audit (action, target, created_at) VALUES (?,?,?)",
+                   (action, str(target)[:200], now_iso()))
+        db.commit()
+    except Exception:
+        pass
+
+def _is_interest_tool(text):
+    t = (text or "").lower()
+    return any(k in t for k in ["compound interest", "mortgage payment",
+                                "credit-card utilization", "credit card utilization",
+                                "debt payoff", "rrsp refund"])
+
+# ---- content listing -------------------------------------------------
+@app.route("/admin/content.json")
+def admin_content():
+    guard = admin_guard()
+    if guard:
+        return guard
+    init_db()
+    kind = request.args.get("kind", "courses")
+    courses = load_courses()
+    drv = _load_json_file("driving.json", {"provinces": []})
+    gd = _load_json_file("guides.json", {"guides": {}, "consulates": {"entries": []}})
+    signs = sorted(os.listdir(SIGN_DIR)) if os.path.isdir(SIGN_DIR) else []
+    if kind == "courses":
+        return jsonify({"categories": courses.get("categories", [])})
+    if kind == "driving":
+        return jsonify({"provinces": drv.get("provinces", [])})
+    if kind == "guides":
+        return jsonify({"guides": gd.get("guides", {})})
+    if kind == "consulates":
+        return jsonify({"entries": (gd.get("consulates", {}) or {}).get("entries", [])})
+    if kind == "tools":
+        return jsonify({"tools": _load_tools_data()})
+    if kind == "portals":
+        return jsonify({"portals": _load_portals_data()})
+    if kind == "resources":
+        return jsonify({"resources": _load_resources_data()})
+    if kind == "signs":
+        return jsonify({"files": signs})
+    return jsonify({"error": "unknown content kind"}), 400
+
+# ---- courses / lessons ----------------------------------------------
+@app.route("/admin/content/courses", methods=["POST"])
+def admin_content_courses():
+    guard = admin_guard()
+    if guard:
+        return guard
+    d = request.get_json(silent=True) or {}
+    action = d.get("action")
+    data = load_courses()
+    cats = data.setdefault("categories", [])
+    if action == "add":
+        if _require_fields(d, ["name", "title"]):
+            return jsonify({"error": "Category name and course title are required."}), 400
+        name = _clean(d["name"], 120)
+        cat = next((c for c in cats if c.get("name") == name), None)
+        if not cat:
+            cat = {"name": name, "description": _clean(d.get("description"), 500), "courses": []}
+            cats.append(cat)
+        cid = _clean(d.get("id") or (name.lower().replace(" ", "-") + "-" + str(len(cat["courses"]) + 1)), 120)
+        if any(c.get("id") == cid for c in cat["courses"]):
+            return jsonify({"error": "A course with that id already exists in this category."}), 400
+        cat["courses"].append({"id": cid, "title": _clean(d["title"], 200), "lessons": []})
+        _save_json_file("courses.json", data)
+        return jsonify({"ok": True, "id": cid})
+    if action == "edit":
+        for cat in cats:
+            for c in cat.get("courses", []):
+                if c.get("id") == d.get("id"):
+                    if d.get("title"):
+                        c["title"] = _clean(d["title"], 200)
+                    if "description" in d:
+                        cat["description"] = _clean(d["description"], 500)
+                    _save_json_file("courses.json", data)
+                    return jsonify({"ok": True})
+        return jsonify({"error": "Course not found."}), 404
+    if action == "delete":
+        for cat in cats:
+            before = len(cat.get("courses", []))
+            cat["courses"] = [c for c in cat.get("courses", []) if c.get("id") != d.get("id")]
+            if len(cat["courses"]) != before:
+                _save_json_file("courses.json", data)
+                return jsonify({"ok": True})
+        return jsonify({"error": "Course not found."}), 404
+    return jsonify({"error": "Unknown action. Use add, edit or delete."}), 400
+
+@app.route("/admin/content/lessons", methods=["POST"])
+def admin_content_lessons():
+    guard = admin_guard()
+    if guard:
+        return guard
+    d = request.get_json(silent=True) or {}
+    action = d.get("action")
+    data = load_courses()
+    course = None
+    for cat in data.get("categories", []):
+        for c in cat.get("courses", []):
+            if c.get("id") == d.get("course_id"):
+                course = c
+    if not course:
+        return jsonify({"error": "Course not found."}), 404
+    lessons = course.setdefault("lessons", [])
+    if action == "add":
+        if _require_fields(d, ["title", "body"]):
+            return jsonify({"error": "Lesson title and body are required."}), 400
+        lid = _clean(d.get("id") or (course["id"] + "-" + str(len(lessons) + 1)), 120)
+        if any(l.get("id") == lid for l in lessons):
+            return jsonify({"error": "A lesson with that id already exists in this course."}), 400
+        lessons.append({"id": lid, "title": _clean(d["title"], 200), "body": _clean(d["body"], 5000)})
+        _save_json_file("courses.json", data)
+        return jsonify({"ok": True, "id": lid})
+    if action == "edit":
+        for l in lessons:
+            if l.get("id") == d.get("id"):
+                if d.get("title"):
+                    l["title"] = _clean(d["title"], 200)
+                if d.get("body"):
+                    l["body"] = _clean(d["body"], 5000)
+                _save_json_file("courses.json", data)
+                return jsonify({"ok": True})
+        return jsonify({"error": "Lesson not found."}), 404
+    if action == "delete":
+        before = len(lessons)
+        course["lessons"] = [l for l in lessons if l.get("id") != d.get("id")]
+        if len(course["lessons"]) != before:
+            _save_json_file("courses.json", data)
+            return jsonify({"ok": True})
+        return jsonify({"error": "Lesson not found."}), 404
+    if action == "reorder":
+        order = d.get("order") or []
+        if not isinstance(order, list) or set(order) != {l.get("id") for l in lessons}:
+            return jsonify({"error": "Reorder needs the full list of lesson ids in the new order."}), 400
+        by_id = {l["id"]: l for l in lessons}
+        course["lessons"] = [by_id[i] for i in order]
+        _save_json_file("courses.json", data)
+        return jsonify({"ok": True})
+    return jsonify({"error": "Unknown action. Use add, edit, delete or reorder."}), 400
+
+# ---- driving ----------------------------------------------------------
+def _driving_prov(data, name):
+    return next((p for p in data.get("provinces", []) if p.get("name") == name), None)
+
+@app.route("/admin/content/driving-questions", methods=["POST"])
+def admin_driving_questions():
+    guard = admin_guard()
+    if guard:
+        return guard
+    d = request.get_json(silent=True) or {}
+    action = d.get("action")
+    data = _load_json_file("driving.json", {"provinces": []})
+    prov = _driving_prov(data, d.get("province"))
+    if not prov:
+        return jsonify({"error": "Province not found. Use one of the 10 provinces."}), 400
+    qs = prov.setdefault("practice_questions", [])
+    if action == "add":
+        if _require_fields(d, ["question"]):
+            return jsonify({"error": "Question text is required."}), 400
+        opts = d.get("options") or []
+        if not isinstance(opts, list) or len(opts) < 2 or len(opts) > 6 or any(not str(o).strip() for o in opts):
+            return jsonify({"error": "Give 2 to 6 non-empty answer options."}), 400
+        try:
+            ans = int(d.get("answer", 0))
+        except Exception:
+            return jsonify({"error": "Answer must be the index of the correct option."}), 400
+        if ans < 0 or ans >= len(opts):
+            return jsonify({"error": "Answer index is out of range for the options given."}), 400
+        qs.append({"question": _clean(d["question"], 1000), "options": [_clean(o, 500) for o in opts],
+                   "answer": ans, "explanation": _clean(d.get("explanation"), 1000)})
+        _save_json_file("driving.json", data)
+        return jsonify({"ok": True, "index": len(qs) - 1})
+    if action == "edit":
+        try:
+            idx = int(d.get("index", -1))
+            q = qs[idx]
+        except Exception:
+            return jsonify({"error": "Question index not found."}), 404
+        if d.get("question"):
+            q["question"] = _clean(d["question"], 1000)
+        if d.get("options"):
+            opts = d["options"]
+            if not isinstance(opts, list) or len(opts) < 2 or len(opts) > 6:
+                return jsonify({"error": "Give 2 to 6 non-empty answer options."}), 400
+            q["options"] = [_clean(o, 500) for o in opts]
+            q["answer"] = 0
+        if d.get("answer") is not None:
+            try:
+                ans = int(d["answer"])
+            except Exception:
+                return jsonify({"error": "Answer must be an option index."}), 400
+            if ans < 0 or ans >= len(q["options"]):
+                return jsonify({"error": "Answer index is out of range."}), 400
+            q["answer"] = ans
+        if "explanation" in d:
+            q["explanation"] = _clean(d["explanation"], 1000)
+        _save_json_file("driving.json", data)
+        return jsonify({"ok": True})
+    if action == "delete":
+        try:
+            idx = int(d.get("index", -1))
+            del qs[idx]
+        except Exception:
+            return jsonify({"error": "Question index not found."}), 404
+        _save_json_file("driving.json", data)
+        return jsonify({"ok": True})
+    return jsonify({"error": "Unknown action. Use add, edit or delete."}), 400
+
+@app.route("/admin/content/fines", methods=["POST"])
+def admin_content_fines():
+    guard = admin_guard()
+    if guard:
+        return guard
+    d = request.get_json(silent=True) or {}
+    action = d.get("action")
+    data = _load_json_file("driving.json", {"provinces": []})
+    prov = _driving_prov(data, d.get("province"))
+    if not prov:
+        return jsonify({"error": "Province not found."}), 400
+    fines = prov.setdefault("fines", {})
+    cards = fines.setdefault("cards", [])
+    if action == "add":
+        if _require_fields(d, ["violation", "fine", "source"]):
+            return jsonify({"error": "Violation, fine and source are required. Unverified amounts must not be added."}), 400
+        cards.append({"violation": _clean(d["violation"], 300), "fine": _clean(d["fine"], 200),
+                      "demerit_points": _clean(d.get("demerit_points"), 100),
+                      "suspension": _clean(d.get("suspension"), 200), "source": _clean(d["source"], 500)})
+        _save_json_file("driving.json", data)
+        return jsonify({"ok": True, "index": len(cards) - 1})
+    if action == "edit":
+        try:
+            idx = int(d.get("index", -1))
+            c = cards[idx]
+        except Exception:
+            return jsonify({"error": "Fine card index not found."}), 404
+        for k in ["violation", "fine", "demerit_points", "suspension", "source"]:
+            if d.get(k):
+                c[k] = _clean(d[k], 500)
+        _save_json_file("driving.json", data)
+        return jsonify({"ok": True})
+    if action == "delete":
+        try:
+            idx = int(d.get("index", -1))
+            del cards[idx]
+        except Exception:
+            return jsonify({"error": "Fine card index not found."}), 404
+        _save_json_file("driving.json", data)
+        return jsonify({"ok": True})
+    return jsonify({"error": "Unknown action. Use add, edit or delete."}), 400
+
+@app.route("/admin/content/signs", methods=["POST"])
+def admin_content_signs():
+    guard = admin_guard()
+    if guard:
+        return guard
+    d = request.get_json(silent=True) or {}
+    action = d.get("action")
+    data = _load_json_file("driving.json", {"provinces": []})
+    prov = _driving_prov(data, d.get("province"))
+    if not prov:
+        return jsonify({"error": "Province not found."}), 400
+    signs = prov.setdefault("road_signs", [])
+    if action == "add":
+        if _require_fields(d, ["name", "meaning", "image"]):
+            return jsonify({"error": "Sign name, meaning and image file are required."}), 400
+        img = os.path.basename(str(d["image"]))
+        if not os.path.isfile(os.path.join(SIGN_DIR, img)):
+            return jsonify({"error": "Image file not found in static/signs/. Only real official sign images already in static/signs/ may be used — never a drawn substitute."}), 400
+        signs.append({"name": _clean(d["name"], 200), "meaning": _clean(d["meaning"], 500),
+                      "image": "/static/signs/" + img})
+        _save_json_file("driving.json", data)
+        return jsonify({"ok": True, "index": len(signs) - 1})
+    if action == "edit":
+        try:
+            idx = int(d.get("index", -1))
+            s = signs[idx]
+        except Exception:
+            return jsonify({"error": "Sign index not found."}), 404
+        if d.get("name"):
+            s["name"] = _clean(d["name"], 200)
+        if d.get("meaning"):
+            s["meaning"] = _clean(d["meaning"], 500)
+        if d.get("image"):
+            img = os.path.basename(str(d["image"]))
+            if not os.path.isfile(os.path.join(SIGN_DIR, img)):
+                return jsonify({"error": "Image file not found in static/signs/."}), 400
+            s["image"] = "/static/signs/" + img
+        _save_json_file("driving.json", data)
+        return jsonify({"ok": True})
+    if action == "delete":
+        try:
+            idx = int(d.get("index", -1))
+            del signs[idx]
+        except Exception:
+            return jsonify({"error": "Sign index not found."}), 404
+        _save_json_file("driving.json", data)
+        return jsonify({"ok": True})
+    return jsonify({"error": "Unknown action. Use add, edit or delete."}), 400
+
+# ---- guides / consulates ---------------------------------------------
+@app.route("/admin/content/guides", methods=["POST"])
+def admin_content_guides():
+    guard = admin_guard()
+    if guard:
+        return guard
+    d = request.get_json(silent=True) or {}
+    action = d.get("action")
+    data = _load_json_file("guides.json", {"guides": {}})
+    guides = data.setdefault("guides", {})
+    slug = _clean(d.get("slug"), 100)
+    if action == "add":
+        if slug in guides:
+            return jsonify({"error": "A guide with that slug already exists."}), 400
+        if _require_fields(d, ["body"]):
+            return jsonify({"error": "Guide body is required."}), 400
+        if slug in ISLAMIC_GUIDE_SLUGS:
+            return jsonify({"error": "Islamic guides are not expanded in this build."}), 400
+        guides[slug] = _clean(d["body"], 20000)
+        _save_json_file("guides.json", data)
+        return jsonify({"ok": True})
+    if action == "edit":
+        if slug not in guides:
+            return jsonify({"error": "Guide not found."}), 404
+        if slug in ISLAMIC_GUIDE_SLUGS:
+            return jsonify({"error": "Ramadan and Zakat guides are not expanded in this build. No change was made."}), 400
+        if not d.get("body"):
+            return jsonify({"error": "Guide body is required."}), 400
+        guides[slug] = _clean(d["body"], 20000)
+        _save_json_file("guides.json", data)
+        return jsonify({"ok": True})
+    if action == "delete":
+        if slug in ISLAMIC_GUIDE_SLUGS:
+            return jsonify({"error": "Islamic guides are not deleted in this build."}), 400
+        if slug not in guides:
+            return jsonify({"error": "Guide not found."}), 404
+        del guides[slug]
+        _save_json_file("guides.json", data)
+        return jsonify({"ok": True})
+    return jsonify({"error": "Unknown action. Use add, edit or delete."}), 400
+
+@app.route("/admin/content/consulates", methods=["POST"])
+def admin_content_consulates():
+    guard = admin_guard()
+    if guard:
+        return guard
+    d = request.get_json(silent=True) or {}
+    action = d.get("action")
+    data = _load_json_file("guides.json", {"consulates": {"entries": []}})
+    cons = data.setdefault("consulates", {})
+    entries = cons.setdefault("entries", [])
+    if action == "add":
+        if _require_fields(d, ["name", "address"]):
+            return jsonify({"error": "Consulate name and address are required. Phone numbers and hours are not listed, because the official directory lists addresses only."}), 400
+        entries.append({"name": _clean(d["name"], 200), "address": _clean(d["address"], 500)})
+        _save_json_file("guides.json", data)
+        return jsonify({"ok": True, "index": len(entries) - 1})
+    if action == "edit":
+        try:
+            idx = int(d.get("index", -1))
+            e = entries[idx]
+        except Exception:
+            return jsonify({"error": "Consulate index not found."}), 404
+        if d.get("name"):
+            e["name"] = _clean(d["name"], 200)
+        if d.get("address"):
+            e["address"] = _clean(d["address"], 500)
+        _save_json_file("guides.json", data)
+        return jsonify({"ok": True})
+    if action == "delete":
+        try:
+            idx = int(d.get("index", -1))
+            del entries[idx]
+        except Exception:
+            return jsonify({"error": "Consulate index not found."}), 404
+        _save_json_file("guides.json", data)
+        return jsonify({"ok": True})
+    return jsonify({"error": "Unknown action. Use add, edit or delete."}), 400
+
+# ---- tools / portals / resources (JSON overrides) --------------------
+def _crud_simple(filename, loader, key_fields, blocked_check=None):
+    d = request.get_json(silent=True) or {}
+    action = d.get("action")
+    items = loader()
+    if action == "add":
+        if _require_fields(d, key_fields):
+            return jsonify({"error": "All required fields must be filled in."}), 400
+        if blocked_check and blocked_check(d):
+            return jsonify({"error": "This item was rejected by screening."}), 400
+        item = {k: _clean(d.get(k), 1000) for k in key_fields}
+        for k, v in d.items():
+            if k not in ("action",) and k not in item:
+                item[k] = _clean(v, 1000)
+        items.append(item)
+        _save_json_file(filename, items)
+        return jsonify({"ok": True, "index": len(items) - 1})
+    if action == "edit":
+        try:
+            idx = int(d.get("index", -1))
+            item = items[idx]
+        except Exception:
+            return jsonify({"error": "Item index not found."}), 404
+        if blocked_check and blocked_check({**item, **d}):
+            return jsonify({"error": "This item was rejected by screening."}), 400
+        for k in key_fields:
+            if d.get(k):
+                item[k] = _clean(d[k], 1000)
+        _save_json_file(filename, items)
+        return jsonify({"ok": True})
+    if action == "delete":
+        try:
+            idx = int(d.get("index", -1))
+            del items[idx]
+        except Exception:
+            return jsonify({"error": "Item index not found."}), 404
+        _save_json_file(filename, items)
+        return jsonify({"ok": True})
+    return jsonify({"error": "Unknown action. Use add, edit or delete."}), 400
+
+@app.route("/admin/content/tools", methods=["POST"])
+def admin_content_tools():
+    guard = admin_guard()
+    if guard:
+        return guard
+    d = request.get_json(silent=True) or {}
+    if _is_interest_tool((d.get("name") or "") + " " + (d.get("id") or "")):
+        return jsonify({"error": "Interest-based tools are never built on this site."}), 400
+    if d.get("action") == "add" and not d.get("id"):
+        return jsonify({"error": "Tool id is required."}), 400
+    return _crud_simple("tools.json", _load_tools_data, ["id", "group", "name"],
+                        lambda x: _is_interest_tool((x.get("name") or "") + " " + (x.get("id") or "")))
+
+@app.route("/admin/content/portals", methods=["POST"])
+def admin_content_portals():
+    guard = admin_guard()
+    if guard:
+        return guard
+    d = request.get_json(silent=True) or {}
+    url = (d.get("url") or "").strip()
+    if d.get("action") in ("add", "edit") and url and not url.startswith("https://"):
+        return jsonify({"error": "Portal URL must start with https:// and be an official government portal."}), 400
+    return _crud_simple("portals.json", _load_portals_data, ["name", "region", "description", "url"])
+
+@app.route("/admin/content/resources", methods=["POST"])
+def admin_content_resources():
+    guard = admin_guard()
+    if guard:
+        return guard
+    d = request.get_json(silent=True) or {}
+    url = (d.get("url") or "").strip()
+    if d.get("action") in ("add", "edit") and url and not url.startswith("https://") and not url.startswith("http://"):
+        return jsonify({"error": "Resource URL must be a full web address."}), 400
+    return _crud_simple("resources.json", _load_resources_data, ["name", "kind", "description", "url"])
+
+# ---- stats -------------------------------------------------------------
+@app.route("/admin/stats.json")
+def admin_stats():
+    guard = admin_guard()
+    if guard:
+        return guard
+    init_db()
+    db = get_db()
+    total = db.execute("SELECT COUNT(*) c FROM visits").fetchone()["c"]
+    uniq = db.execute("SELECT COUNT(DISTINCT session_id) c FROM visits").fetchone()["c"]
+    per_route = [dict(r) for r in db.execute("SELECT route, COUNT(*) c FROM visits GROUP BY route ORDER BY c DESC LIMIT 50").fetchall()]
+    per_device = [dict(r) for r in db.execute("SELECT device_class, COUNT(*) c FROM visits GROUP BY device_class ORDER BY c DESC").fetchall()]
+    per_country = [dict(r) for r in db.execute("SELECT country, COUNT(*) c FROM visits GROUP BY country ORDER BY c DESC LIMIT 50").fetchall()]
+    per_day = [dict(r) for r in db.execute("SELECT substr(created_at,1,10) day, COUNT(*) c FROM visits GROUP BY day ORDER BY day DESC LIMIT 60").fetchall()]
+    users = db.execute("SELECT COUNT(*) c FROM users").fetchone()["c"]
+    signups = [dict(r) for r in db.execute("SELECT substr(created_at,1,10) day, COUNT(*) c FROM users WHERE created_at IS NOT NULL GROUP BY day ORDER BY day DESC LIMIT 60").fetchall()]
+    return jsonify({
+        "views": {"total": total, "unique_sessions": uniq, "per_route": per_route,
+                  "per_device": per_device, "per_country": per_country, "per_day": per_day},
+        "registrations": {"total": users, "per_day": signups,
+                          "note": "Registration currently returns 503 because email verification is not configured, so no account can be created today. The count above is the real users-table count; if it is 0, that is the honest total, not a placeholder."},
+    })
+
+# ---- moderation ---------------------------------------------------------
+@app.route("/admin/moderation.json")
+def admin_moderation():
+    guard = admin_guard()
+    if guard:
+        return guard
+    init_db()
+    db = get_db()
+    def items(table, title_field):
+        rows = db.execute(f"SELECT * FROM {table} ORDER BY id DESC LIMIT 100").fetchall()
+        return [dict(r) for r in rows]
+    return jsonify({
+        "job_posts": items("jobs", "title"),
+        "qa": items("qa_questions", "title"),
+        "posts": items("posts", "body"),
+        "events": items("events", "title"),
+    })
+
+@app.route("/admin/moderation/<kind>/<int:item_id>/<action>", methods=["POST"])
+def admin_moderation_action(kind, item_id, action):
+    guard = admin_guard()
+    if guard:
+        return guard
+    tables = {"job_posts": "jobs", "qa": "qa_questions", "posts": "posts", "events": "events"}
+    table = tables.get(kind)
+    if not table:
+        return jsonify({"error": "Unknown moderation kind. Use job_posts, qa, posts or events."}), 400
+    if action not in ("approve", "reject", "hide", "unhide", "delete"):
+        return jsonify({"error": "Unknown action. Use approve, reject, hide, unhide or delete."}), 400
+    init_db()
+    db = get_db()
+    _ext_tables(db)
+    row = db.execute(f"SELECT id FROM {table} WHERE id=?", (item_id,)).fetchone()
+    if not row:
+        return jsonify({"error": "Item not found."}), 404
+    if action == "delete":
+        db.execute(f"DELETE FROM {table} WHERE id=?", (item_id,))
+    elif action == "approve":
+        if table == "jobs":
+            db.execute("UPDATE jobs SET approved=1, is_hidden=0 WHERE id=?", (item_id,))
+        else:
+            db.execute(f"UPDATE {table} SET is_hidden=0 WHERE id=?", (item_id,))
+    elif action in ("reject", "hide"):
+        if table == "jobs":
+            db.execute("UPDATE jobs SET approved=0, is_hidden=1 WHERE id=?", (item_id,))
+        else:
+            db.execute(f"UPDATE {table} SET is_hidden=1 WHERE id=?", (item_id,))
+    elif action == "unhide":
+        if table == "jobs":
+            db.execute("UPDATE jobs SET is_hidden=0 WHERE id=?", (item_id,))
+        else:
+            db.execute(f"UPDATE {table} SET is_hidden=0 WHERE id=?", (item_id,))
+    _audit(db, action, f"{kind}/{item_id}")
+    db.commit()
+    return jsonify({"ok": True, "action": action})
+
+# ---- ads edit / delete (Homepage management) ----------------------------
+@app.route("/admin/ads/<int:ad_id>/edit", methods=["POST"])
+def admin_ad_edit(ad_id):
+    guard = admin_guard()
+    if guard:
+        return guard
+    d = request.get_json(silent=True) or {}
+    if is_blocked_job(d.get("caption") or "", d.get("business_name") or "", d.get("caption") or ""):
+        return jsonify({"error": "Advertisement rejected by screening: alcohol, pork, gambling or doubtful businesses are never listed."}), 400
+    init_db()
+    db = get_db()
+    row = db.execute("SELECT id FROM ads WHERE id=?", (ad_id,)).fetchone()
+    if not row:
+        return jsonify({"error": "Ad not found."}), 404
+    for k in ["image_url", "caption", "link"]:
+        if k in d:
+            db.execute(f"UPDATE ads SET {k}=? WHERE id=?", (str(d[k])[:1000], ad_id))
+    db.commit()
+    return jsonify({"ok": True})
+
+@app.route("/admin/ads/<int:ad_id>/delete", methods=["POST"])
+def admin_ad_delete(ad_id):
+    guard = admin_guard()
+    if guard:
+        return guard
+    init_db()
+    db = get_db()
+    db.execute("DELETE FROM ads WHERE id=?", (ad_id,))
+    db.commit()
+    return jsonify({"ok": True})
+
+# ---- announcements -------------------------------------------------------
+@app.route("/admin/announcements", methods=["GET", "POST"])
+def admin_announcements():
+    guard = admin_guard()
+    if guard:
+        return guard
+    init_db()
+    db = get_db()
+    _ext_tables(db)
+    db.commit()
+    if request.method == "POST":
+        d = request.get_json(silent=True) or {}
+        if _require_fields(d, ["title", "body"]):
+            return jsonify({"error": "Announcement title and body are required."}), 400
+        cur = db.execute("INSERT INTO announcements (title, body, active, created_at) VALUES (?,?,?,?)",
+                         (_clean(d["title"], 200), _clean(d["body"], 2000), 1 if d.get("active") else 0, now_iso()))
+        db.commit()
+        return jsonify({"ok": True, "id": cur.lastrowid})
+    rows = db.execute("SELECT * FROM announcements ORDER BY id DESC LIMIT 100").fetchall()
+    return jsonify([dict(r) for r in rows])
+
+@app.route("/admin/announcements/<int:ann_id>/toggle", methods=["POST"])
+def admin_announcement_toggle(ann_id):
+    guard = admin_guard()
+    if guard:
+        return guard
+    init_db()
+    db = get_db()
+    _ext_tables(db)
+    row = db.execute("SELECT active FROM announcements WHERE id=?", (ann_id,)).fetchone()
+    if not row:
+        return jsonify({"error": "Announcement not found."}), 404
+    db.execute("UPDATE announcements SET active=? WHERE id=?", (0 if row["active"] else 1, ann_id))
+    db.commit()
+    return jsonify({"ok": True, "active": 0 if row["active"] else 1})
+
+@app.route("/admin/announcements/<int:ann_id>/delete", methods=["POST"])
+def admin_announcement_delete(ann_id):
+    guard = admin_guard()
+    if guard:
+        return guard
+    init_db()
+    db = get_db()
+    _ext_tables(db)
+    db.execute("DELETE FROM announcements WHERE id=?", (ann_id,))
+    db.commit()
+    return jsonify({"ok": True})
+
+@app.route("/api/announcements")
+def api_announcements():
+    init_db()
+    s = get_settings()
+    if s.get("announcement_on", "1") != "1":
+        return jsonify([])
+    db = get_db()
+    _ext_tables(db)
+    rows = db.execute("SELECT id, title, body, created_at FROM announcements WHERE active=1 ORDER BY id DESC LIMIT 10").fetchall()
+    return jsonify([dict(r) for r in rows])
+
+# ---- export / backup ------------------------------------------------------
+@app.route("/admin/export.json")
+def admin_export():
+    guard = admin_guard()
+    if guard:
+        return guard
+    payload = {
+        "exported_at": now_iso(),
+        "note": "Admin-only export of public site content. It contains no user passwords, no password hashes, and no server secrets.",
+        "courses": load_courses(),
+        "driving": _load_json_file("driving.json", {}),
+        "guides": _load_json_file("guides.json", {}),
+        "consulates": _load_json_file("guides.json", {}).get("consulates", {}),
+        "tools": _load_tools_data(),
+        "portals": _load_portals_data(),
+        "resources": _load_resources_data(),
+        "sign_sources": _load_json_file("sign_sources.json", {}),
+    }
+    body = json.dumps(payload, ensure_ascii=False, indent=2)
+    return Response(body, mimetype="application/json",
+                    headers={"Content-Disposition": "attachment; filename=northstart-export.json"})
+
+@app.route("/admin/backup", methods=["POST"])
+def admin_backup():
+    guard = admin_guard()
+    if guard:
+        return guard
+    # What this button does, stated before it runs in the panel text:
+    # it copies ONLY the public data JSON files into a new timestamped
+    # folder under instance/backups/. It does NOT download the live
+    # database file, and it never includes a secret or password hash.
+    stamp = datetime.now(timezone.utc).strftime("%Y%m%d-%H%M%S")
+    dest = os.path.join(BASE_DIR, "instance", "backups", "admin-backup-" + stamp)
+    os.makedirs(dest, exist_ok=True)
+    files = []
+    total = 0
+    for name in ["courses.json", "driving.json", "guides.json", "sign_sources.json",
+                 "official_figures_2026.json", "tools_verified_2026.json",
+                 "tools.json", "portals.json", "resources.json"]:
+        src = _json_path(name)
+        if os.path.isfile(src):
+            _shutil.copy2(src, os.path.join(dest, name))
+            sz = os.path.getsize(src)
+            files.append({"file": name, "bytes": sz})
+            total += sz
+    manifest = {"backup": os.path.basename(dest), "created_at_utc": stamp,
+                "files": files, "total_bytes": total,
+                "note": "Public data files only. The live database file and all secrets are excluded."}
+    with open(os.path.join(dest, "manifest.json"), "w", encoding="utf-8") as f:
+        json.dump(manifest, f, indent=2)
+    return jsonify({"ok": True, **manifest})

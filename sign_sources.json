@@ -1,0 +1,275 @@
+{
+  "checked": "2026-10-28",
+  "source_note": "Images are exact reproductions of official Canadian road signs from Wikimedia Commons, sourced from the Manual of Uniform Traffic Control Devices for Canada (MUTCDC) and provincial sign series. Each file was verified by its Commons file description before download. No simplified drawing or text-only diamond is used. Signs that could not be matched exactly were removed, not drawn.",
+  "files": {
+    "stop.svg": {
+      "commons_file": "Canada Stop sign.svg",
+      "commons_url": "https://commons.wikimedia.org/wiki/File:Canada_Stop_sign.svg",
+      "licence": "Public domain",
+      "description": "",
+      "bytes": 6583
+    },
+    "yield.svg": {
+      "commons_file": "CA-MUTCDC RA-002.svg",
+      "commons_url": "https://commons.wikimedia.org/wiki/File:CA-MUTCDC_RA-002.svg",
+      "licence": "Public domain",
+      "description": "Yield.",
+      "bytes": 2014
+    },
+    "speed-50.svg": {
+      "commons_file": "CA-ON road sign Rb-001-050.svg",
+      "commons_url": "https://commons.wikimedia.org/wiki/File:CA-ON_road_sign_Rb-001-050.svg",
+      "licence": "Public domain",
+      "description": "Maximum speed limit – 50 km/h.",
+      "bytes": 10552
+    },
+    "do-not-enter.svg": {
+      "commons_file": "CA-MUTCDC RB-023.svg",
+      "commons_url": "https://commons.wikimedia.org/wiki/File:CA-MUTCDC_RB-023.svg",
+      "licence": "Public domain",
+      "description": "Do not enter.",
+      "bytes": 3727
+    },
+    "one-way.svg": {
+      "commons_file": "CA-MUTCDC RB-021-L.svg",
+      "commons_url": "https://commons.wikimedia.org/wiki/File:CA-MUTCDC_RB-021-L.svg",
+      "licence": "Public domain",
+      "description": "One way.",
+      "bytes": 3635
+    },
+    "no-parking.svg": {
+      "commons_file": "CA-MUTCDC RB-052-EN.svg",
+      "commons_url": "https://commons.wikimedia.org/wiki/File:CA-MUTCDC_RB-052-EN.svg",
+      "licence": "Public domain",
+      "description": "No parking at indicated times on indicated days of the week.",
+      "bytes": 19494
+    },
+    "no-uturn.svg": {
+      "commons_file": "CA-MUTCDC RB-016.svg",
+      "commons_url": "https://commons.wikimedia.org/wiki/File:CA-MUTCDC_RB-016.svg",
+      "licence": "Public domain",
+      "description": "No U-turn.",
+      "bytes": 5115
+    },
+    "no-right-turn.svg": {
+      "commons_file": "CA-ON road sign Rb-011A (B).svg",
+      "commons_url": "https://commons.wikimedia.org/wiki/File:CA-ON_road_sign_Rb-011A_(B).svg",
+      "licence": "Public domain",
+      "description": "No right turn. (with hours of the day and days of the week when the prohibition applies)",
+      "bytes": 23765
+    },
+    "keep-right.svg": {
+      "commons_file": "CA-MUTCDC RB-025-R.svg",
+      "commons_url": "https://commons.wikimedia.org/wiki/File:CA-MUTCDC_RB-025-R.svg",
+      "licence": "Public domain",
+      "description": "Keep right.",
+      "bytes": 3291
+    },
+    "school-zone.svg": {
+      "commons_file": "CA-MUTCDC WC-001.svg",
+      "commons_url": "https://commons.wikimedia.org/wiki/File:CA-MUTCDC_WC-001.svg",
+      "licence": "Public domain",
+      "description": "School zone.",
+      "bytes": 7146
+    },
+    "pedestrian-crossing.svg": {
+      "commons_file": "CA-MUTCDC RA-004-R.svg",
+      "commons_url": "https://commons.wikimedia.org/wiki/File:CA-MUTCDC_RA-004-R.svg",
+      "licence": "Public domain",
+      "description": "Pedestrian crosswalk.",
+      "bytes": 3250
+    },
+    "railway-ahead.svg": {
+      "commons_file": "CA-MUTCDC WA-018.svg",
+      "commons_url": "https://commons.wikimedia.org/wiki/File:CA-MUTCDC_WA-018.svg",
+      "licence": "Public domain",
+      "description": "This sign warns of a railway crossing.",
+      "bytes": 3826
+    },
+    "slippery.svg": {
+      "commons_file": "CA-MUTCDC WC-023.svg",
+      "commons_url": "https://commons.wikimedia.org/wiki/File:CA-MUTCDC_WC-023.svg",
+      "licence": "Public domain",
+      "description": "Slippery surface when wet.",
+      "bytes": 8704
+    },
+    "merge.svg": {
+      "commons_file": "CA-MUTCDC WA-016-R.svg",
+      "commons_url": "https://commons.wikimedia.org/wiki/File:CA-MUTCDC_WA-016-R.svg",
+      "licence": "Public domain",
+      "description": "This sign warns of an onramp on the right.",
+      "bytes": 2742
+    },
+    "bicycle-crossing.svg": {
+      "commons_file": "CA-MUTCDC WC-007-R.svg",
+      "commons_url": "https://commons.wikimedia.org/wiki/File:CA-MUTCDC_WC-007-R.svg",
+      "licence": "Public domain",
+      "description": "Bicycle crossing ahead.",
+      "bytes": 5703
+    },
+    "construction-1km.svg": {
+      "commons_file": "Ontario TC-1A.svg",
+      "commons_url": "https://commons.wikimedia.org/wiki/File:Ontario_TC-1A.svg",
+      "licence": "Public domain",
+      "description": "Construction ahead in 1 kilometre.",
+      "bytes": 13995
+    },
+    "hospital.svg": {
+      "commons_file": "MUTCDC IC-10.svg",
+      "commons_url": "https://commons.wikimedia.org/wiki/File:MUTCDC_IC-10.svg",
+      "licence": "Public domain",
+      "description": "Hospital.",
+      "bytes": 3362
+    },
+    "diesel.svg": {
+      "commons_file": "Canada Diesel Station Sign.svg",
+      "commons_url": "https://commons.wikimedia.org/wiki/File:Canada_Diesel_Station_Sign.svg",
+      "licence": "Public domain",
+      "description": "Road sign in Canada indicating a nearby diesel fuel station.",
+      "bytes": 4513
+    },
+    "school-bus.svg": {
+      "commons_file": "CA-MUTCDC WC-009.svg",
+      "commons_url": "https://commons.wikimedia.org/wiki/File:CA-MUTCDC_WC-009.svg",
+      "licence": "Public domain",
+      "description": "School bus stop ahead.",
+      "bytes": 7770
+    },
+    "crosswind.svg": {
+      "commons_file": "CA-MUTCDC WC-024-R.svg",
+      "commons_url": "https://commons.wikimedia.org/wiki/File:CA-MUTCDC_WC-024-R.svg",
+      "licence": "Public domain",
+      "description": "This sign warns that a strong crosswind may topple a commercial vehicle.",
+      "bytes": 7168
+    },
+    "bilingual-stop.svg": {
+      "commons_file": "Bi-lingual Canadian stop sign.svg",
+      "commons_url": "https://commons.wikimedia.org/wiki/File:Bi-lingual_Canadian_stop_sign.svg",
+      "licence": "CC BY-SA 4.0",
+      "description": "Bi-lingual Canadian stop sign with French at the top and English on the bottom.  This W3C-unspecified vector image was created with Inkscape .  Canadian stop sign with English on the top and French on",
+      "bytes": 7400
+    },
+    "arret-quebec.svg": {
+      "commons_file": "CA-QC road sign P-010-fr.svg",
+      "commons_url": "https://commons.wikimedia.org/wiki/File:CA-QC_road_sign_P-010-fr.svg",
+      "licence": "Public domain",
+      "description": "Stop.",
+      "bytes": 4408
+    }
+  },
+  "removed": {
+    "Curve ahead sign": [
+      "Alberta",
+      "British Columbia",
+      "Manitoba",
+      "New Brunswick",
+      "Newfoundland and Labrador",
+      "Nova Scotia",
+      "Ontario",
+      "Prince Edward Island",
+      "Quebec",
+      "Saskatchewan"
+    ],
+    "Traffic lights ahead sign": [
+      "Alberta",
+      "British Columbia",
+      "Manitoba",
+      "New Brunswick",
+      "Newfoundland and Labrador",
+      "Nova Scotia",
+      "Ontario",
+      "Prince Edward Island",
+      "Quebec",
+      "Saskatchewan"
+    ],
+    "Animal crossing sign": [
+      "Alberta",
+      "British Columbia",
+      "Manitoba",
+      "New Brunswick",
+      "Newfoundland and Labrador",
+      "Nova Scotia",
+      "Ontario",
+      "Prince Edward Island",
+      "Quebec",
+      "Saskatchewan"
+    ],
+    "Route marker / highway guide sign": [
+      "Alberta",
+      "British Columbia",
+      "Manitoba",
+      "New Brunswick",
+      "Newfoundland and Labrador",
+      "Nova Scotia",
+      "Ontario",
+      "Prince Edward Island",
+      "Quebec",
+      "Saskatchewan"
+    ],
+    "Parking guide sign": [
+      "Alberta",
+      "British Columbia",
+      "Manitoba",
+      "New Brunswick",
+      "Newfoundland and Labrador",
+      "Nova Scotia",
+      "Ontario",
+      "Prince Edward Island",
+      "Quebec",
+      "Saskatchewan"
+    ],
+    "Rest area sign": [
+      "Alberta",
+      "British Columbia",
+      "Manitoba",
+      "New Brunswick",
+      "Newfoundland and Labrador",
+      "Nova Scotia",
+      "Ontario",
+      "Prince Edward Island",
+      "Quebec",
+      "Saskatchewan"
+    ],
+    "ARRET / Stop sign in Manitoba": [
+      "Manitoba"
+    ],
+    "Streetcar stop sign": [
+      "Ontario"
+    ],
+    "King's Highway route marker": [
+      "Ontario"
+    ],
+    "Cedez le passage (yield) sign": [
+      "Quebec"
+    ],
+    "Mountain pass / winter tire sign": [
+      "British Columbia"
+    ],
+    "Wildlife crossing sign": [
+      "British Columbia"
+    ],
+    "Playground zone sign": [
+      "Alberta"
+    ],
+    "Deer crossing sign": [
+      "Alberta"
+    ],
+    "Grid road / rural route sign": [
+      "Saskatchewan"
+    ],
+    "Farm vehicle warning sign": [
+      "Saskatchewan"
+    ],
+    "Fog / coastal warning sign": [
+      "Nova Scotia"
+    ],
+    "Moose crossing sign": [
+      "New Brunswick",
+      "Newfoundland and Labrador"
+    ],
+    "Confederation Trail crossing sign": [
+      "Prince Edward Island"
+    ]
+  },
+  "removed_reason": "No exact official sign image could be verified on Wikimedia Commons for that entry (generic, province-specific, or combined entry), so the entry was removed rather than filled in with a simplified drawing."
+}

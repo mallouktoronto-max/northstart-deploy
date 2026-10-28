@@ -209,10 +209,26 @@ TABLES = {
     "cms_lessons": "id INTEGER PRIMARY KEY, entry_id INTEGER, title TEXT, body TEXT, position INTEGER",
 }
 
+def _ensure_column(db, table, column, decl):
+    try:
+        cols = [r[1] for r in db.execute(f"PRAGMA table_info({table})").fetchall()]
+        if column not in cols:
+            db.execute(f"ALTER TABLE {table} ADD COLUMN {column} {decl}")
+    except Exception:
+        pass
+
 def init_db():
     db = get_db()
     for name, cols in TABLES.items():
         db.execute(f"CREATE TABLE IF NOT EXISTS {name} ({cols})")
+    for _t in ("qa_questions", "posts", "events", "rental_companies", "svc_pros"):
+        _ensure_column(db, _t, "is_hidden", "INTEGER DEFAULT 0")
+    _ensure_column(db, "ads", "status", "TEXT DEFAULT 'pending'")
+    try:
+        db.execute("UPDATE ads SET status='approved' WHERE status='pending' AND visible=1")
+        db.execute("UPDATE ads SET status='pending' WHERE status='pending' AND visible=0")
+    except Exception:
+        pass
     for k, v in DEFAULT_SETTINGS.items():
         db.execute("INSERT OR IGNORE INTO site_settings (key, value) VALUES (?, ?)", (k, v))
     db.commit()
@@ -362,9 +378,11 @@ def api_lists():
         with open(os.path.join(BASE_DIR, "data", "driving.json"), encoding="utf-8") as f:
             drv = json.load(f)
         fines = sum(len(p.get("fines", {}).get("cards", [])) for p in drv.get("provinces", []))
-        driving = {"provinces": len(drv.get("provinces", [])), "questions": 720, "signs": 260, "fines": fines}
+        questions = sum(len(p.get("practice_questions", [])) for p in drv.get("provinces", []))
+        signs = sum(len(p.get("road_signs", [])) for p in drv.get("provinces", []))
+        driving = {"provinces": len(drv.get("provinces", [])), "questions": questions, "signs": signs, "fines": fines}
     except Exception:
-        driving = {"provinces": 10, "questions": 720, "signs": 260, "fines": 265}
+        driving = {"provinces": 10, "questions": 720, "signs": 186, "fines": 265}
     try:
         with open(os.path.join(BASE_DIR, "data", "guides.json"), encoding="utf-8") as f:
             gd = json.load(f)
@@ -427,6 +445,14 @@ def api_driving():
             return jsonify(json.load(f))
     except FileNotFoundError:
         return jsonify({"error": "driving file not found"}), 404
+
+@app.route("/api/sign-sources")
+def api_sign_sources():
+    try:
+        with open(os.path.join(BASE_DIR, "data", "sign_sources.json"), encoding="utf-8") as f:
+            return jsonify(json.load(f))
+    except FileNotFoundError:
+        return jsonify({"error": "sign sources file not found"}), 404
 
 @app.route("/api/driving/provinces")
 def api_driving_provinces():
@@ -643,6 +669,12 @@ def admin_usage():
                     "most_used_routes": [dict(r) for r in per_route],
                     "note": "Per-day counts in America/Winnipeg time are computed in the admin UI from created_at."})
 
+@app.route("/admin/settings", methods=["GET"])
+def admin_settings_get():
+    guard=admin_guard()
+    if guard: return guard
+    init_db(); return jsonify({"settings": get_settings()})
+
 @app.route("/admin/settings", methods=["POST"])
 def admin_settings():
     guard = admin_guard()
@@ -743,7 +775,7 @@ def api_qa():
         d=request.get_json(silent=True) or {}
         if not d.get("title") or not d.get("body"): return jsonify({"error":"Title and body are required."}),400
         cur=db.execute("INSERT INTO qa_questions (user_id,title,body,created_at) VALUES (0,?,?,?)",(d["title"],d["body"],now_iso())); db.commit(); return jsonify({"ok":True,"id":cur.lastrowid})
-    rows=db.execute("SELECT * FROM qa_questions ORDER BY id DESC LIMIT 100").fetchall(); out=[]
+    rows=db.execute("SELECT * FROM qa_questions WHERE COALESCE(is_hidden,0)=0 ORDER BY id DESC LIMIT 100").fetchall(); out=[]
     for r in rows:
         q=dict(r); q["answers"]=[dict(a) for a in db.execute("SELECT * FROM qa_answers WHERE question_id=? ORDER BY id",(r["id"],)).fetchall()]; out.append(q)
     return jsonify(out)
@@ -759,7 +791,7 @@ def api_posts():
         d=request.get_json(silent=True) or {}
         if not d.get("body"): return jsonify({"error":"Post text is required."}),400
         cur=db.execute("INSERT INTO posts (user_id,body,created_at) VALUES (0,?,?)",(d["body"],now_iso())); db.commit(); return jsonify({"ok":True,"id":cur.lastrowid})
-    rows=db.execute("SELECT * FROM posts ORDER BY id DESC LIMIT 100").fetchall(); return jsonify([dict(r) for r in rows])
+    rows=db.execute("SELECT * FROM posts WHERE COALESCE(is_hidden,0)=0 ORDER BY id DESC LIMIT 100").fetchall(); return jsonify([dict(r) for r in rows])
 @app.route("/api/events", methods=["GET","POST"])
 def api_events():
     init_db(); db=get_db()
@@ -767,7 +799,7 @@ def api_events():
         d=request.get_json(silent=True) or {}
         if not d.get("title") or not d.get("event_date"): return jsonify({"error":"Title and date are required."}),400
         cur=db.execute("INSERT INTO events (title,city,description,event_date) VALUES (?,?,?,?)",(d["title"],(d.get("city") or ""),(d.get("description") or ""),d["event_date"])); db.commit(); return jsonify({"ok":True,"id":cur.lastrowid})
-    rows=db.execute("SELECT * FROM events ORDER BY event_date LIMIT 100").fetchall(); return jsonify([dict(r) for r in rows])
+    rows=db.execute("SELECT * FROM events WHERE COALESCE(is_hidden,0)=0 ORDER BY event_date LIMIT 100").fetchall(); return jsonify([dict(r) for r in rows])
 @app.route("/api/donations", methods=["POST"])
 def api_donation():
     init_db(); d=request.get_json(silent=True) or {}
@@ -783,7 +815,7 @@ def api_rentals():
         d=request.get_json(silent=True) or {}
         if not d.get("name") or not d.get("city"): return jsonify({"error":"Company name and city are required."}),400
         cur=db.execute("INSERT INTO rental_companies (name,city,approved) VALUES (?,?,0)",(d["name"],d["city"])); db.commit(); return jsonify({"ok":True,"id":cur.lastrowid,"note":"Submitted for admin review."})
-    rows=db.execute("SELECT * FROM rental_companies WHERE approved=1 ORDER BY id").fetchall(); return jsonify([dict(r) for r in rows])
+    rows=db.execute("SELECT * FROM rental_companies WHERE approved=1 AND COALESCE(is_hidden,0)=0 ORDER BY id").fetchall(); return jsonify([dict(r) for r in rows])
 @app.route("/api/services", methods=["GET","POST"])
 def api_services():
     init_db(); db=get_db()
@@ -791,7 +823,7 @@ def api_services():
         d=request.get_json(silent=True) or {}
         if not d.get("name") or not d.get("trade"): return jsonify({"error":"Name and trade are required."}),400
         cur=db.execute("INSERT INTO svc_pros (name,trade,city,verified) VALUES (?,?,?,0)",(d["name"],d["trade"],(d.get("city") or ""))); db.commit(); return jsonify({"ok":True,"id":cur.lastrowid,"note":"Submitted for admin verification."})
-    rows=db.execute("SELECT * FROM svc_pros WHERE verified=1 ORDER BY id").fetchall(); return jsonify([dict(r) for r in rows])
+    rows=db.execute("SELECT * FROM svc_pros WHERE verified=1 AND COALESCE(is_hidden,0)=0 ORDER BY id").fetchall(); return jsonify([dict(r) for r in rows])
 @app.route("/api/track/complete", methods=["POST"])
 def api_track_complete():
     init_db(); d=request.get_json(silent=True) or {}
@@ -855,13 +887,74 @@ def api_consulates():
 @app.route("/admin/panel")
 def admin_panel():
     if not require_admin(): return jsonify({"error":"Forbidden"}), 403
-    tabs="Overview, Jobs, Ads, Members, Community, Messages, Rentals and Services, Settings"
-    return Response(f"<h1>Admin panel</h1><p>Tabs in order: {tabs}.</p><p>Overview: visits stats card first, then Administrative News (/admin/news.json), then Usage Statistics (/admin/usage.json). Jobs: approve/hide via /admin/jobs endpoints. Settings: /admin/settings with launch switches and donation/inquiry email in site_settings, never hard-coded.</p>", mimetype="text/html")
+    return Response(ADMIN_PANEL_HTML, mimetype="text/html")
+
+ADMIN_PANEL_HTML = """<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin panel — NorthStart Canada</title><style>
+body{margin:0;font-family:system-ui,Arial,sans-serif;background:#0A1F2B;color:#fff;padding:20px}
+a{color:#F08A24} h1{color:#fff} h2{color:#fff;border-bottom:1px solid #24465A;padding-bottom:6px}
+.card{background:#122E3D;border:1px solid #24465A;border-radius:12px;padding:16px;margin:14px 0}
+button{background:linear-gradient(135deg,#F59A2E,#E67E14);color:#1E2426;border:0;border-radius:999px;padding:9px 18px;font-weight:700;cursor:pointer;margin:3px}
+button.sec{background:#16394D;color:#F08A24;border:1.5px solid #F08A24}
+input,select,textarea{width:100%;padding:10px;margin:6px 0;border:1.5px solid #24465A;border-radius:10px;background:#16394D;color:#fff;font-size:15px}
+label{display:block;margin:8px 0;font-weight:600} .count{color:#F08A24;font-weight:800}
+table{width:100%;border-collapse:collapse} td,th{border-bottom:1px solid #24465A;padding:8px;text-align:left;vertical-align:top}
+.empty{color:#9AB0BE}
+</style></head><body>
+<h1>Admin panel</h1><p>Every section below is a category. Counts come from the live database — nothing is invented. Empty sections say so.</p>
+<nav>
+<button class="sec" onclick="showCat('overview')">Overview</button>
+<button class="sec" onclick="showCat('jobs')">Jobs</button>
+<button class="sec" onclick="showCat('ads')">Ads</button>
+<button class="sec" onclick="showCat('members')">Members</button>
+<button class="sec" onclick="showCat('community')">Community</button>
+<button class="sec" onclick="showCat('messages')">Messages</button>
+<button class="sec" onclick="showCat('rentals')">Rentals and Services</button>
+<button class="sec" onclick="showCat('settings')">Settings</button>
+</nav>
+<div id="cat-overview" class="card"><h2>Overview</h2>
+<div class="card"><h3>Visits (first)</h3><div id="ov-visits">Loading…</div></div>
+<div class="card"><h3>Administrative News</h3><div id="ov-news">Loading…</div></div>
+<div class="card"><h3>Usage Statistics</h3><div id="ov-usage">Loading…</div></div></div>
+<div id="cat-jobs" class="card" style="display:none"><h2>Jobs</h2>
+<p>Filter: <select id="job-status" onchange="loadJobs()"><option value="pending">Pending</option><option value="approved">Approved</option><option value="rejected">Rejected</option></select></p><div id="job-list">Loading…</div></div>
+<div id="cat-ads" class="card" style="display:none"><h2>Ads</h2>
+<p>Filter: <select id="ad-status" onchange="loadAds()"><option value="pending">Pending</option><option value="approved">Approved</option><option value="rejected">Rejected</option></select></p><div id="ad-list">Loading…</div></div>
+<div id="cat-members" class="card" style="display:none"><h2>Members</h2>
+<label>Search members<input id="member-q" oninput="loadMembers()" placeholder="Search by name or email…"></label><div id="member-list">Loading…</div>
+<p>VIP is manual admin activation only, OFF by default. No payment is taken on this site.</p></div>
+<div id="cat-community" class="card" style="display:none"><h2>Community</h2>
+<p>Filter: <select id="com-kind" onchange="loadCommunity()"><option value="qa">Q&amp;A</option><option value="posts">Posts</option><option value="events">Events</option></select></p><div id="com-list">Loading…</div></div>
+<div id="cat-messages" class="card" style="display:none"><h2>Messages</h2>
+<p>Filter: <select id="msg-kind" onchange="loadMessages()"><option value="inquiries">Inquiries</option><option value="job_applications">Job applications</option><option value="admin_messages">Admin messages</option></select></p><div id="msg-list">Loading…</div></div>
+<div id="cat-rentals" class="card" style="display:none"><h2>Rentals and Services</h2>
+<p>Filter: <select id="rs-kind" onchange="loadRentals()"><option value="rentals">Rentals</option><option value="services">Services</option></select>
+<select id="rs-status" onchange="loadRentals()"><option value="pending">Pending</option><option value="approved">Approved</option><option value="rejected">Rejected</option></select></p><div id="rs-list">Loading…</div></div>
+<div id="cat-settings" class="card" style="display:none"><h2>Settings</h2><div id="set-form">Loading…</div></div>
+<script>
+function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function showCat(c){document.querySelectorAll('[id^="cat-"]').forEach(function(e){e.style.display='none';});document.getElementById('cat-'+c).style.display='block';if(c==='overview')loadOverview();if(c==='jobs')loadJobs();if(c==='ads')loadAds();if(c==='members')loadMembers();if(c==='community')loadCommunity();if(c==='messages')loadMessages();if(c==='rentals')loadRentals();if(c==='settings')loadSettings();}
+function post(url,body){return fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body||{})}).then(function(r){return r.json();});}
+function loadOverview(){fetch('/admin/overview.json').then(function(r){return r.json();}).then(function(j){document.getElementById('ov-visits').innerHTML='<p>Total visit entries: <b class="count">'+j.visits.total+'</b> &nbsp; Unique sessions: <b class="count">'+j.visits.unique_sessions+'</b></p>'+j.visits.by_route.map(function(r){return '<p>'+esc(r.route)+': '+r.c+'</p>';}).join('');document.getElementById('ov-usage').innerHTML='<p>By device:</p>'+j.visits.by_device.map(function(r){return '<p>'+esc(r.device_class)+': '+r.c+'</p>';}).join('')+'<p>By country:</p>'+j.visits.by_country.map(function(r){return '<p>'+esc(r.country)+': '+r.c+'</p>';}).join('');});fetch('/admin/news.json').then(function(r){return r.json();}).then(function(j){document.getElementById('ov-news').innerHTML=j.length?j.slice(0,20).map(function(x){return '<p>'+esc(x.type||'')+' — '+esc(x.at||'')+'</p>';}).join(''):'<p class="empty">No administrative news yet.</p>';});}
+function loadJobs(){var st=document.getElementById('job-status').value;fetch('/admin/jobs/list?status='+st).then(function(r){return r.json();}).then(function(j){document.getElementById('job-list').innerHTML=j.length?j.map(function(x){return '<div class="card"><p><b>'+esc(x.title)+'</b> — '+esc(x.company||'')+' ('+esc(x.city||'')+')</p><button onclick="post(&quot;/admin/jobs/'+x.id+'/approve&quot;).then(loadJobs)">Approve</button><button class="sec" onclick="post(&quot;/admin/jobs/'+x.id+'/reject&quot;).then(loadJobs)">Reject</button><button class="sec" onclick="post(&quot;/admin/jobs/'+x.id+'/hide&quot;).then(loadJobs)">Hide</button></div>';}).join(''):'<p class="empty">No jobs in this category.</p>';});}
+function loadAds(){var st=document.getElementById('ad-status').value;fetch('/admin/ads?status='+st).then(function(r){return r.json();}).then(function(j){var list=j.ads||j;document.getElementById('ad-list').innerHTML=list.length?list.map(function(x){return '<div class="card"><p>'+esc(x.caption||'')+' — '+esc(x.link||'')+'</p><button onclick="post(&quot;/admin/ads/'+x.id+'/approve&quot;).then(loadAds)">Approve</button><button class="sec" onclick="post(&quot;/admin/ads/'+x.id+'/reject&quot;).then(loadAds)">Reject</button></div>';}).join(''):'<p class="empty">No ads in this category.</p>';});}
+function loadMembers(){var q=(document.getElementById('member-q').value||'');fetch('/admin/members?q='+encodeURIComponent(q)).then(function(r){return r.json();}).then(function(j){document.getElementById('member-list').innerHTML=j.length?j.map(function(x){return '<div class="card"><p>'+esc(x.name||'')+' — '+esc(x.email||'')+' — points '+x.points+' — VIP '+(x.vip?'ON':'OFF')+'</p><button onclick="post(&quot;/admin/members/'+x.id+'/vip&quot;,{vip:'+(x.vip?0:1)+'}).then(loadMembers)">Turn VIP '+(x.vip?'OFF':'ON')+'</button></div>';}).join(''):'<p class="empty">No members match that search.</p>';});}
+function loadCommunity(){var k=document.getElementById('com-kind').value;fetch('/admin/community').then(function(r){return r.json();}).then(function(j){var list=(k==='qa'?j.qa:(k==='posts'?j.posts:j.events));document.getElementById('com-list').innerHTML=list.length?list.map(function(x){return '<div class="card"><p>'+esc(x.title||x.body||'')+'</p><button class="sec" onclick="post(&quot;/admin/community/'+k+'/'+x.id+'/hide&quot;).then(loadCommunity)">Hide</button></div>';}).join(''):'<p class="empty">Nothing in this community category.</p>';});}
+function loadMessages(){var k=document.getElementById('msg-kind').value;fetch('/admin/messages').then(function(r){return r.json();}).then(function(j){var list=j[k]||[];document.getElementById('msg-list').innerHTML=list.length?list.map(function(x){return '<div class="card"><p>'+esc(x.body||x.message||x.email||'')+'</p></div>';}).join(''):'<p class="empty">No messages in this category.</p>';});}
+function loadRentals(){var k=document.getElementById('rs-kind').value,st=document.getElementById('rs-status').value;fetch('/admin/rentals-services?kind='+k+'&status='+st).then(function(r){return r.json();}).then(function(j){var list=j.items||[];document.getElementById('rs-list').innerHTML=list.length?list.map(function(x){return '<div class="card"><p>'+esc(x.name||'')+' — '+esc(x.city||x.trade||'')+'</p><button onclick="post(&quot;/admin/rentals-services/'+k+'/'+x.id+'/approve&quot;).then(loadRentals)">Approve</button><button class="sec" onclick="post(&quot;/admin/rentals-services/'+k+'/'+x.id+'/reject&quot;).then(loadRentals)">Reject</button></div>';}).join(''):'<p class="empty">Nothing in this category.</p>';});}
+function loadSettings(){fetch('/admin/settings').then(function(r){return r.json();}).then(function(j){var s=j.settings||{};document.getElementById('set-form').innerHTML='<label>Registration open<select id="s-registration_open"><option value="1">On</option><option value="0">Off</option></select></label><label>Show ticker<select id="s-show_ticker"><option value="1">On</option><option value="0">Off</option></select></label><label>Show carousel<select id="s-show_carousel"><option value="1">On</option><option value="0">Off</option></select></label><label>Show top helpers<select id="s-show_top_helpers"><option value="1">On</option><option value="0">Off</option></select></label><label>VIP enabled (manual activation only)<select id="s-vip_enabled"><option value="1">On</option><option value="0">Off</option></select></label><label>Donation email<input id="s-donation_email"></label><label>Inquiry email<input id="s-inquiry_email"></label><button onclick="saveSettings()">Save settings</button><p id="set-msg"></p>';['registration_open','show_ticker','show_carousel','show_top_helpers','vip_enabled'].forEach(function(k){document.getElementById('s-'+k).value=s[k]||'0';});document.getElementById('s-donation_email').value=s.donation_email||'';document.getElementById('s-inquiry_email').value=s.inquiry_email||'';});}
+function saveSettings(){var body={};['registration_open','show_ticker','show_carousel','show_top_helpers','vip_enabled'].forEach(function(k){body[k]=document.getElementById('s-'+k).value;});body.donation_email=document.getElementById('s-donation_email').value;body.inquiry_email=document.getElementById('s-inquiry_email').value;post('/admin/settings',body).then(function(){document.getElementById('set-msg').textContent='Settings saved.';});}
+loadOverview();
+</script></body></html>"""
 @app.route("/admin/jobs/list")
 def admin_jobs_list():
     guard=admin_guard()
     if guard: return guard
-    init_db(); rows=get_db().execute("SELECT * FROM jobs ORDER BY id DESC LIMIT 200").fetchall(); return jsonify([dict(r) for r in rows])
+    init_db(); st=request.args.get("status","pending")
+    if st=="approved": rows=get_db().execute("SELECT * FROM jobs WHERE approved=1 AND is_hidden=0 ORDER BY id DESC LIMIT 200").fetchall()
+    elif st=="rejected": rows=get_db().execute("SELECT * FROM jobs WHERE is_hidden=1 ORDER BY id DESC LIMIT 200").fetchall()
+    else: rows=get_db().execute("SELECT * FROM jobs WHERE approved=0 AND is_hidden=0 ORDER BY id DESC LIMIT 200").fetchall()
+    return jsonify([dict(r) for r in rows])
 @app.route("/admin/jobs/<int:job_id>/approve", methods=["POST"])
 def admin_approve_job(job_id):
     guard=admin_guard()
@@ -871,7 +964,10 @@ def admin_approve_job(job_id):
 def admin_members():
     guard=admin_guard()
     if guard: return guard
-    init_db(); rows=get_db().execute("SELECT id,name,email,points,vip,created_at FROM users ORDER BY id DESC LIMIT 200").fetchall(); return jsonify([dict(r) for r in rows])
+    init_db(); q=(request.args.get("q") or "").strip()
+    if q: rows=get_db().execute("SELECT id,name,email,points,vip,created_at FROM users WHERE name LIKE ? OR email LIKE ? ORDER BY id DESC LIMIT 200",("%"+q+"%","%"+q+"%")).fetchall()
+    else: rows=get_db().execute("SELECT id,name,email,points,vip,created_at FROM users ORDER BY id DESC LIMIT 200").fetchall()
+    return jsonify([dict(r) for r in rows])
 @app.route("/admin/community")
 def admin_community():
     guard=admin_guard()
@@ -886,7 +982,16 @@ def admin_messages():
 def admin_rentals_services():
     guard=admin_guard()
     if guard: return guard
-    init_db(); db=get_db(); return jsonify({"rental_companies": [dict(r) for r in db.execute("SELECT * FROM rental_companies ORDER BY id DESC LIMIT 100").fetchall()], "svc_pros": [dict(r) for r in db.execute("SELECT * FROM svc_pros ORDER BY id DESC LIMIT 100").fetchall()]})
+    init_db(); db=get_db(); kind=request.args.get("kind","rentals"); st=request.args.get("status","pending")
+    if kind=="services":
+        if st=="approved": rows=db.execute("SELECT id,name,trade,city,verified,is_hidden FROM svc_pros WHERE verified=1 AND COALESCE(is_hidden,0)=0 ORDER BY id DESC LIMIT 100").fetchall()
+        elif st=="rejected": rows=db.execute("SELECT id,name,trade,city,verified,is_hidden FROM svc_pros WHERE COALESCE(is_hidden,0)=1 ORDER BY id DESC LIMIT 100").fetchall()
+        else: rows=db.execute("SELECT id,name,trade,city,verified,is_hidden FROM svc_pros WHERE verified=0 AND COALESCE(is_hidden,0)=0 ORDER BY id DESC LIMIT 100").fetchall()
+        return jsonify({"items":[dict(r) for r in rows]})
+    if st=="approved": rows=db.execute("SELECT id,name,city,approved,is_hidden FROM rental_companies WHERE approved=1 AND COALESCE(is_hidden,0)=0 ORDER BY id DESC LIMIT 100").fetchall()
+    elif st=="rejected": rows=db.execute("SELECT id,name,city,approved,is_hidden FROM rental_companies WHERE COALESCE(is_hidden,0)=1 ORDER BY id DESC LIMIT 100").fetchall()
+    else: rows=db.execute("SELECT id,name,city,approved,is_hidden FROM rental_companies WHERE approved=0 AND COALESCE(is_hidden,0)=0 ORDER BY id DESC LIMIT 100").fetchall()
+    return jsonify({"items":[dict(r) for r in rows]})
 @app.route("/admin/ads", methods=["GET","POST"])
 def admin_ads():
     guard=admin_guard()
@@ -896,9 +1001,78 @@ def admin_ads():
         d=request.get_json(silent=True) or {}
         if is_blocked_job(d.get("caption") or "", d.get("business_name") or "", d.get("caption") or ""):
             return jsonify({"error":"Advertisement rejected by screening: alcohol, pork, gambling or doubtful businesses are never listed."}), 400
-        cur=db.execute("INSERT INTO ads (image_url,caption,link,visible) VALUES (?,?,?,1)",((d.get("image_url") or ""),(d.get("caption") or ""),(d.get("link") or ""))); db.commit(); return jsonify({"ok":True,"id":cur.lastrowid})
-    rows=db.execute("SELECT * FROM ads ORDER BY id DESC").fetchall(); return jsonify([dict(r) for r in rows])
+        cur=db.execute("INSERT INTO ads (image_url,caption,link,visible,status) VALUES (?,?,?,0,'pending')",((d.get("image_url") or ""),(d.get("caption") or ""),(d.get("link") or ""))); db.commit(); return jsonify({"ok":True,"id":cur.lastrowid,"note":"Ad is pending admin approval and is not shown until approved."})
+    st=request.args.get("status","pending")
+    if st=="approved": rows=db.execute("SELECT * FROM ads WHERE status='approved' ORDER BY id DESC").fetchall()
+    elif st=="rejected": rows=db.execute("SELECT * FROM ads WHERE status='rejected' ORDER BY id DESC").fetchall()
+    else: rows=db.execute("SELECT * FROM ads WHERE status='pending' ORDER BY id DESC").fetchall()
+    return jsonify({"ads":[dict(r) for r in rows]})
 
+
+
+@app.route("/admin/overview.json")
+def admin_overview():
+    guard=admin_guard()
+    if guard: return guard
+    init_db(); db=get_db()
+    total=db.execute("SELECT COUNT(*) c FROM visits").fetchone()["c"]
+    uniq=db.execute("SELECT COUNT(DISTINCT session_id) c FROM visits").fetchone()["c"]
+    by_route=[dict(r) for r in db.execute("SELECT route, COUNT(*) c FROM visits GROUP BY route ORDER BY c DESC LIMIT 20").fetchall()]
+    by_device=[dict(r) for r in db.execute("SELECT device_class, COUNT(*) c FROM visits GROUP BY device_class ORDER BY c DESC").fetchall()]
+    by_country=[dict(r) for r in db.execute("SELECT country, COUNT(*) c FROM visits GROUP BY country ORDER BY c DESC LIMIT 20").fetchall()]
+    return jsonify({"visits":{"total":total,"unique_sessions":uniq,"by_route":by_route,"by_device":by_device,"by_country":by_country}})
+
+@app.route("/admin/jobs/<int:job_id>/reject", methods=["POST"])
+def admin_reject_job(job_id):
+    guard=admin_guard()
+    if guard: return guard
+    init_db(); db=get_db(); db.execute("UPDATE jobs SET approved=0, is_hidden=1 WHERE id=?",(job_id,)); db.commit(); return jsonify({"ok":True,"rejected":True})
+
+@app.route("/admin/members/<int:member_id>/vip", methods=["POST"])
+def admin_member_vip(member_id):
+    guard=admin_guard()
+    if guard: return guard
+    init_db(); d=request.get_json(silent=True) or {}; db=get_db(); db.execute("UPDATE users SET vip=? WHERE id=?",(1 if d.get("vip") else 0, member_id)); db.commit(); return jsonify({"ok":True})
+
+@app.route("/admin/community/<kind>/<int:item_id>/hide", methods=["POST"])
+def admin_community_hide(kind, item_id):
+    guard=admin_guard()
+    if guard: return guard
+    table={"qa":"qa_questions","posts":"posts","events":"events"}.get(kind)
+    if not table: return jsonify({"error":"unknown community kind"}), 400
+    init_db(); db=get_db(); db.execute(f"UPDATE {table} SET is_hidden=1 WHERE id=?",(item_id,)); db.commit(); return jsonify({"ok":True,"hidden":True})
+
+@app.route("/admin/ads/<int:ad_id>/approve", methods=["POST"])
+def admin_ad_approve(ad_id):
+    guard=admin_guard()
+    if guard: return guard
+    init_db(); db=get_db(); db.execute("UPDATE ads SET visible=1, status='approved' WHERE id=?",(ad_id,)); db.commit(); return jsonify({"ok":True})
+
+@app.route("/admin/ads/<int:ad_id>/reject", methods=["POST"])
+def admin_ad_reject(ad_id):
+    guard=admin_guard()
+    if guard: return guard
+    init_db(); db=get_db(); db.execute("UPDATE ads SET visible=0, status='rejected' WHERE id=?",(ad_id,)); db.commit(); return jsonify({"ok":True})
+
+@app.route("/admin/rentals-services/<kind>/<int:item_id>/approve", methods=["POST"])
+def admin_rs_approve(kind, item_id):
+    guard=admin_guard()
+    if guard: return guard
+    init_db(); db=get_db()
+    if kind=="rentals": db.execute("UPDATE rental_companies SET approved=1, is_hidden=0 WHERE id=?",(item_id,))
+    elif kind=="services": db.execute("UPDATE svc_pros SET verified=1, is_hidden=0 WHERE id=?",(item_id,))
+    else: return jsonify({"error":"unknown kind"}), 400
+    db.commit(); return jsonify({"ok":True})
+
+@app.route("/admin/rentals-services/<kind>/<int:item_id>/reject", methods=["POST"])
+def admin_rs_reject(kind, item_id):
+    guard=admin_guard()
+    if guard: return guard
+    init_db(); db=get_db()
+    if kind=="rentals": db.execute("UPDATE rental_companies SET approved=0, is_hidden=1 WHERE id=?",(item_id,))
+    elif kind=="services": db.execute("UPDATE svc_pros SET verified=0, is_hidden=1 WHERE id=?",(item_id,))
+    else: return jsonify({"error":"unknown kind"}), 400
+    db.commit(); return jsonify({"ok":True})
 
 @app.route("/api/calc", methods=["POST"])
 def api_calc():

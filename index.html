@@ -15,7 +15,7 @@
   --font:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:280px}
 body{margin:0;font-family:var(--font);background:var(--bg);color:var(--white);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
 a{color:var(--orange)}
 a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
@@ -50,33 +50,33 @@ main{max-width:1100px;margin:0 auto;padding:28px 20px 40px}
 .tile b{color:#fff;font-size:19px;line-height:1.3}
 .tile p{margin:0;font-size:14.5px;color:var(--muted);line-height:1.5}
 .tile .count{display:inline-block;margin-top:4px;font-size:13px;font-weight:700;color:var(--orange);background:rgba(240,138,36,.14);border:1px solid rgba(240,138,36,.35);border-radius:var(--radius-pill);padding:3px 12px}
-#view{background:var(--light);color:var(--text);border-radius:var(--radius);padding:22px 20px}
-#view h2{font-size:1.45rem;line-height:1.3;margin:8px 0 12px;color:var(--teal)}
-#view h3{font-size:1.15rem;line-height:1.35;margin:16px 0 8px;color:var(--teal)}
-#view h4{font-size:1rem;line-height:1.4;margin:0 0 6px;color:var(--teal)}
+#view{background:var(--panel);color:#fff;border:1px solid var(--border-dark);border-radius:var(--radius);padding:28px 20px 22px;scroll-margin-top:280px}
+#view h2{font-size:1.45rem;line-height:1.3;margin:8px 0 12px;color:#fff}
+#view h3{font-size:1.15rem;line-height:1.35;margin:16px 0 8px;color:#fff}
+#view h4{font-size:1rem;line-height:1.4;margin:0 0 6px;color:var(--orange)}
 #view p{margin:8px 0}
-#view a{color:var(--teal)}
-.card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);box-shadow:0 2px 12px rgba(11,85,99,.10);padding:18px;margin:14px 0}
+#view a{color:var(--orange)}
+.card{background:var(--panel-2);border:1px solid var(--border-dark);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;margin:14px 0;color:#fff}
 .btn{background:linear-gradient(135deg,#F59A2E,#E67E14);color:#1E2426;border:0;border-radius:var(--radius-pill);padding:12px 22px;font-size:16px;font-weight:700;cursor:pointer;box-shadow:0 2px 8px rgba(240,138,36,.35);transition:transform .15s}
 .btn:hover{transform:translateY(-1px)}
 .btn:active{transform:scale(.98)}
-.tabbtn{background:#fff;color:var(--teal);border:1.5px solid var(--teal);border-radius:var(--radius-pill);padding:8px 15px;font-size:15px;font-weight:600;cursor:pointer;margin:3px}
-.tabbtn:hover{background:var(--teal-light)}
-.tabbtn.on{background:var(--teal);color:#fff}
-details{margin:10px 0;background:#fff;border:1px solid var(--border);border-radius:var(--radius-sm);padding:10px 14px}
-summary{cursor:pointer;font-weight:700;color:var(--teal)} details p{white-space:pre-line}
-#view input,#view textarea,#view select{width:100%;padding:12px 14px;margin:6px 0;border:1.5px solid var(--border);border-radius:var(--radius-sm);font-size:16px;background:#fff;color:var(--text)}
-#view input:focus,#view select:focus,#view textarea:focus{border-color:var(--teal);box-shadow:0 0 0 3px var(--teal-light)}
+.tabbtn{background:var(--panel);color:var(--orange);border:1.5px solid var(--orange);border-radius:var(--radius-pill);padding:8px 15px;font-size:15px;font-weight:600;cursor:pointer;margin:3px}
+.tabbtn:hover{background:var(--panel-2)}
+.tabbtn.on{background:linear-gradient(135deg,#F59A2E,#E67E14);color:#1E2426;border-color:transparent}
+details{margin:10px 0;background:var(--panel-2);border:1px solid var(--border-dark);border-radius:var(--radius-sm);padding:10px 14px}
+summary{cursor:pointer;font-weight:700;color:#fff} details p{white-space:pre-line}
+#view input,#view textarea,#view select{width:100%;padding:12px 14px;margin:6px 0;border:1.5px solid var(--border-dark);border-radius:var(--radius-sm);font-size:16px;background:var(--panel-2);color:#fff}
+#view input:focus,#view select:focus,#view textarea:focus{border-color:var(--orange);box-shadow:0 0 0 3px rgba(240,138,36,.25)}
 #view input[type=radio],#view input[type=checkbox]{width:auto;margin:0 8px 0 0;accent-color:var(--teal)}
 #view label{display:block;margin:10px 0;font-weight:600} #view label.inline{display:block;font-weight:400}
-.bad{color:#8a1f1f;font-weight:600} .ok{color:var(--teal);font-weight:700}
-.sign{display:flex;gap:14px;align-items:flex-start;margin:14px 0;background:#fff;border:1px solid var(--border);border-radius:var(--radius-sm);padding:12px}
+.bad{color:#FF9A8A;font-weight:600} .ok{color:#7ED492;font-weight:700}
+.sign{display:flex;gap:14px;align-items:flex-start;margin:14px 0;background:var(--panel-2);border:1px solid var(--border-dark);border-radius:var(--radius-sm);padding:12px}
 .sign svg{flex:0 0 auto}
 .filterbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:12px 0}
-.listitem{background:#fff;border:1px solid var(--border);border-left:4px solid var(--teal);border-radius:var(--radius-sm);box-shadow:0 2px 12px rgba(11,85,99,.10);padding:16px;margin:12px 0}
-.listitem h4{margin:0 0 6px;color:var(--teal)} .listitem p{margin:4px 0;color:var(--text)}
-.empty{background:var(--teal-light);border:1px dashed var(--teal);border-radius:var(--radius-sm);padding:16px;text-align:center;color:var(--teal-dark)}
-.result{background:var(--orange-soft);border:1px solid #F5D9B0;border-radius:var(--radius-sm);padding:14px 16px;margin-top:12px}
+.listitem{background:var(--panel-2);border:1px solid var(--border-dark);border-left:4px solid var(--orange);border-radius:var(--radius-sm);box-shadow:var(--shadow);padding:16px;margin:12px 0}
+.listitem h4{margin:0 0 6px;color:#fff} .listitem p{margin:4px 0;color:#fff}
+.empty{background:var(--panel-2);border:1px dashed var(--orange);border-radius:var(--radius-sm);padding:16px;text-align:center;color:var(--muted)}
+.result{background:rgba(240,138,36,.14);border:1px solid rgba(240,138,36,.45);border-radius:var(--radius-sm);padding:14px 16px;margin-top:12px;color:#fff}
 .site-footer{background:#132E40;border-top:1px solid var(--border-dark);padding:36px 20px 40px;text-align:center}
 .site-footer .tagline{color:var(--muted);font-size:15px;margin:0 0 6px}
 .site-footer .contact{color:var(--muted);font-size:14px;margin:0 0 18px}
@@ -88,7 +88,15 @@ summary{cursor:pointer;font-weight:700;color:var(--teal)} details p{white-space:
 .site-footer .copy{color:var(--muted-2);font-size:13px;margin:14px 0 0}
 .fab{position:fixed;right:20px;bottom:20px;z-index:30;width:56px;height:56px;border-radius:50%;background:var(--panel);border:2px solid var(--orange);color:#fff;font-size:26px;line-height:1;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,.45)}
 .fab:hover{transform:translateY(-2px)}
+.subgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:16px 0}
+@media(max-width:640px){.subgrid{grid-template-columns:repeat(2,1fr);gap:14px}}
+.subtile{background:var(--panel-2);border:1px solid var(--border-dark);border-radius:var(--radius);padding:22px 16px;text-align:center;text-decoration:none;color:#fff;min-height:160px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px}
+.subtile:hover{border-color:var(--orange);transform:translateY(-3px)}
+.subtile b{font-size:17px}
+.subtile p{margin:0;font-size:14px;color:var(--muted);line-height:1.5}
+.sign img{width:90px;height:90px;object-fit:contain;background:#fff;border-radius:12px;padding:6px;flex:0 0 auto}
 @media(max-width:640px){
+  html{scroll-padding-top:360px} #view{scroll-margin-top:360px}
   .header-row{flex-direction:column;align-items:stretch;padding:14px 16px 8px}
   .auth{width:100%;padding-top:4px}
   .auth .pill{flex:1;justify-content:center;padding:10px 8px;font-size:13px}
@@ -129,7 +137,7 @@ summary{cursor:pointer;font-weight:700;color:var(--teal)} details p{white-space:
     <div id="groups">Loading categories&hellip;</div>
   </div>
   </div>
-  <div id="view"><button type="button" id="back-btn" class="btn" style="display:none;margin-bottom:12px" onclick="location.hash='#/'">← Back to home</button><h2 id="view-title">Welcome</h2><div id="view-body"><p>Choose a section above.</p></div></div>
+  <div id="view"><button type="button" id="back-cat-btn" class="btn" style="display:none;margin-bottom:12px;margin-right:8px">← Back to category</button><button type="button" id="back-btn" class="btn" style="display:none;margin-bottom:12px" onclick="location.hash='#/'">← Back to home</button><h2 id="view-title">Welcome</h2><div id="view-body"><p>Choose a section above.</p></div></div>
 </main>
 <footer class="site-footer">
   <p class="tagline">Free help for people new to Canada.</p>
@@ -392,54 +400,13 @@ async function loadEnglish(){
     renderEnglish(data);
   }catch(e){ body.innerHTML='<p>English courses could not be loaded. Try again.</p>'; }
 }
-function signSVG(name){
-  const n=(name||'').toLowerCase();
-  const wrap=function(inner){ return '<svg width="90" height="90" viewBox="0 0 90 90" role="img" aria-label="'+esc(name)+'">'+inner+'</svg>'; };
-  const oct=function(txt,sub){ return wrap('<polygon points="45,3 76,14 87,45 76,76 45,87 14,76 3,45 14,14" fill="#c62828" stroke="#7f1414" stroke-width="2"/><text x="45" y="44" text-anchor="middle" font-size="16" font-weight="800" fill="#fff" font-family="system-ui, Arial, sans-serif">'+txt+'</text>'+(sub?'<text x="45" y="62" text-anchor="middle" font-size="11" font-weight="700" fill="#fff" font-family="system-ui, Arial, sans-serif">'+sub+'</text>':'')+''); };
-  const dia=function(fill,inner){ return wrap('<polygon points="45,3 87,45 45,87 3,45" fill="'+fill+'" stroke="#1E2426" stroke-width="2"/>'+inner); };
-  if(n.indexOf('bilingual')>=0) return oct('STOP','ARRÊT');
-  if(n.indexOf('arret')>=0||n.indexOf('arrêt')>=0) return oct('ARRÊT','');
-  if(n.indexOf('stop')>=0) return oct('STOP','');
-  if(n.indexOf('yield')>=0||n.indexOf('cedez')>=0) return wrap('<polygon points="45,87 3,8 87,8" fill="#fff" stroke="#c62828" stroke-width="6"/><text x="45" y="42" text-anchor="middle" font-size="13" font-weight="800" fill="#1E2426" font-family="system-ui, Arial, sans-serif">'+(n.indexOf('cedez')>=0?'CÉDEZ':'YIELD')+'</text>');
-  if(n.indexOf('speed limit')>=0) return wrap('<rect x="18" y="8" width="54" height="74" rx="4" fill="#fff" stroke="#1E2426" stroke-width="3"/><text x="45" y="40" text-anchor="middle" font-size="13" font-weight="800" fill="#1E2426" font-family="system-ui, Arial, sans-serif">SPEED</text><text x="45" y="58" text-anchor="middle" font-size="13" font-weight="800" fill="#1E2426" font-family="system-ui, Arial, sans-serif">LIMIT</text>');
-  if(n.indexOf('do not enter')>=0) return wrap('<circle cx="45" cy="45" r="40" fill="#c62828" stroke="#7f1414" stroke-width="2"/><rect x="12" y="39" width="66" height="12" fill="#fff"/>');
-  if(n.indexOf('one-way')>=0||n.indexOf('one way')>=0) return wrap('<rect x="8" y="22" width="74" height="46" rx="4" fill="#fff" stroke="#1E2426" stroke-width="3"/><polygon points="28,45 62,45 62,32 80,45 62,58 62,45" fill="#1E2426"/>');
-  if(n.indexOf('no parking')>=0) return wrap('<circle cx="45" cy="45" r="40" fill="#fff" stroke="#c62828" stroke-width="5"/><text x="45" y="60" text-anchor="middle" font-size="42" font-weight="800" fill="#1E2426" font-family="system-ui, Arial, sans-serif">P</text><line x1="17" y1="73" x2="73" y2="17" stroke="#c62828" stroke-width="6"/>');
-  if(n.indexOf('no u-turn')>=0) return wrap('<circle cx="45" cy="45" r="40" fill="#fff" stroke="#c62828" stroke-width="5"/><path d="M30 58 L30 40 A15 15 0 0 1 60 40 L60 52" fill="none" stroke="#1E2426" stroke-width="5"/><polygon points="60,52 52,44 68,44" fill="#1E2426"/><line x1="17" y1="73" x2="73" y2="17" stroke="#c62828" stroke-width="6"/>');
-  if(n.indexOf('no left')>=0||n.indexOf('no right')>=0){ const left=n.indexOf('no left')>=0; return wrap('<circle cx="45" cy="45" r="40" fill="#fff" stroke="#c62828" stroke-width="5"/><polygon points="'+(left?'58,45 28,45 28,32 10,45 28,58 28,45':'32,45 62,45 62,32 80,45 62,58 62,45')+'" fill="#1E2426"/><line x1="17" y1="73" x2="73" y2="17" stroke="#c62828" stroke-width="6"/>'); }
-  if(n.indexOf('keep right')>=0) return wrap('<rect x="8" y="22" width="74" height="46" rx="4" fill="#fff" stroke="#1E2426" stroke-width="3"/><polygon points="32,58 56,32 62,40 68,34 44,60" fill="#1E2426"/>');
-  if(n.indexOf('school zone')>=0) return wrap('<polygon points="45,3 84,28 84,68 45,87 6,68 6,28" fill="#fdd835" stroke="#1E2426" stroke-width="2"/><text x="45" y="50" text-anchor="middle" font-size="13" font-weight="800" fill="#1E2426" font-family="system-ui, Arial, sans-serif">SCHOOL</text>');
-  if(n.indexOf('school bus')>=0) return dia('#fdd835','<text x="45" y="50" text-anchor="middle" font-size="13" font-weight="800" fill="#1E2426" font-family="system-ui, Arial, sans-serif">BUS</text>');
-  if(n.indexOf('pedestrian')>=0) return dia('#fdd835','<rect x="28" y="30" width="34" height="6" fill="#fff"/><rect x="28" y="42" width="34" height="6" fill="#fff"/><rect x="28" y="54" width="34" height="6" fill="#fff"/>');
-  if(n.indexOf('railway')>=0) return dia('#fdd835','<line x1="25" y1="25" x2="65" y2="65" stroke="#1E2426" stroke-width="7"/><line x1="65" y1="25" x2="25" y2="65" stroke="#1E2426" stroke-width="7"/>');
-  if(n.indexOf('curve')>=0) return dia('#fdd835','<path d="M30 65 Q55 55 55 35 Q55 25 65 22" fill="none" stroke="#1E2426" stroke-width="5"/><polygon points="65,22 56,26 64,33" fill="#1E2426"/>');
-  if(n.indexOf('slippery')>=0||n.indexOf('fog')>=0||n.indexOf('coastal')>=0) return dia('#fdd835','<path d="M25 40 Q35 32 45 40 T65 40" fill="none" stroke="#1E2426" stroke-width="4"/><path d="M25 54 Q35 46 45 54 T65 54" fill="none" stroke="#1E2426" stroke-width="4"/>');
-  if(n.indexOf('merge')>=0) return dia('#fdd835','<path d="M30 65 L45 45 L45 25 M60 65 L45 45" fill="none" stroke="#1E2426" stroke-width="5"/>');
-  if(n.indexOf('traffic lights')>=0) return dia('#fdd835','<circle cx="45" cy="28" r="8" fill="#c62828"/><circle cx="45" cy="45" r="8" fill="#F08A24"/><circle cx="45" cy="62" r="8" fill="#2e7d32"/>');
-  if(n.indexOf('bicycle')>=0) return dia('#fdd835','<circle cx="30" cy="60" r="9" fill="none" stroke="#1E2426" stroke-width="3"/><circle cx="60" cy="60" r="9" fill="none" stroke="#1E2426" stroke-width="3"/><path d="M30 60 L45 38 L60 60 M45 38 L52 28 L62 28" fill="none" stroke="#1E2426" stroke-width="3"/>');
-  if(n.indexOf('construction')>=0) return dia('#F08A24','<text x="45" y="42" text-anchor="middle" font-size="11" font-weight="800" fill="#1E2426" font-family="system-ui, Arial, sans-serif">ROAD</text><text x="45" y="56" text-anchor="middle" font-size="11" font-weight="800" fill="#1E2426" font-family="system-ui, Arial, sans-serif">WORK</text>');
-  if(n.indexOf('hospital')>=0) return wrap('<rect x="10" y="10" width="70" height="70" rx="6" fill="#1565c0"/><text x="45" y="62" text-anchor="middle" font-size="44" font-weight="800" fill="#fff" font-family="system-ui, Arial, sans-serif">H</text>');
-  if(n.indexOf('information')>=0) return wrap('<rect x="10" y="10" width="70" height="70" rx="6" fill="#1565c0"/><text x="45" y="62" text-anchor="middle" font-size="44" font-weight="800" fill="#fff" font-family="system-ui, Arial, sans-serif">i</text>');
-  if(n.indexOf('route marker')>=0||n.indexOf('highway')>=0||n.indexOf('grid')>=0||n.indexOf('trail')>=0) return wrap('<rect x="8" y="22" width="74" height="46" rx="4" fill="#2e7d32"/><text x="45" y="52" text-anchor="middle" font-size="13" font-weight="800" fill="#fff" font-family="system-ui, Arial, sans-serif">'+(n.indexOf('trail')>=0?'TRAIL':(n.indexOf('grid')>=0?'GRID':'ROUTE'))+'</text>');
-  if(n.indexOf('parking guide')>=0) return wrap('<rect x="10" y="10" width="70" height="70" rx="6" fill="#1565c0"/><text x="45" y="62" text-anchor="middle" font-size="44" font-weight="800" fill="#fff" font-family="system-ui, Arial, sans-serif">P</text>');
-  if(n.indexOf('rest area')>=0) return wrap('<rect x="8" y="22" width="74" height="46" rx="4" fill="#1565c0"/><text x="45" y="52" text-anchor="middle" font-size="13" font-weight="800" fill="#fff" font-family="system-ui, Arial, sans-serif">REST</text>');
-  if(n.indexOf('fuel')>=0||n.indexOf('food service')>=0) return wrap('<rect x="8" y="22" width="74" height="46" rx="4" fill="#1565c0"/><text x="45" y="52" text-anchor="middle" font-size="13" font-weight="800" fill="#fff" font-family="system-ui, Arial, sans-serif">FUEL</text>');
-  if(n.indexOf('streetcar')>=0) return wrap('<rect x="8" y="22" width="74" height="46" rx="4" fill="#fff" stroke="#1E2426" stroke-width="3"/><text x="45" y="52" text-anchor="middle" font-size="11" font-weight="800" fill="#1E2426" font-family="system-ui, Arial, sans-serif">STREETCAR</text>');
-  if(n.indexOf('playground')>=0) return dia('#fdd835','<text x="45" y="50" text-anchor="middle" font-size="10" font-weight="800" fill="#1E2426" font-family="system-ui, Arial, sans-serif">PLAYGROUND</text>');
-  if(n.indexOf('farm')>=0) return dia('#fdd835','<text x="45" y="50" text-anchor="middle" font-size="13" font-weight="800" fill="#1E2426" font-family="system-ui, Arial, sans-serif">FARM</text>');
-  if(n.indexOf('animal')>=0||n.indexOf('wildlife')>=0||n.indexOf('moose')>=0||n.indexOf('deer')>=0) return dia('#fdd835','<text x="45" y="42" text-anchor="middle" font-size="11" font-weight="800" fill="#1E2426" font-family="system-ui, Arial, sans-serif">ANIMAL</text><text x="45" y="56" text-anchor="middle" font-size="11" font-weight="800" fill="#1E2426" font-family="system-ui, Arial, sans-serif">XING</text>');
-  if(n.indexOf('winter')>=0||n.indexOf('mountain')>=0) return dia('#fdd835','<polygon points="45,25 65,62 25,62" fill="none" stroke="#1E2426" stroke-width="4"/>');
-  if(n.indexOf('wind')>=0) return dia('#fdd835','<path d="M25 40 Q40 32 55 40 M25 54 Q45 46 65 54" fill="none" stroke="#1E2426" stroke-width="4"/>');
-  return dia('#fdd835','<text x="45" y="58" text-anchor="middle" font-size="34" font-weight="800" fill="#1E2426" font-family="system-ui, Arial, sans-serif">!</text>');
-}
-
 let DRIVING=null, DRIVING_PROV='Manitoba', DRIVING_TAB='Practice Test';
 async function loadDriving(){
   const body=document.getElementById('view-body');
   try{
     if(!DRIVING) DRIVING=await (await fetch('/api/driving')).json();
     let html='<p><strong>Practice questions only — not the official test.</strong> '+esc(DRIVING.note||'')+'</p>';
-    html+='<div class="card"><h3>Lists in Driving Test</h3><p>Practice Test — 72 questions per province, with answers and a score. &nbsp; Road Signs — 26 sign images per province. &nbsp; Study Guide — 10 study topics per province. &nbsp; Fines and Violations — verified fine cards per province.</p></div>';
+    html+='<p>Practice Test, Road Signs, Study Guide, and Fines are subcategories of Driving Test. Choose a subcategory card first, then a province inside it.</p>';
     html+='<div>'+DRIVING.provinces.map(function(p){ return '<button type="button" class="tabbtn '+(p.name===DRIVING_PROV?'on':'')+'" onclick="DRIVING_PROV=\''+p.name.replace(/'/g,"\\'")+'\';loadDriving()">'+esc(p.name)+'</button>'; }).join('')+'</div>';
     const prov=DRIVING.provinces.find(function(p){ return p.name===DRIVING_PROV; })||DRIVING.provinces[0];
     html+='<div>'+prov.tabs.map(function(t){ return '<button type="button" class="tabbtn '+(t===DRIVING_TAB?'on':'')+'" onclick="DRIVING_TAB=\''+t+'\';loadDriving()">'+esc(t)+'</button>'; }).join('')+'</div>';
@@ -456,9 +423,9 @@ async function loadDriving(){
       });
       html+='<button type="button" class="btn" onclick="checkDriving()">Check answers</button>';
     } else if(DRIVING_TAB==='Road Signs'){
-      html+='<p>General sign meanings only. Check your province’s official handbook for the full sign list.</p>';
+      html+='<p>Real official sign images only. Signs that could not be matched exactly to a real official sign were removed, not drawn. Check your province’s official handbook for the full sign list.</p>';
       (prov.road_signs||[]).forEach(function(s){
-        html+='<div class="sign">'+signSVG(s.name)+'<div><p><b>'+esc(s.name)+'</b></p><p>'+esc(s.meaning)+'</p></div></div>';
+        html+='<div class="sign">'+(s.image?'<img src="'+esc(s.image)+'" alt="'+esc(s.name)+'" onerror="this.style.display=\'none\'">':'')+'<div><p><b>'+esc(s.name)+'</b></p><p>'+esc(s.meaning)+'</p><p><small>Real official sign image. Source: see /api/sign-sources.</small></p></div></div>';
       });
     } else if(DRIVING_TAB==='Study Guide'){
       (prov.study_guide||[]).forEach(function(g){ html+='<p>'+esc(g)+'</p>'; });
@@ -494,11 +461,12 @@ function checkDriving(){
   const sc=document.getElementById('dq-score');
   if(sc) sc.innerHTML='<b>You scored '+score+' / '+qs.length+'.</b>';
 }
-function loadPlacement(){
+function loadPlacement(level){
   const body=document.getElementById('view-body');
   fetch('/api/courses').then(function(r){ return r.json(); }).then(function(data){
-    const pt=data.placement_test||{questions:[],mapping:[],note:''};
-    let html='<div class="card"><h3>About this test</h3><p>'+esc(pt.note||'This is a study placement guide only, not an official exam. You may browse any level freely.')+'</p></div>';
+    const pt0=data.placement_test||{questions:[],mapping:[],note:''};
+    const pt={questions:level?pt0.questions.filter(function(q){return q.level===level;}):pt0.questions,mapping:pt0.mapping,note:pt0.note};
+    let html='<div class="card"><h3>About this test</h3><p>'+esc(pt.note||'This is a study placement guide only, not an official exam. You may browse any level freely.')+(level?(' Showing '+esc(level)+' questions only.'):'')+'</p></div>';
     html+='<div class="card"><h3>Questions ('+pt.questions.length+')</h3>';
     pt.questions.forEach(function(q,i){
       html+='<div id="pq-q'+i+'"><p><b>Q'+(i+1)+'.</b> '+esc(q.question)+'</p>';
@@ -522,13 +490,12 @@ function scorePlacement(){
   let level='A1'; pt.mapping.forEach(function(m){ if(score>=m.min&&score<=m.max) level=m.level; });
   document.getElementById('pq-out').textContent='You scored '+score+' out of '+pt.questions.length+'. Suggested starting level: '+level+'. This is a guide only — browse any level freely.';
 }
-async function loadTrack(){
+async function loadTrack(section){
   const body=document.getElementById('view-body');
   try{
     const t=await (await fetch('/api/track/summary')).json();
-    body.innerHTML='<div class="card"><h3>Learning progress</h3><p>Site total: '+t.learning.total_courses+' courses, '+t.learning.total_lessons+' lessons.</p><p>'+esc(t.learning.note||'')+'</p></div>'
-      +'<div class="card"><h3>Saved tools</h3><p>Saved tool entries: '+t.saved_tools.count+'.</p><p>'+esc(t.saved_tools.note||'')+'</p></div>'
-      +'<div class="card"><h3>Points and badges</h3><p>Points shown here: '+t.points+'. Badges shown here: '+t.badges.count+'.</p><p>'+esc(t.badges.note||'')+'</p></div>';
+    const cards={'learning':'<div class="card"><h3>Learning progress</h3><p>Site total: '+t.learning.total_courses+' courses, '+t.learning.total_lessons+' lessons.</p><p>'+esc(t.learning.note||'')+'</p></div>','saved':'<div class="card"><h3>Saved tools</h3><p>Saved tool entries: '+t.saved_tools.count+'.</p><p>'+esc(t.saved_tools.note||'')+'</p></div>','points':'<div class="card"><h3>Points and badges</h3><p>Points shown here: '+t.points+'. Badges shown here: '+t.badges.count+'.</p><p>'+esc(t.badges.note||'')+'</p></div>'};
+    body.innerHTML=section?cards[section]:(cards.learning+cards.saved+cards.points);
   }catch(e){ body.innerHTML='<p>My Tracking could not be loaded. Try again.</p>'; }
 }
 function loadGuide(hash){
@@ -590,21 +557,24 @@ async function loadJobPortals(){
       +(list.length?list.map(function(p){ return '<div class="listitem"><h4>🔎 '+esc(p.name)+'</h4><p>'+esc(p.region)+'</p><p>'+esc(p.description)+'</p><p><a href="'+esc(p.url)+'">Open the official portal</a></p></div>'; }).join(''):'<p>No portals for that province or territory.</p>');
   }catch(e){ el.innerHTML='<p class="bad">Job portals could not be loaded. Try again.</p>'; }
 }
-async function loadCommunityResources(){
+async function loadCommunityResources(kind){
   const el=document.getElementById('community-resources'); if(!el) return;
   try{
     const j=await (await fetch('/api/community-resources')).json();
-    el.innerHTML='<p>'+j.resources.length+' official resources. These are listed separately from visitor questions, posts, and events, which are from visitors, not from these organisations.</p>'
-      +j.resources.map(function(r){ return '<div class="listitem"><h4>🤝 '+esc(r.name)+'</h4><p>'+esc(r.kind)+'</p><p>'+esc(r.description)+'</p><p><a href="'+esc(r.url)+'">Open the official resource</a></p></div>'; }).join('');
+    const list=kind?j.resources.filter(function(r){return r.kind===kind;}):j.resources;
+    el.innerHTML='<p>'+list.length+' official resources'+(kind?' in '+esc(kind):'')+'. These are listed separately from visitor questions, posts, and events, which are from visitors, not from these organisations.</p>'
+      +list.map(function(r){ return '<div class="listitem"><h4>🤝 '+esc(r.name)+'</h4><p>'+esc(r.kind)+'</p><p>'+esc(r.description)+'</p><p><a href="'+esc(r.url)+'">Open the official resource</a></p></div>'; }).join('');
   }catch(e){ el.innerHTML='<p class="bad">Community resources could not be loaded. Try again.</p>'; }
 }
-async function loadScholarDifference(){
+async function loadScholarDifference(topicIdx){
   const body=document.getElementById('view-body');
   try{
     const j=await (await fetch('/api/guides')).json();
     const s=j.scholar_difference||{};
+    const topics=s.topics||[];
+    const show=(topicIdx!=null&&topics[topicIdx])?[topics[topicIdx]]:topics;
     body.innerHTML='<div class="card"><p>'+esc(s.intro||'')+'</p></div>'
-      +(s.topics||[]).map(function(t){ return '<div class="card"><h4>'+esc(t.title)+'</h4><p style="white-space:pre-line">'+esc(t.body)+'</p></div>'; }).join('')
+      +show.map(function(t){ return '<div class="card"><h4>'+esc(t.title)+'</h4><p style="white-space:pre-line">'+esc(t.body)+'</p></div>'; }).join('')
       +'<div class="card"><p>Sources consulted: '+esc(s.sources_consulted||'')+'</p></div>';
   }catch(e){ body.innerHTML='<p>That page could not be loaded. Try again.</p>'; }
 }
@@ -741,9 +711,64 @@ function setHomeMode(isHome){
   const wrap=document.getElementById('sections-wrap'); if(wrap) wrap.style.display=isHome?'block':'none';
   const view=document.getElementById('view'); if(view) view.style.display=isHome?'none':'block';
   document.getElementById('back-btn').style.display=isHome?'none':'inline-block';
+  const bc=document.getElementById('back-cat-btn'); if(bc) bc.style.display='none';
+}
+function subCards(items){
+  return '<div class="subgrid">'+items.map(function(it){
+    return '<a class="subtile" href="/#/'+it.route+'"><span style="font-size:30px">'+(it.icon||'📂')+'</span><b>'+esc(it.name)+'</b><p>'+esc(it.desc)+'</p></a>';
+  }).join('')+'</div>';
+}
+function setBackCat(parent){
+  const bc=document.getElementById('back-cat-btn');
+  if(bc){ bc.style.display='inline-block'; bc.onclick=function(){ location.hash='#/'+parent; }; }
+}
+function loadEnglishLevels(){
+  const body=document.getElementById('view-body');
+  fetch('/api/courses').then(function(r){ return r.json(); }).then(function(data){
+    window._COURSE_DATA=data;
+    const levels=[['foundation','Foundation','Foundation','Everyday English for newcomers: greetings, shopping, health, work, and conversation.'],
+      ['a1','A1','English level A1','Beginner English: everyday words, simple sentences, and basic conversation.'],
+      ['a2','A2','English level A2','Elementary English: everyday life, work, and simple past and future sentences.'],
+      ['b1','B1','English level B1','Intermediate English: longer conversations, opinions, and everyday problems.'],
+      ['b2','B2','English level B2','Upper-intermediate English: work, study, and detailed discussion in English.'],
+      ['c1','C1','English level C1','Advanced English: clear, detailed English for work and study.'],
+      ['c2','C2','English level C2','Mastery English: precise, flexible English for complex topics.'],
+      ['grammar','Grammar','English Grammar','22 grammar courses, 4 lessons each, from basic sentences to advanced grammar.']];
+    const items=levels.map(function(lv){
+      let nc=0, nl=0;
+      (data.categories||[]).forEach(function(cat){ if(cat.name.indexOf(lv[2])>=0){ nc=(cat.courses||[]).length; nl=(cat.courses||[]).reduce(function(a,c){ return a+(c.lessons||[]).length; },0); } });
+      return {route:'english/'+lv[0],icon:'📚',name:lv[1],desc:lv[3]+' — '+nc+' courses, '+nl+' lessons.'};
+    });
+    body.innerHTML='<p>Choose a level. Each level opens on its own, with its courses and lessons inside it, in order.</p>'+subCards(items);
+  }).catch(function(){ body.innerHTML='<p>Courses could not be loaded. Try again.</p>'; });
+}
+function loadEnglishLevel(slug){
+  const map={foundation:'Foundation',a1:'A1',a2:'A2',b1:'B1',b2:'B2',c1:'C1',c2:'C2',grammar:'Grammar'};
+  COURSE_LEVEL=map[slug]||'All';
+  const body=document.getElementById('view-body');
+  body.innerHTML='<p>Loading courses…</p>';
+  fetch('/api/courses').then(function(r){ return r.json(); }).then(function(data){ window._COURSE_DATA=data; renderEnglish(data); }).catch(function(){ body.innerHTML='<p>Courses could not be loaded. Try again.</p>'; });
+}
+function loadConsulatesAZ(){
+  const body=document.getElementById('view-body');
+  fetch('/api/guides').then(function(r){ return r.json(); }).then(function(j){
+    const c=j.consulates||{}; const ents=c.entries||[];
+    const groups={}; ents.forEach(function(e){ const k=(e.name||'?')[0].toUpperCase(); (groups[k]=groups[k]||[]).push(e); });
+    let html='<p>Browse all '+ents.length+' addresses, grouped A–Z.</p>';
+    Object.keys(groups).sort().forEach(function(k){ html+='<h3>'+esc(k)+'</h3>'+groups[k].map(function(e){ return '<div class="listitem"><h4>🏛️ '+esc(e.name)+'</h4><p>'+esc(e.address)+'</p></div>'; }).join(''); });
+    body.innerHTML=html;
+  }).catch(function(){ body.innerHTML='<p>Consulates could not be loaded. Try again.</p>'; });
+}
+function loadScholarTopics(){
+  const body=document.getElementById('view-body');
+  fetch('/api/guides').then(function(r){ return r.json(); }).then(function(j){
+    const topics=((j.scholar_difference||{}).topics||[]);
+    body.innerHTML='<p>Each topic opens as its own page. This site gives no ruling — read the plain wording, then ask a trusted scholar.</p>'+subCards(topics.map(function(t,i){ return {route:'scholar/'+i,icon:'📖',name:t.title,desc:'A question where scholars differ — plain wording, no ruling from this site.'}; }));
+  }).catch(function(){ body.innerHTML='<p>Topics could not be loaded. Try again.</p>'; });
 }
 function render(){
-  const hash=decodeURIComponent((location.hash||'#/').replace('#/',''));
+  const raw=decodeURIComponent((location.hash||'#/').replace('#/',''));
+  const parts=raw.split('/'); const hash=parts[0]; const sub=parts.slice(1).join('/');
   const title=document.getElementById('view-title'), body=document.getElementById('view-body');
   const isHome=!hash;
   setHomeMode(isHome);
@@ -751,81 +776,111 @@ function render(){
     if(window.NSTrack) NSTrack(routeFor());
     return;
   }
+  // Fix sticky-header overlap: always start a detail view at the top of the page,
+  // so the Back buttons and heading sit below the header, never under it.
+  window.scrollTo(0,0);
   title.textContent=TITLES[hash]||hash;
-  if(hash==='placement'){ body.innerHTML='<p>Loading placement…</p>'; loadPlacement(); }
-  else if(hash==='english'){ body.innerHTML='<p>Loading courses…</p>'; loadEnglish(); }
-  else if(hash==='driving'){ body.innerHTML='<p>Loading driving…</p>'; loadDriving(); }
-  else if(hash==='track'){ body.innerHTML='<p>Loading tracking…</p>'; loadTrack(); }
-  else if(hash==='tools'){ body.innerHTML='<p>Loading tools…</p>'; loadTools(); }
-  else if(['consulates','food','mosques','ramadan','zakat','pregnancy','funeral'].indexOf(hash)>=0){ body.innerHTML='<p>Loading guide…</p>'; loadGuide(hash); }
-  else if(hash==='jobs'){
-    body.innerHTML='<p>Approved employer listings are shown below. You do not need an account to view them or to use the application form on a listing.</p><div class="card"><p><b>Job Portals list</b> — Official government job-search portals have their own list. <a href="/#/job-portals">Open the Job Portals list</a></p></div><label>Search jobs<input id="jobs-search" oninput="loadJobsList()" placeholder="Search by title, company, or city…"></label><div id="jobs-list">Loading jobs…</div><h3>Submit a job</h3><label>Title<input id="j-title"></label><label>Company<input id="j-company"></label><label>City<input id="j-city"></label><label>Description<textarea id="j-desc"></textarea></label><button type="button" class="btn" onclick="submitJob()">Submit for review</button><p id="j-msg"></p>';
-    loadJobsList();
+  const bc=document.getElementById('back-cat-btn'); if(bc) bc.style.display='none';
+  if(sub){
+    setBackCat(hash);
+    // --- sub-view dispatch ---
+    if(hash==='tools'){ TOOL_GROUP=sub==='immigration'?'Immigration':sub==='money'?'Money and salary':sub==='living'?'Living and housing':'All'; body.innerHTML='<p>Loading tools…</p>'; loadTools(); return; }
+    if(hash==='english'){ title.textContent='English Courses — '+sub.toUpperCase(); loadEnglishLevel(sub); return; }
+    if(hash==='placement'){ title.textContent=sub==='full'?'Placement Test — Full test':'Placement Test — '+sub.toUpperCase(); body.innerHTML='<p>Loading placement…</p>'; loadPlacement(sub==='full'?null:sub.toUpperCase()); return; }
+    if(hash==='driving'){
+      const tabmap={practice:'Practice Test',signs:'Road Signs',study:'Study Guide',fines:'Fines and Violations'};
+      DRIVING_TAB=tabmap[sub]||'Practice Test'; title.textContent='Driving Test — '+DRIVING_TAB; body.innerHTML='<p>Loading driving…</p>'; loadDriving(); return;
+    }
+    if(hash==='jobs'){
+      if(sub==='approved'){ body.innerHTML='<p>Approved employer listings are shown below. You do not need an account to view them or to use the application form on a listing.</p><label>Search jobs<input id="jobs-search" oninput="loadJobsList()" placeholder="Search by title, company, or city…"></label><div id="jobs-list">Loading jobs…</div>'; loadJobsList(); return; }
+      if(sub==='submit'){ body.innerHTML='<h3>Submit a job</h3><p>Submitted jobs are checked for alcohol, pork, gambling, and doubtful businesses, and are shown only after admin approval.</p><label>Title<input id="j-title"></label><label>Company<input id="j-company"></label><label>City<input id="j-city"></label><label>Description<textarea id="j-desc"></textarea></label><button type="button" class="btn" onclick="submitJob()">Submit for review</button><p id="j-msg"></p>'; return; }
+      if(sub==='portals'){ body.innerHTML='<div class="card"><p><b>Job Portals list</b> — Official government job-search portals have their own list. <a href="/#/job-portals">Open the Job Portals list</a></p></div>'; return; }
+    }
+    if(hash==='job-portals'){ body.innerHTML='<p>Official government job-search portals, by province and territory.</p><label>Filter by province or territory<select id="portal-region" onchange="loadJobPortals()"><option value="All">All provinces and territories</option></select></label><div id="jobs-portals">Loading portals…</div>'; loadJobPortals(); return; }
+    if(hash==='community-support'){ const kindmap={settlement:'Settlement services',help:'Community help line',library:'Library'}; body.innerHTML='<p>Loading resources…</p>'; const el=document.getElementById('view-body'); el.innerHTML='<div id="community-resources">Loading resources…</div>'; loadCommunityResources(kindmap[sub]); return; }
+    if(hash==='qa'){
+      if(sub==='browse'){ body.innerHTML='<div id="qa-list">Loading…</div>'; loadQAList(); return; }
+      if(sub==='ask'){ body.innerHTML='<label>Question title<input id="qa-title"></label><label>Question<textarea id="qa-body"></textarea></label><button type="button" class="btn" onclick="submitQA()">Ask question</button><p id="qa-msg"></p>'; return; }
+      if(sub==='search'){ body.innerHTML='<label>Search questions<input id="qa-search" oninput="loadQAList()" placeholder="Search questions…"></label><div id="qa-list">Loading…</div>'; loadQAList(); return; }
+    }
+    if(hash==='posts'){
+      if(sub==='browse'){ body.innerHTML='<div id="posts-list">Loading…</div>'; loadPostsList(); return; }
+      if(sub==='add'){ body.innerHTML='<label>Post<textarea id="p-body"></textarea></label><button type="button" class="btn" onclick="submitPost()">Post</button><p id="p-msg"></p>'; return; }
+      if(sub==='search'){ body.innerHTML='<label>Search posts<input id="posts-search" oninput="loadPostsList()" placeholder="Search posts…"></label><div id="posts-list">Loading…</div>'; loadPostsList(); return; }
+    }
+    if(hash==='events'){
+      if(sub==='browse'){ body.innerHTML='<div id="events-list">Loading…</div>'; loadEventsList(); return; }
+      if(sub==='add'){ body.innerHTML='<label>Title<input id="ev-title"></label><label>City<input id="ev-city"></label><label>Date<input id="ev-date" type="date"></label><button type="button" class="btn" onclick="submitEvent()">Add event</button><p id="ev-msg"></p>'; return; }
+      if(sub==='search'){ body.innerHTML='<label>Search events<input id="ev-search" oninput="loadEventsList()" placeholder="Search events…"></label><div id="events-list">Loading…</div>'; loadEventsList(); return; }
+    }
+    if(hash==='rentals'){
+      if(sub==='approved'){ body.innerHTML='<div id="rent-list">Loading approved rentals…</div>'; loadRentalsList(); return; }
+      if(sub==='submit'){ body.innerHTML='<label>Company name<input id="r-name"></label><label>City<input id="r-city"></label><button type="button" class="btn" onclick="submitRental()">Submit company</button><p id="r-msg"></p>'; return; }
+    }
+    if(hash==='services'){
+      if(sub==='verified'){ body.innerHTML='<div id="svc-list">Loading verified services…</div>'; loadServicesList(); return; }
+      if(sub==='submit'){ body.innerHTML='<label>Name<input id="s-name"></label><label>Trade<input id="s-trade"></label><label>City<input id="s-city"></label><button type="button" class="btn" onclick="submitService()">Submit service</button><p id="s-msg"></p>'; return; }
+    }
+    if(hash==='consulates'){
+      if(sub==='search'){ setBackCat('consulates'); loadGuide('consulates'); return; }
+      if(sub==='az'){ loadConsulatesAZ(); return; }
+    }
+    if(hash==='guides'){ setBackCat('guides'); loadGuide(sub); return; }
+    if(hash==='scholar'){ body.innerHTML='<p>Loading…</p>'; loadScholarDifference(parseInt(sub,10)); return; }
+    if(hash==='assistant'){
+      if(sub==='ask'){ body.innerHTML='<p>Ask about this site. Answers come only from this site\'s own content.</p><label>Your question<input id="as-q"></label><button type="button" class="btn" onclick="submitAssistant()">Ask</button><p id="as-out"></p>'; return; }
+      if(sub==='how'){ body.innerHTML='<div class="card"><h3>How this site works</h3><p>Everything is free to view without an account. An account is only for saving progress, and saving is not available yet because email verification is not set up. Job applications need no account, only an email. The Site Assistant answers only from this site\'s own content.</p></div>'; return; }
+    }
+    if(hash==='donate'){
+      if(sub==='amounts'){ body.innerHTML='<p>Choose $5, $10, $25, $50, $100, or another amount. $25 is preselected below.</p><label>Amount $<input id="d-amt" type="number" value="25"></label><label>Your email (optional)<input id="d-email" type="email"></label><button type="button" class="btn" onclick="submitDonation()">Record donation</button><p id="d-out"></p><p>No card payment is taken on this site.</p>'; return; }
+      if(sub==='steps'){ body.innerHTML='<div class="card"><h3>Interac steps</h3><p>1. Choose an amount in the Amounts subcategory. 2. Send it by Interac e-Transfer to the donation email shown in the site settings (ask the Site Assistant if it is not shown). 3. Your donation is recorded only after you submit the form. No card payment is taken on this site.</p></div>'; return; }
+    }
+    if(hash==='about'){
+      const pages={about:'about-page',terms:'terms',privacy:'privacy',refund:'refund',advertise:'advertise'};
+      const pg=pages[sub]||sub;
+      body.innerHTML='<p>Loading…</p>';
+      fetch('/api/pages/'+pg).then(function(r){ return r.json(); }).then(function(j){ title.textContent=j.title||TITLES[sub]; body.innerHTML='<p style="white-space:pre-line">'+esc(j.body||'')+'</p>'; }).catch(function(){ body.innerHTML='<p>That page could not be loaded. Try again.</p>'; });
+      return;
+    }
+    if(hash==='apk'){
+      if(sub==='about'){ body.innerHTML='<div class="card"><h3>Android app</h3><p>There is no APK file to download today. The whole site works in a phone browser.</p><p><a href="/download/apk">Open the full Android app page</a></p></div>'; return; }
+      if(sub==='home-screen'){ body.innerHTML='<div class="card"><h3>Add to Home Screen</h3><p>Open the site in Chrome, tap the three dots menu, tap “Add to Home screen”, then tap “Add”.</p></div>'; return; }
+    }
+    if(hash==='track'){ body.innerHTML='<p>Loading tracking…</p>'; loadTrack(sub); return; }
+    body.innerHTML='<p>That page could not be found.</p>'; return;
   }
-  else if(hash==='job-portals'){
-    body.innerHTML='<p>Official government job-search portals, by province and territory. These are places to search for jobs, not employer listings from this site.</p><label>Filter by province or territory<select id="portal-region" onchange="loadJobPortals()"><option value="All">All provinces and territories</option></select></label><div id="jobs-portals">Loading portals…</div>';
-    loadJobPortals();
-  }
-  else if(hash==='community-support'){
-    body.innerHTML='<p>Official community resources and settlement help, in one list. Visitor questions, posts, and events are separate lists, and are from visitors, not from these organisations.</p><div id="community-resources">Loading resources…</div>';
-    loadCommunityResources();
-  }
-  else if(hash==='guides'){
-    body.innerHTML='<p>Newcomer guides. Tap a guide to open it as its own page.</p>'
-      +'<div class="listitem"><h4>📖 Food and Restaurants Guide</h4><p>A guide to food and restaurants for newcomers.</p><p><a href="/#/food">Open this guide</a></p></div>'
-      +'<div class="listitem"><h4>📖 Mosques and Prayer Guide</h4><p>A guide to mosques and prayer.</p><p><a href="/#/mosques">Open this guide</a></p></div>'
-      +'<div class="listitem"><h4>📖 Ramadan Guide</h4><p>A guide to Ramadan.</p><p><a href="/#/ramadan">Open this guide</a></p></div>'
-      +'<div class="listitem"><h4>📖 Zakat Guide</h4><p>A guide to Zakat.</p><p><a href="/#/zakat">Open this guide</a></p></div>'
-      +'<div class="listitem"><h4>📖 Pregnancy and Baby Guide</h4><p>A guide to pregnancy and babies.</p><p><a href="/#/pregnancy">Open this guide</a></p></div>'
-      +'<div class="listitem"><h4>📖 Funeral and Burial Guide</h4><p>A guide to funerals and burial.</p><p><a href="/#/funeral">Open this guide</a></p></div>'
-      +'<div class="listitem"><h4>📖 Questions where scholars differ</h4><p>Plain words on questions where no single agreed ruling was found, with no ruling from this site.</p><p><a href="/#/scholar">Open this list</a></p></div>';
-  }
-  else if(hash==='assistant'){
-    body.innerHTML='<p>Ask about this site. Answers come only from this site\'s own content. If there is no answer here, you will be told to contact the site.</p><label>Your question<input id="as-q"></label><button type="button" class="btn" onclick="submitAssistant()">Ask</button><p id="as-out"></p>';
-  }
-  else if(hash==='about'){
-    body.innerHTML='<p>About this site, and its terms and privacy rules, each as its own page.</p>'
-      +'<div class="listitem"><h4>ℹ️ About Us</h4><p>What NorthStart Canada is, and what it is not.</p><p><a href="/#/about-page">Open About Us</a></p></div>'
-      +'<div class="listitem"><h4>📄 Terms</h4><p>How this site may be used.</p><p><a href="/#/terms">Open Terms</a></p></div>'
-      +'<div class="listitem"><h4>🔒 Privacy Policy</h4><p>What visit data this site stores, and what it does not store.</p><p><a href="/#/privacy">Open Privacy Policy</a></p></div>'
-      +'<div class="listitem"><h4>↩️ Refund Policy</h4><p>Donations and refunds.</p><p><a href="/#/refund">Open Refund Policy</a></p></div>'
-      +'<div class="listitem"><h4>📣 Advertise With Us</h4><p>How a business may ask to advertise, and what is never listed.</p><p><a href="/#/advertise">Open Advertise With Us</a></p></div>'
-      +'<div class="listitem"><h4>❤️ Donate</h4><p>Help keep this free site running.</p><p><a href="/#/donate">Open Donate</a></p></div>';
-  }
-  else if(hash==='qa'){
-    body.innerHTML='<div class="card"><p><b>Community Support list</b> — Official community resources have their own list. <a href="/#/community-support">Open the Community Support list</a></p></div><label>Search questions<input id="qa-search" oninput="loadQAList()" placeholder="Search questions…"></label><div id="qa-list">Loading…</div><label>Question title<input id="qa-title"></label><label>Question<textarea id="qa-body"></textarea></label><button type="button" class="btn" onclick="submitQA()">Ask question</button><p id="qa-msg"></p>';
-    loadQAList();
-  }
-  else if(hash==='posts'){
-    body.innerHTML='<div class="card"><p><b>Community Support list</b> — Official community resources have their own list. <a href="/#/community-support">Open the Community Support list</a></p></div><label>Search posts<input id="posts-search" oninput="loadPostsList()" placeholder="Search posts…"></label><div id="posts-list">Loading…</div><label>Post<textarea id="p-body"></textarea></label><button type="button" class="btn" onclick="submitPost()">Post</button><p id="p-msg"></p>';
-    loadPostsList();
-  }
-  else if(hash==='events'){
-    body.innerHTML='<div class="card"><p><b>Community Support list</b> — Official community resources have their own list. <a href="/#/community-support">Open the Community Support list</a></p></div><label>Search events<input id="ev-search" oninput="loadEventsList()" placeholder="Search events…"></label><div id="ev-list">Loading…</div><label>Title<input id="ev-title"></label><label>City<input id="ev-city"></label><label>Date<input id="ev-date" type="date"></label><button type="button" class="btn" onclick="submitEvent()">Add event</button><p id="ev-msg"></p>';
-    loadEventsList();
-  }
-  else if(hash==='rentals'){
-    body.innerHTML='<div id="rent-list">Loading approved rentals…</div><label>Company name<input id="r-name"></label><label>City<input id="r-city"></label><button type="button" class="btn" onclick="submitRental()">Submit company</button><p id="r-msg"></p>';
-    loadRentalsList();
-  }
-  else if(hash==='services'){
-    body.innerHTML='<div id="svc-list">Loading verified services…</div><label>Name<input id="s-name"></label><label>Trade<input id="s-trade"></label><label>City<input id="s-city"></label><button type="button" class="btn" onclick="submitService()">Submit service</button><p id="s-msg"></p>';
-    loadServicesList();
-  }
-  else if(hash==='donate'){
-    body.innerHTML='<p>Choose $5, $10, $25, $50, $100, or another amount. $25 is preselected below.</p><label>Amount $<input id="d-amt" type="number" value="25"></label><label>Your email (optional)<input id="d-email" type="email"></label><button type="button" class="btn" onclick="submitDonation()">Record donation</button><p id="d-out"></p><p>No card payment is taken on this site.</p>';
-  }
+  // --- category landing: subcategories only, no flat detail ---
+  if(hash==='tools'){ TOOL_GROUP='All'; body.innerHTML='<p>Choose a tool group. Each group opens as its own subcategory.</p>'+subCards([{route:'tools/immigration',icon:'🛂',name:'Immigration',desc:'Citizenship days, proof of funds, IELTS to CLB, CRS, and PGP income.'},{route:'tools/money',icon:'💰',name:'Money and salary',desc:'Net salary, hourly to annual, TFSA room, and currency conversion.'},{route:'tools/living',icon:'🏠',name:'Living and housing',desc:'Sales tax, rent affordability, Ontario land transfer tax, and living costs.'}]); }
+  else if(hash==='english'){ body.innerHTML='<p>Loading levels…</p>'; loadEnglishLevels(); }
+  else if(hash==='placement'){ body.innerHTML='<p>Choose a level, or take the full test. Each level opens only its own questions.</p>'+subCards([{route:'placement/a1',icon:'🔤',name:'A1 questions',desc:'Beginner placement questions.'},{route:'placement/a2',icon:'🔤',name:'A2 questions',desc:'Elementary placement questions.'},{route:'placement/b1',icon:'🔤',name:'B1 questions',desc:'Intermediate placement questions.'},{route:'placement/b2',icon:'🔤',name:'B2 questions',desc:'Upper-intermediate placement questions.'},{route:'placement/c1',icon:'🔤',name:'C1 questions',desc:'Advanced placement questions.'},{route:'placement/c2',icon:'🔤',name:'C2 questions',desc:'Mastery placement questions.'},{route:'placement/full',icon:'📝',name:'Full test',desc:'All 24 placement questions, with a level result.'}]); }
+  else if(hash==='driving'){ body.innerHTML='<p>Choose a driving subcategory, then a province inside it.</p>'+subCards([{route:'driving/practice',icon:'🚗',name:'Practice Test',desc:'72 practice questions per province, with answers and a score.'},{route:'driving/signs',icon:'🛑',name:'Road Signs',desc:'Real official road sign images per province.'},{route:'driving/study',icon:'📖',name:'Study Guide',desc:'10 study topics per province.'},{route:'driving/fines',icon:'⚖️',name:'Fines and Violations',desc:'Verified fine cards per province.'}]); }
+  else if(hash==='track'){ body.innerHTML='<p>Choose a tracking subcategory.</p>'+subCards([{route:'track/learning',icon:'📚',name:'Learning progress',desc:'Courses and lessons totals for this site.'},{route:'track/saved',icon:'💾',name:'Saved tools',desc:'Saved tool entries, when accounts are available.'},{route:'track/points',icon:'⭐',name:'Points and badges',desc:'Points and badges, shown for members only when accounts are available.'}]); }
+  else if(hash==='jobs'){ body.innerHTML='<p>Choose a jobs subcategory.</p>'+subCards([{route:'jobs/approved',icon:'💼',name:'Approved listings',desc:'Approved employer listings only. No account is needed to view or apply.'},{route:'jobs/submit',icon:'📝',name:'Submit a job',desc:'Submit a job for review. It is shown only after admin approval.'},{route:'jobs/portals',icon:'🌐',name:'Job Portals link',desc:'Official government job-search portals have their own list.'}]); }
+  else if(hash==='job-portals'){ body.innerHTML='<p>Choose how to browse the portals.</p>'+subCards([{route:'job-portals/all',icon:'🌐',name:'All portals',desc:'All 15 official government job-search portals.'},{route:'job-portals/by-province',icon:'🗺️',name:'By province or territory',desc:'Filter the portals by province or territory.'}]); }
+  else if(hash==='community-support'){ body.innerHTML='<p>Choose a kind of official resource.</p>'+subCards([{route:'community-support/settlement',icon:'🤝',name:'Settlement services',desc:'Official settlement help for newcomers.'},{route:'community-support/help',icon:'📞',name:'Community help line',desc:'Free, confidential community help.'},{route:'community-support/library',icon:'📚',name:'Library',desc:'Public library help for newcomers.'}]); }
+  else if(hash==='qa'){ body.innerHTML='<p>Choose a Q&A subcategory.</p>'+subCards([{route:'qa/browse',icon:'💬',name:'Browse questions',desc:'Questions from visitors.'},{route:'qa/ask',icon:'❓',name:'Ask a question',desc:'Ask a question for the community.'},{route:'qa/search',icon:'🔍',name:'Search questions',desc:'Search questions by words.'}]); }
+  else if(hash==='posts'){ body.innerHTML='<p>Choose a posts subcategory.</p>'+subCards([{route:'posts/browse',icon:'📝',name:'Browse posts',desc:'Posts from visitors.'},{route:'posts/add',icon:'✏️',name:'Add a post',desc:'Add a post for the community.'},{route:'posts/search',icon:'🔍',name:'Search posts',desc:'Search posts by words.'}]); }
+  else if(hash==='events'){ body.innerHTML='<p>Choose an events subcategory.</p>'+subCards([{route:'events/browse',icon:'📅',name:'Browse events',desc:'Events from visitors.'},{route:'events/add',icon:'➕',name:'Add an event',desc:'Add an event for the community.'},{route:'events/search',icon:'🔍',name:'Search events',desc:'Search events by words.'}]); }
+  else if(hash==='rentals'){ body.innerHTML='<p>Choose a rentals subcategory.</p>'+subCards([{route:'rentals/approved',icon:'🏠',name:'Approved rentals',desc:'Approved rental companies only.'},{route:'rentals/submit',icon:'📝',name:'Submit a company',desc:'Submit a rental company for review.'}]); }
+  else if(hash==='services'){ body.innerHTML='<p>Choose a services subcategory.</p>'+subCards([{route:'services/verified',icon:'🔧',name:'Verified services',desc:'Verified service providers only.'},{route:'services/submit',icon:'📝',name:'Submit a service',desc:'Submit a service for review.'}]); }
+  else if(hash==='consulates'){ body.innerHTML='<p>Choose how to browse the consulate addresses.</p>'+subCards([{route:'consulates/search',icon:'🔍',name:'Search by name',desc:'Search 133 Ottawa addresses by country name.'},{route:'consulates/az',icon:'🔤',name:'Browse A–Z',desc:'All addresses grouped by first letter.'}]); }
+  else if(hash==='guides'){ body.innerHTML='<p>Newcomer guides. Tap a guide to open it as its own page.</p>'+subCards([{route:'guides/food',icon:'📖',name:'Food and Restaurants Guide',desc:'A guide to food and restaurants for newcomers.'},{route:'guides/mosques',icon:'📖',name:'Mosques and Prayer Guide',desc:'A guide to mosques and prayer.'},{route:'guides/ramadan',icon:'📖',name:'Ramadan Guide',desc:'A guide to Ramadan.'},{route:'guides/zakat',icon:'📖',name:'Zakat Guide',desc:'A guide to Zakat.'},{route:'guides/pregnancy',icon:'📖',name:'Pregnancy and Baby Guide',desc:'A guide to pregnancy and babies.'},{route:'guides/funeral',icon:'📖',name:'Funeral and Burial Guide',desc:'A guide to funerals and burial.'},{route:'scholar',icon:'📖',name:'Questions where scholars differ',desc:'Plain words on questions where no single agreed ruling was found, with no ruling from this site.'}]); }
+  else if(hash==='assistant'){ body.innerHTML='<p>Choose a Site Assistant subcategory.</p>'+subCards([{route:'assistant/ask',icon:'💬',name:'Ask a question',desc:'Ask about this site. Answers come only from this site\'s own content.'},{route:'assistant/how',icon:'ℹ️',name:'How this site works',desc:'What is free, what needs an account, and what the assistant can answer.'}]); }
+  else if(hash==='about'){ body.innerHTML='<p>About this site, and its terms and privacy rules, each as its own page.</p>'+subCards([{route:'about/about',icon:'ℹ️',name:'About Us',desc:'What NorthStart Canada is, and what it is not.'},{route:'about/terms',icon:'📄',name:'Terms',desc:'How this site may be used.'},{route:'about/privacy',icon:'🔒',name:'Privacy Policy',desc:'What visit data this site stores, and what it does not store.'},{route:'about/refund',icon:'↩️',name:'Refund Policy',desc:'Donations and refunds.'},{route:'about/advertise',icon:'📣',name:'Advertise With Us',desc:'How a business may ask to advertise, and what is never listed.'},{route:'donate',icon:'❤️',name:'Donate',desc:'Help keep this free site running.'}]); }
+  else if(hash==='donate'){ body.innerHTML='<p>Choose a donate subcategory.</p>'+subCards([{route:'donate/amounts',icon:'💵',name:'Amounts',desc:'Choose $5, $10, $25, $50, $100, or another amount.'},{route:'donate/steps',icon:'📋',name:'Interac steps',desc:'How to send a donation by Interac. No card payment is taken on this site.'}]); }
+  else if(hash==='apk'){ body.innerHTML='<p>Choose an Android App subcategory.</p>'+subCards([{route:'apk/about',icon:'🤖',name:'About the app',desc:'There is no APK file to download today. The whole site works in a phone browser.'},{route:'apk/home-screen',icon:'📱',name:'Add to Home Screen steps',desc:'Add the site to your Android home screen.'}]); }
+  else if(hash==='scholar'){ body.innerHTML='<p>Loading topics…</p>'; loadScholarTopics(); }
+  else if(hash==='consulates'){ body.innerHTML='<p>Loading…</p>'; loadGuide('consulates'); }
+  else if(['food','mosques','ramadan','zakat','pregnancy','funeral'].indexOf(hash)>=0){ setBackCat('guides'); body.innerHTML='<p>Loading guide…</p>'; loadGuide(hash); }
   else if(hash==='login'){
     body.innerHTML='<p class="empty">Account log-in is not available yet, because email verification is not set up. Everything on this site is free to view without an account.</p><p>If you already have an account from an earlier period, you can try to log in below.</p><label>Email<input id="l-email" type="email"></label><label>Password<input id="l-pass" type="password"></label><button type="button" class="btn" onclick="submitLogin()">Log in</button><p id="l-out"></p>';
   }
   else if(hash==='register'){
-    body.innerHTML='<p class="empty">New accounts cannot be created today, because email verification is not set up. Everything on this site is free to view without an account.</p><p>The form below will show that message if you try it.</p><label>Name<input id="rg-name"></label><label>Email<input id="rg-email" type="email"></label><label>Password<input id="rg-pass" type="password"></label><button type="button" class="btn" onclick="submitRegister()">Register</button><p id="rg-out"></p>';
+    body.innerHTML='<p class="empty">New accounts cannot be created today, because email verification is not set up. Everything on this site is free to view without an account.</p><p>The form below will show that message if you try it.</p><label>Name<input id="rg-name"></label><label>Email<input id="rg-email" type="email"></label><label>Password<input id="rg-pass" type="password"></label><button type="button" class="btn" onclick="submitRegister()">Register</button><p id="rg-msg"></p><p id="rg-out"></p>';
   }
-  else if(hash==='scholar'){ body.innerHTML='<p>Loading…</p>'; loadScholarDifference(); }
-  else if(hash==='apk'){ body.innerHTML='<div class="card"><h3>Android app</h3><p>There is no APK file to download today. The whole site works in a phone browser. To add it to your Android home screen, open the site in Chrome, tap the three dots menu, tap \u201cAdd to Home screen\u201d, then tap \u201cAdd\u201d.</p><p><a href="/download/apk">Open the full Android app page</a></p></div>'; }
-  else if(hash==='about-page'){ body.innerHTML='<p>Loading…</p>'; fetch('/api/pages/about').then(function(r){ return r.json(); }).then(function(j){ title.textContent=j.title||'About Us'; body.innerHTML='<p style="white-space:pre-line">'+esc(j.body||'')+'</p>'; }).catch(function(){ body.innerHTML='<p>That page could not be loaded. Try again.</p>'; }); }
+  else if(hash==='about-page'){ setBackCat('about'); body.innerHTML='<p>Loading…</p>'; fetch('/api/pages/about').then(function(r){ return r.json(); }).then(function(j){ title.textContent=j.title||'About Us'; body.innerHTML='<p style="white-space:pre-line">'+esc(j.body||'')+'</p>'; }).catch(function(){ body.innerHTML='<p>That page could not be loaded. Try again.</p>'; }); }
   else if(['advertise','terms','privacy','refund'].indexOf(hash)>=0){
-    body.innerHTML='<p>Loading…</p>';
+    setBackCat('about'); body.innerHTML='<p>Loading…</p>';
     fetch('/api/pages/'+hash).then(function(r){ return r.json(); }).then(function(j){ title.textContent=j.title||TITLES[hash]; body.innerHTML='<p style="white-space:pre-line">'+esc(j.body||'')+'</p>'; }).catch(function(){ body.innerHTML='<p>That page could not be loaded. Try again.</p>'; });
   }
   else {
@@ -833,6 +888,7 @@ function render(){
   }
   if(window.NSTrack) NSTrack(routeFor());
 }
+
 window.addEventListener('hashchange', render);
 load();
 </script>

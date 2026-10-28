@@ -1,0 +1,983 @@
+{
+  "consulates": {
+    "entries": [
+      {
+        "name": "Apostolic Nunciature",
+        "city": "Ottawa",
+        "address": "724 Manor Avenue, Ottawa, ON K1M 0E3",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Australian High Commission",
+        "city": "Ottawa",
+        "address": "50 O'Connor Street, Suite 1301, Ottawa, ON K1P 6L2",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "British High Commission",
+        "city": "Ottawa",
+        "address": "140 Sussex Drive, Ottawa, ON K1N 5A2",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Delegation of the European Union",
+        "city": "Ottawa",
+        "address": "150 Metcalfe Street, 19th Floor, Ottawa, ON K2P 1P1",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of Belgium",
+        "city": "Ottawa",
+        "address": "360 Albert Street, 8th Floor, Suite 820, Ottawa, ON K1R 7X7",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of Bosnia and Herzegovina",
+        "city": "Ottawa",
+        "address": "17 Blackburn Avenue, Ottawa, ON K1N 8A2",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of Burkina Faso",
+        "city": "Ottawa",
+        "address": "48 Range Road, Ottawa, ON K1N 8J4",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of France",
+        "city": "Ottawa",
+        "address": "42 Sussex Drive, Ottawa, ON K1M 2C9",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of Georgia",
+        "city": "Ottawa",
+        "address": "340 Albert Street, Suite 940, Ottawa, ON K1R 7Y6",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of Hungary",
+        "city": "Ottawa",
+        "address": "299 Waverley Street, Ottawa, ON K2P 0V9",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of Iceland",
+        "city": "Ottawa",
+        "address": "360 Albert Street, 7th Floor, Suite 710, Ottawa, ON K1R 7X7",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of Ireland",
+        "city": "Ottawa",
+        "address": "150 Metcalfe Street, Suite 1700, Ottawa, ON K2P 1P1",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of Japan",
+        "city": "Ottawa",
+        "address": "255 Sussex Drive, Ottawa, ON K1N 9E6",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of Lebanon",
+        "city": "Ottawa",
+        "address": "640 Lyon Street, Ottawa, ON K1S 3Z5",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of Libya",
+        "city": "Ottawa",
+        "address": "170 Laurier Avenue West, Suite 1100, Ottawa, ON K1P 5V5",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of Mongolia",
+        "city": "Ottawa",
+        "address": "130 Albert Street, Suite 1620, Ottawa, ON K1P 5G4",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of Nepal",
+        "city": "Ottawa",
+        "address": "408 Queen Street, Ottawa, ON K1R 5A7",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of Romania",
+        "city": "Ottawa",
+        "address": "655 Rideau Street, Ottawa, ON K1N 6A3",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of Spain",
+        "city": "Ottawa",
+        "address": "74 Stanley Avenue, Ottawa, ON K1M 1P4",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of Sweden",
+        "city": "Ottawa",
+        "address": "Mercury Court, 377 Dalhousie Street, Suite 305, Ottawa, ON K1N 9N8",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of Switzerland",
+        "city": "Ottawa",
+        "address": "5 Marlborough Avenue, Ottawa, ON K1N 8E6",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Arab Republic of Egypt",
+        "city": "Ottawa",
+        "address": "454 Laurier Avenue East, Ottawa, ON K1N 6R3",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Argentine Republic",
+        "city": "Ottawa",
+        "address": "81 Metcalfe Street, 7th Floor, Ottawa, ON K1P 6K7",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Bolivarian Republic of Venezuela",
+        "city": "Ottawa",
+        "address": "32 Range Road, Ottawa, ON K1N 8J4",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Czech Republic",
+        "city": "Ottawa",
+        "address": "251 Cooper Street, Ottawa, ON K2P 0G2",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Democratic Republic of the Congo",
+        "city": "Ottawa",
+        "address": "18 Range Road, Ottawa, ON K1N 8J3",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Dominican Republic",
+        "city": "Ottawa",
+        "address": "130 Albert Street, Suite 1605, Ottawa, ON K1P 5G4",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Federal Democratic Republic of Ethiopia",
+        "city": "Ottawa",
+        "address": "350 Sparks Street, Suite 908, Ottawa, ON K1R 7S8",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Federal Republic of Germany",
+        "city": "Ottawa",
+        "address": "1 Waverley Street, Ottawa, ON K2P 0T8",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Federative Republic of Brazil",
+        "city": "Ottawa",
+        "address": "450 Wilbrod Street, Ottawa, ON K1N 6M8",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Grand Duchy of Luxembourg",
+        "city": "Ottawa",
+        "address": "To be determined, Ottawa, ON, Canada",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Hashemite Kingdom of Jordan",
+        "city": "Ottawa",
+        "address": "100 Bronson Avenue, Suite 701, Ottawa, ON K1R 6G8",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Hellenic Republic",
+        "city": "Ottawa",
+        "address": "80 MacLaren Street, Ottawa, ON K2P 0K6",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Islamic Republic of Afghanistan",
+        "city": "Ottawa",
+        "address": "240 Argyle Avenue, Ottawa, ON K2P 1B9",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Islamic Republic of Iran",
+        "city": "Ottawa",
+        "address": "245 Metcalfe Street, Ottawa, ON K2P 2K2",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Islamic Republic of Mauritania",
+        "city": "Ottawa",
+        "address": "81 Metcalfe Street, 12th Floor, Ottawa, ON K1P 6K7",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Italian Republic",
+        "city": "Ottawa",
+        "address": "275 Slater Street, 21st Floor, Ottawa, ON K1P 5H9",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Kingdom of Morocco",
+        "city": "Ottawa",
+        "address": "38 Range Road, Ottawa, ON K1N 8J4",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Kingdom of Norway",
+        "city": "Ottawa",
+        "address": "150 Metcalfe Street, Suite 1300, Ottawa, ON K2P 1P1",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Kingdom of the Netherlands",
+        "city": "Ottawa",
+        "address": "350 Albert Street, Suite 2020, Ottawa, ON K1R 1A4",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Oriental Republic of Uruguay",
+        "city": "Ottawa",
+        "address": "55 Metcalfe Street, Suite 800, Ottawa, ON K1P 6L5",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the People's Democratic Republic of Algeria",
+        "city": "Ottawa",
+        "address": "500 Wilbrod Street, Ottawa, ON K1N 6N2",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the People's Republic of China",
+        "city": "Ottawa",
+        "address": "515 St. Patrick Street, Ottawa, ON K1N 5H3",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Plurinational State of Bolivia",
+        "city": "Ottawa",
+        "address": "130 Albert Street, Suite 415, Ottawa, ON K1P 5G4",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Portuguese Republic",
+        "city": "Ottawa",
+        "address": "645 Island Park Drive, Ottawa, ON K1Y 0B8",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of Albania",
+        "city": "Ottawa",
+        "address": "130 Albert Street, Suite 302, Ottawa, ON K1P 5G4",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of Armenia",
+        "city": "Ottawa",
+        "address": "7 Delaware Avenue, Ottawa, ON K2P 0Z2",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of Austria",
+        "city": "Ottawa",
+        "address": "445 Wilbrod Street, Ottawa, ON K1N 6M7",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of Azerbaijan",
+        "city": "Ottawa",
+        "address": "275 Slater Street, Suite 1203, Ottawa, ON K1P 5H9",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of Bulgaria",
+        "city": "Ottawa",
+        "address": "325 Stewart Street, Ottawa, ON K1N 6K5",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of Burundi",
+        "city": "Ottawa",
+        "address": "To be determined, Ottawa, ON, Canada",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of Chad",
+        "city": "Ottawa",
+        "address": "350 Sparks Street, Suite 802, Ottawa, ON K1R 7S8",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of Chile",
+        "city": "Ottawa",
+        "address": "50 O'Connor Street, Suite 1413, Ottawa, ON K1P 6L2",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of Colombia",
+        "city": "Ottawa",
+        "address": "360 Albert Street, Suite 1002, Ottawa, ON K1R 7X7",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of Costa Rica",
+        "city": "Ottawa",
+        "address": "275 Slater Street, Suite 1002, Ottawa, ON K1P 5H9",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of Croatia",
+        "city": "Ottawa",
+        "address": "229 Chapel Street, Ottawa, ON K1N 7Y6",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of Cuba",
+        "city": "Ottawa",
+        "address": "388 Main Street, Ottawa, ON K1S 1E3",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of Côte d'Ivoire",
+        "city": "Ottawa",
+        "address": "2713 Lancaster Road, Suite 201, Ottawa, ON K1B 5R6",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of Ecuador",
+        "city": "Ottawa",
+        "address": "99 Bank Street, Suite 230, Ottawa, ON K1P 6B9",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of El Salvador",
+        "city": "Ottawa",
+        "address": "209 Kent Street, Ottawa, ON K2P 1Z8",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of Estonia",
+        "city": "Ottawa",
+        "address": "168 Daly Avenue, Ottawa, ON K1N 6E9",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of Finland",
+        "city": "Ottawa",
+        "address": "55 Metcalfe Street, Suite 850, Ottawa, ON K1P 6L5",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of Guatemala",
+        "city": "Ottawa",
+        "address": "130 Albert Street, Suite 1010, Ottawa, ON K1P 5G4",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of Guinea",
+        "city": "Ottawa",
+        "address": "483 Wilbrod Street, Ottawa, ON K1N 6N1",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of Haiti",
+        "city": "Ottawa",
+        "address": "85 Albert Street, Suite 1110, Ottawa, ON K1P 6A4",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of Honduras",
+        "city": "Ottawa",
+        "address": "130 Albert Street, Suite 504, Ottawa, ON K1P 5G4",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of Indonesia",
+        "city": "Ottawa",
+        "address": "55 Parkdale Avenue, Ottawa, ON K1Y 1E5",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of Iraq",
+        "city": "Ottawa",
+        "address": "189 Laurier Avenue East, Ottawa, ON K1N 7N3",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of Kazakhstan",
+        "city": "Ottawa",
+        "address": "150 Metcalfe Street, Suite 701, Ottawa, ON K2P 1P1",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of Korea",
+        "city": "Ottawa",
+        "address": "150 Boteler Street, Ottawa, ON K1N 5A6",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of Kosovo",
+        "city": "Ottawa",
+        "address": "470 Somerset Street West, Ottawa, ON K1R 5J8",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of Latvia",
+        "city": "Ottawa",
+        "address": "350 Sparks Street, Suite 1200, Ottawa, ON K1R 7S8",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of Lithuania",
+        "city": "Ottawa",
+        "address": "150 Metcalfe Street, Suite 1600, Ottawa, ON K2P 1P1",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of Madagascar",
+        "city": "Ottawa",
+        "address": "3 Raymond Street, Ottawa, ON K1R 1A3",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of Mali",
+        "city": "Ottawa",
+        "address": "50 Goulburn Avenue, Ottawa, ON K1N 8C8",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of Moldova",
+        "city": "Ottawa",
+        "address": "275 Slater Street, Suite 801 (8th Floor), Ottawa, ON K1P 5H9",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of North Macedonia",
+        "city": "Ottawa",
+        "address": "130 Albert Street, Suite 1006, Ottawa, ON K1P 5G4",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of Panama",
+        "city": "Ottawa",
+        "address": "130 Albert Street, Suite 803, Ottawa, ON K1P 5G4",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of Paraguay",
+        "city": "Ottawa",
+        "address": "130 Albert Street, Suite 418, Ottawa, ON K1P 1B1",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of Peru",
+        "city": "Ottawa",
+        "address": "130 Albert Street, Suite 1901, Ottawa, ON K1P 5G4",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of Poland",
+        "city": "Ottawa",
+        "address": "443 Daly Avenue, Ottawa, ON K1N 6H3",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of Senegal",
+        "city": "Ottawa",
+        "address": "381 Kent Street, 4th Floor, Ottawa, ON K2P 2A8",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of Serbia",
+        "city": "Ottawa",
+        "address": "21 Blackburn Avenue, Ottawa, ON K1N 8A2",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of Slovenia",
+        "city": "Ottawa",
+        "address": "150 Metcalfe Street, Suite 2200, Ottawa, ON K2P 1P1",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of the Congo",
+        "city": "Ottawa",
+        "address": "1400 St. Laurent Boulevard, Suite 105, Ottawa, ON K1K 4H4",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of the Philippines",
+        "city": "Ottawa",
+        "address": "30 Murray Street, Ottawa, ON K1N 5M4",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of the Sudan",
+        "city": "Ottawa",
+        "address": "354 Stewart Street, Ottawa, ON K1N 6K8",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of the Union of Myanmar",
+        "city": "Ottawa",
+        "address": "336 Island Park Drive, Ottawa, ON K1Y 0A7",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of Tunisia",
+        "city": "Ottawa",
+        "address": "515 O'Connor Street, Ottawa, ON K1S 3P8",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of Türkiye",
+        "city": "Ottawa",
+        "address": "197 Wurtemburg Street, Ottawa, ON K1N 8L9",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of Yemen",
+        "city": "Ottawa",
+        "address": "54 Chamberlain Avenue, Ottawa, ON K1S 1V9",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Republic of Zimbabwe",
+        "city": "Ottawa",
+        "address": "332 Somerset Street West, Ottawa, ON K2P 0J9",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Russian Federation",
+        "city": "Ottawa",
+        "address": "285 Charlotte Street, Ottawa, ON K1N 8L5",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Slovak Republic",
+        "city": "Ottawa",
+        "address": "50 Rideau Terrace, Ottawa, ON K1M 2A1",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Socialist Republic of Vietnam",
+        "city": "Ottawa",
+        "address": "55 Mackay Street, Ottawa, ON K1M 2B2",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the State of Israel",
+        "city": "Ottawa",
+        "address": "50 O'Connor Street, Suite 1005, Ottawa, ON K1P 6L2",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the State of Kuwait",
+        "city": "Ottawa",
+        "address": "333 Sussex Drive, Ottawa, ON K1N 1J9",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the State of Qatar",
+        "city": "Ottawa",
+        "address": "150 Metcalfe Street, 8th Floor and 12th Floor, Ottawa, ON K2P 1P1",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the Syrian Arab Republic",
+        "city": "Ottawa",
+        "address": "46 Cartier Street, Ottawa, ON K2P 1J3",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the United Arab Emirates",
+        "city": "Ottawa",
+        "address": "125 Boteler Street, Ottawa, ON K1N 0A4",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the United Mexican States",
+        "city": "Ottawa",
+        "address": "45 O'Connor Street, Suites 1000, 1010 and 1030, Ottawa, ON K1P 1A4",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of the United States of America",
+        "city": "Ottawa",
+        "address": "490 Sussex Drive, Ottawa, ON K1N 1G8",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Embassy of Ukraine",
+        "city": "Ottawa",
+        "address": "310 Somerset Street West, Ottawa, ON K2P 0J9",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "High Commission for Barbados",
+        "city": "Ottawa",
+        "address": "55 Metcalfe Street, Suite 470, Ottawa, ON K1P 6L5",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "High Commission for Brunei Darussalam",
+        "city": "Ottawa",
+        "address": "395 Laurier Avenue East, Ottawa, ON K1N 6R4",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "High Commission for Malaysia",
+        "city": "Ottawa",
+        "address": "60 Boteler Street, Ottawa, ON K1N 8Y7",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "High Commission for the Commonwealth of The Bahamas",
+        "city": "Ottawa",
+        "address": "99 Bank Street, Suite 415, Ottawa, ON K1P 6B9",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "High Commission for the Cooperative Republic of Guyana",
+        "city": "Ottawa",
+        "address": "123 Slater Street, Suite 902, Ottawa, ON K1P 5G4",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "High Commission for the Democratic Socialist Republic of Sri Lanka",
+        "city": "Ottawa",
+        "address": "333 Laurier Avenue West, Suite 1204, Ottawa, ON K1P 1C1",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "High Commission for the Federal Republic of Nigeria",
+        "city": "Ottawa",
+        "address": "295 Metcalfe Street, Ottawa, ON K2P 1R9",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "High Commission for the Federation of Saint Kitts and Nevis",
+        "city": "Ottawa",
+        "address": "421 Besserer Street, Ottawa, ON K1N 6H4",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "High Commission for the Gabonese Republic",
+        "city": "Ottawa",
+        "address": "2283 St. Laurent Boulevard, Suites 103-104, Ottawa, ON K1G 5A2",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "High Commission for the Islamic Republic of Pakistan",
+        "city": "Ottawa",
+        "address": "10 Range Road, Ottawa, ON K1N 8J3",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "High Commission for the Kingdom of Lesotho",
+        "city": "Ottawa",
+        "address": "130 Albert Street, Suite 1820, Ottawa, ON K1P 5G4",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "High Commission for the People's Republic of Bangladesh",
+        "city": "Ottawa",
+        "address": "350 Sparks Street, Suite 1100, Ottawa, ON K1R 7S8",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "High Commission for the Republic of Cameroon",
+        "city": "Ottawa",
+        "address": "170 Clemow Avenue, Ottawa, ON K1S 2B4",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "High Commission for the Republic of Cyprus",
+        "city": "Ottawa",
+        "address": "150 Metcalfe Street, Suite 1002, Ottawa, ON K2P 1P1",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "High Commission for the Republic of Ghana",
+        "city": "Ottawa",
+        "address": "1 Clemow Avenue, Ottawa, ON K1S 2A9",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "High Commission for the Republic of India",
+        "city": "Ottawa",
+        "address": "10 Springfield Road, Ottawa, ON K1M 1C9",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "High Commission for the Republic of Rwanda",
+        "city": "Ottawa",
+        "address": "294 Albert Street, Suite 404, Ottawa, ON K1P 6E6",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "High Commission for the Republic of South Africa",
+        "city": "Ottawa",
+        "address": "15 Sussex Drive, Ottawa, ON K1M 1M8",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "High Commission for the Republic of Trinidad and Tobago",
+        "city": "Ottawa",
+        "address": "200 First Avenue, 3rd Level, Ottawa, ON K1S 2G6",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "High Commission for the Republic of Uganda",
+        "city": "Ottawa",
+        "address": "350 Sparks Street, Suite 601, Ottawa, ON K1R 7S8",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "High Commission for the Republic of Zambia",
+        "city": "Ottawa",
+        "address": "130 Albert Street, Suite 900, Ottawa, ON K1P 5G4",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "High Commission for the United Republic of Tanzania",
+        "city": "Ottawa",
+        "address": "50 Range Road, Ottawa, ON K1N 8J4",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "High Commission for Togo",
+        "city": "Ottawa",
+        "address": "12 Range Road, Ottawa, ON K1N 8J3",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "High Commission of the Republic of Malta",
+        "city": "Ottawa",
+        "address": "275 Slater Street, Suite 401, Ottawa, ON K1P 5H9",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Jamaican High Commission",
+        "city": "Ottawa",
+        "address": "350 Sparks Street, Suite 910, Ottawa, ON K1R 7S8",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Kenya High Commission",
+        "city": "Ottawa",
+        "address": "415 Laurier Avenue East, Ottawa, ON K1N 6R4",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "New Zealand High Commission",
+        "city": "Ottawa",
+        "address": "150 Elgin Street, Suite 1401, Ottawa, ON K2P 1L4",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Royal Danish Embassy",
+        "city": "Ottawa",
+        "address": "47 Clarence Street, Suite 450, Ottawa, ON K1N 9K1",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "Royal Embassy of Saudi Arabia",
+        "city": "Ottawa",
+        "address": "201 Sussex Drive, Ottawa, ON K1N 1K6",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      },
+      {
+        "name": "The Royal Thai Embassy",
+        "city": "Ottawa",
+        "address": "180 Island Park Drive, Ottawa, ON K1Y 0A2",
+        "phone": "",
+        "source": "Global Affairs Canada, Foreign Representatives in Canada directory"
+      }
+    ],
+    "note": "All Ottawa addresses below were verified from Global Affairs Canada's 'Foreign Representatives in Canada' directory on 2026-10-27 (page last modified 2025-01-22). That directory page lists addresses only, not phone numbers or hours — check the directory before visiting or calling, as details can change. Two Ottawa listings (Burundi and Luxembourg) show no street address in the directory, listed here as 'To be determined'. Missions whose listed address is outside Ottawa (for example in Washington, D.C., New York, or Singapore) are not included in this Ottawa list; see the full directory for those.",
+    "official_directory": "https://www.international.gc.ca/protocol-protocole/addresses.aspx?lang=eng",
+    "checked": "2026-10-27",
+    "count": 133
+  },
+  "fatwa_citations_used": [
+    "Work in pork/alcohol restaurants, including dishwashing, as cooperation in sin (Qur'an 5:2) — Permanent Committee / Ibn Baz, Fatawa al-Lajnah al-Daa'imah 14/414, as recorded in the previous coordinator report. Site screening follows the user's stricter spec: any role in such a restaurant is rejected.",
+    "Ramadan obligation and sick/traveller make-up — Ibn Baz, Ibn Uthaymeen, as recorded in the previous coordinator report. Pregnancy detail is covered in 'scholar_difference' (scholars differ; no ruling given).",
+    "Zakat 2.5%, silver nisab 595 g (Ibn Baz favoured), eight recipients Qur'an 9:60 — as recorded in the previous coordinator report.",
+    "Funeral washing and four-takbeer prayer — Ibn Baz, Majmu' 13/123, as recorded in the previous coordinator report. Shrouding detail is covered in 'scholar_difference' (no finished ruling given).",
+    "Congregational prayer obligation — Ibn Baz, Ibn Uthaymeen, as recorded in the previous coordinator report.",
+    "Halal meat: naming Allah essential — Ibn Uthaymeen, Ibn Baz, Al-Albani, as recorded in the previous coordinator report.",
+    "Alcohol/pork/gambling advertising and work prohibited — Ibn Baz, Ibn Uthaymeen, as recorded in the previous coordinator report."
+  ],
+  "guides": {
+    "food": "Practical guide: look for a halal certification mark you recognise, ask the restaurant or shop what certification it uses, and check ingredients for pork, gelatin, and alcohol. The site never lists a restaurant or business that sells alcohol or pork, gambling, or any doubtful business. For questions where scholars differ, see 'Questions where scholars differ' on this site. This site gives no ruling of its own.",
+    "funeral": "Practical guide: in Canada, contact the funeral home, the hospital or coroner, and your local mosque or community organisation as soon as possible; ask about washing, shrouding, prayer, burial, and the death certificate and registration steps in your province. For questions where scholars differ, including shrouding detail, see the section 'Questions where scholars differ' on this site.",
+    "mosques": "Practical guide: search for a mosque or prayer space in your city, check its prayer times and Friday prayer time on its own website or notice board, and ask about newcomer welcome, English classes, and community help. This site gives no ruling of its own.",
+    "pregnancy": "Practical guide: register for your province's health coverage as soon as you arrive, find a family doctor, midwife, or obstetrician through your province's health line, and ask about prenatal classes, baby supplies, and community support in your city. This guide gives practical steps only; it does not give medical advice or a religious ruling.",
+    "ramadan": "Practical guide: Ramadan dates change each year — check a local mosque or Islamic calendar for the current year's dates, Suhoor/Iftar times, and Taraweeh times. For questions where scholars differ, see the section 'Questions where scholars differ' on this site.",
+    "zakat": "Practical guide: Zakat is 2.5% on qualifying wealth held for a lunar year, with a silver nisab of 595 grams, and eight recipient categories in Qur'an 9:60. Use a calculator only as an estimate, and ask a knowledgeable scholar or local mosque for a personal calculation — the site does not give a personal fatwa."
+  },
+  "note": "Practical newcomer guides only. Religious rulings are NOT given as the site's own opinion. Where a ruling is cited, it is from the scholars named in the citation. Topics with no clear ruling agreed by Ibn Baz, Ibn Uthaymeen, and Al-Albani, or with a conflict among them, are in 'scholar_difference' and are NOT written as finished rulings.",
+  "scholar_difference": {
+    "title": "Questions where scholars differ",
+    "intro": "This site does not give a ruling of its own on the questions below. In the research for this site, no single clear ruling was found that is agreed by Ibn Baz, Ibn Uthaymeen, and Al-Albani together. Where scholars differ, this site describes the difference in plain words and does not choose between the positions. For your own situation, ask a trusted scholar.",
+    "checked": "2026-10-27",
+    "topics": [
+      {
+        "title": "Fasting in Ramadan during pregnancy",
+        "body": "Scholars differ on what a pregnant woman who does not fast in Ramadan should do afterwards: whether she makes up the missed days, or feeds a poor person for each missed day instead, or both. A Permanent Committee fatwa chaired by Ibn Baz (Fatwa No. 1144) says a pregnant woman who fears harm for herself or her child may break the fast and make up the missed days, like a sick person. A feeding-only position is also reported in summaries attributed to Al-Albani, but this site could not verify that position from a primary fatwa source in this round, so it is not presented here as a verified attribution. Because the positions differ, this site gives no ruling here. Ask a trusted scholar for your own situation, and also ask your doctor about fasting and your health."
+      },
+      {
+        "title": "Shrouding detail at a funeral",
+        "body": "This site gives practical steps for contacting a funeral home, hospital or coroner, and mosque, and for asking about washing, prayer, burial, and registration. It does not give a finished ruling on shrouding detail, because no directly attributed fatwa from Ibn Baz, Ibn Uthaymeen, and Al-Albani together was found in this research that settles that detail. Ask a trusted scholar or your local mosque for guidance for a particular case."
+      },
+      {
+        "title": "General cleaning work in a place that serves forbidden food or drink",
+        "body": "This site's own screening is strict and stays strict: it never lists a job with a restaurant or business that serves pork or alcohol, in any role, including kitchen help and dishwashing. That screening is the site's own rule for what it lists, not a ruling on every kind of cleaning work. A distinction between dishwashing and general cleaning of a place, chairs, or windows was raised in one source in earlier research, but no clear single ruling from Ibn Baz, Ibn Uthaymeen, and Al-Albani together was found that settles indirect cleaning cases. Ask a trusted scholar about a particular job."
+      },
+      {
+        "title": "Mixed businesses and separate departments",
+        "body": "This site does not give a ruling on working for a mixed business, or in a separate department of a business that also sells forbidden goods. No clear single ruling from Ibn Baz, Ibn Uthaymeen, and Al-Albani together was found in this research that settles these cases. The site's own listing rule stays strict: it does not list alcohol, pork, gambling, or doubtful businesses. For a particular job, ask a trusted scholar."
+      }
+    ],
+    "sources_consulted": "Permanent Committee for Scholarly Research and Ifta, Fatwa No. 1144 (pregnancy and breastfeeding, make-up position); Ibn Baz, 30 Questions and Answers on Fasting (pregnancy make-up wording); secondary summaries reporting a feeding-only position attributed to Al-Albani, not verified from a primary source in this round and therefore not attributed as verified here."
+  }
+}

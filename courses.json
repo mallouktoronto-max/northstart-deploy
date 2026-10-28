@@ -1,0 +1,1616 @@
+{
+  "categories": [
+    {
+      "courses": [
+        {
+          "id": "foundation-1",
+          "title": "Foundation 1 — Greetings and everyday words",
+          "lessons": [
+            {
+              "id": "foundation-1-1",
+              "title": "Lesson 1 — Saying hello",
+              "body": "Welcome! In this lesson you will learn how to say hello in a friendly, simple way.\n\nLearn these words:\nHello. — A polite hello for any time of day.\nHi. — A friendly, short hello.\nGood morning. — Use this in the morning.\nGood afternoon. — Use this in the afternoon.\nGood evening. — Use this in the evening.\nHow are you? — A kind question when you meet someone.\nI am fine, thank you. — A simple, polite answer.\nNice to meet you. — Say this the first time you meet someone.\n\nExamples:\nA: Hello! How are you?\nB: I am fine, thank you. And you?\nA: I am fine too. Nice to meet you.\nB: Nice to meet you too.\n\nTry it: Say hello to one person today. Smile, say 'Hello, how are you?' and listen to the answer. That is a good first step. "
+            },
+            {
+              "id": "foundation-1-2",
+              "title": "Lesson 2 — Introducing yourself",
+              "body": "In this lesson you will learn how to tell someone your name, where you are from, and where you live now.\n\nLearn these sentences:\nMy name is Sara. — Say your own name here.\nI am from Egypt. — Say the country you are from.\nI live in Winnipeg now. — Say the city where you live now.\nI speak Arabic and a little English. — Say the languages you speak.\nI am new to Canada. — A clear, honest sentence for a first meeting.\n\nExamples:\nA: Hello, my name is Omar. What is your name?\nB: My name is Lina. Nice to meet you.\nA: Nice to meet you too. I am new to Canada.\nB: Welcome! I live here in Winnipeg.\n\nTry it: Write three sentences about yourself. 1) My name is ___. 2) I am from ___. 3) I live in ___ now. Say them out loud slowly, two times. It is fine to speak slowly. Clear and slow is good."
+            },
+            {
+              "id": "foundation-1-3",
+              "title": "Lesson 3 — Polite words: please, thank you, sorry",
+              "body": "Polite words help a lot in a new place. In this lesson you will learn three small words that make a big difference.\n\nPlease — Use it when you ask for something.\nExample: Please, can you help me?\n\nThank you — Use it when someone helps you.\nExample: Thank you very much.\n\nSorry — Use it when you make a small mistake, or when you do not understand.\nExample: Sorry, I do not understand. Can you say that again, please?\n\nExcuse me — Use it to get attention in a polite way, or to pass someone in a small space.\nExample: Excuse me, where is the bus stop?\n\nTry it: Make one polite question today. For example: 'Excuse me, can you help me, please?' Then say 'Thank you' when the person helps you. These words are useful at school, at work, at a store, and on the bus."
+            },
+            {
+              "id": "foundation-1-4",
+              "title": "Lesson 4 — Everyday questions and short answers",
+              "body": "In this lesson you will learn short questions you can use every day, and short answers you can understand easily.\n\nWhere is the library? — Ask for a place.\nHow much is this? — Ask for a price in a store.\nWhat time is it? — Ask for the time.\nDo you speak English? — A useful first question. You can also say: I speak a little English.\nCan you help me, please? — Ask for help in a polite way.\n\nShort answers:\nYes, please. / No, thank you.\nIt is over there. — The person shows you with a hand or a direction.\nIt is ten dollars. — Listen for a number and the word dollars.\n\nReview: Say hello, tell someone your name, say please and thank you, and ask one question. That is the whole course in one short talk. Well done! Practice a little every day. Short practice, every day, is better than long practice one time."
+            }
+          ]
+        },
+        {
+          "id": "foundation-2",
+          "title": "Foundation 2 — At home, at school, and in the neighbourhood",
+          "lessons": [
+            {
+              "id": "foundation-2-1",
+              "title": "Lesson 1 — At home with family",
+              "body": "Learn: Home words help you talk about daily life. Say: kitchen, bedroom, bathroom, living room, door, window, table, chair. Family words: mother, father, sister, brother, grandmother, grandfather, baby, friend. Examples: This is my kitchen. My sister is in the bedroom. The door is open. Try it: Point to a room in your home and say its name. Then say one family word and one room word together, for example: My brother is in the living room. More examples: This is my mother. That is our living room. Try it again with a friend: ask, What room is this? and answer with a room word."
+            },
+            {
+              "id": "foundation-2-2",
+              "title": "Lesson 2 — At school: classroom words",
+              "body": "Learn: School words help you ask for help and follow a lesson. Say: teacher, student, book, pen, paper, desk, board, bag, lesson, homework. Examples: The teacher is at the board. I have my book and pen. My homework is in my bag. Try it: Make three short sentences with teacher, book, and desk. Then practise this question: Excuse me, teacher, can you help me, please? More examples: The student sits at a desk. The book is on the desk. Try it again: point to your pen and say, This is my pen."
+            },
+            {
+              "id": "foundation-2-3",
+              "title": "Lesson 3 — In the neighbourhood: shops and places",
+              "body": "Learn: Neighbourhood words help you find places and ask for directions. Say: shop, library, bus stop, park, bank, clinic, street, corner. Examples: The library is on this street. The bus stop is near the park. I go to the shop in the morning. Try it: Say where you go each week, for example: I go to the library on Monday. Then ask: Excuse me, where is the bus stop, please? More examples: The clinic is across the street. The park is behind the shop. Try it again: ask a friend, Where is the library?"
+            },
+            {
+              "id": "foundation-2-4",
+              "title": "Lesson 4 — My daily routine",
+              "body": "Learn: Routine words help you talk about your day in order. Say: morning, afternoon, evening, wake up, eat breakfast, go to school, go to work, come home, sleep. Examples: In the morning, I wake up and eat breakfast. In the afternoon, I go to school. In the evening, I come home. Try it: Tell your day in three sentences, one for morning, one for afternoon, and one for evening. More examples: I wake up at seven. I eat lunch in the afternoon. Try it again: tell a friend your routine for tomorrow."
+            }
+          ]
+        }
+      ],
+      "description": "Everyday English for newcomers: greetings, shopping, health, work, and conversation.",
+      "id": "foundation-conversation",
+      "name": "Foundation and Conversation"
+    },
+    {
+      "courses": [
+        {
+          "id": "a1-1",
+          "title": "A1 — Everyday life at home",
+          "lessons": [
+            {
+              "id": "a1-1-1",
+              "title": "Lesson 1 — Rooms and things in my home",
+              "body": "Learn: Home words help you talk about where you live. Learn: kitchen, bedroom, bathroom, living room, hall, table, chair, bed, door, window. Use 'This is' and 'There is' to describe a room: This is my kitchen. There is a table in the kitchen.\n\nExamples:\nThis is my bedroom. There is a bed and a chair.\nThe window is open. The door is closed.\nMy family eats in the kitchen.\n\nTry it: Walk through your home and name each room out loud. Then say one sentence for each room, for example: There is a table in the living room."
+            },
+            {
+              "id": "a1-1-2",
+              "title": "Lesson 2 — Food and meals",
+              "body": "Learn: Food words help you cook, shop, and eat with others. Learn: bread, rice, milk, eggs, cheese, fruit, vegetables, chicken, tea, coffee. Use 'I like' and 'I want': I like rice. I want tea, please.\n\nExamples:\nI eat bread and eggs for breakfast.\nWe drink tea in the evening.\nI like fruit, but I do not like coffee.\n\nTry it: Say what you eat for breakfast, lunch, and dinner, one sentence for each meal. Then ask a friend: What do you like to eat?"
+            },
+            {
+              "id": "a1-1-3",
+              "title": "Lesson 3 — My family",
+              "body": "Learn: Family words help you introduce the people close to you. Learn: mother, father, sister, brother, daughter, son, grandmother, grandfather, baby. Use 'This is my' and 'He is' or 'She is': This is my sister. She is a student.\n\nExamples:\nThis is my brother. His name is Ali.\nMy mother is a teacher. My father works in a shop.\nWe have two children: a son and a daughter.\n\nTry it: Introduce your family in four sentences: This is my ___. He/She is ___. Then say one thing each person likes to do."
+            },
+            {
+              "id": "a1-1-4",
+              "title": "Lesson 4 — My day: morning, afternoon, evening",
+              "body": "Learn: Day words help you talk about your routine in order. Learn: morning, afternoon, evening, night, wake up, eat breakfast, go to school, go to work, come home, sleep. Start with 'In the morning' or 'In the evening'.\n\nExamples:\nIn the morning, I wake up at seven.\nIn the afternoon, I go to school.\nIn the evening, I come home and eat dinner.\n\nTry it: Tell your day in three sentences, one for morning, afternoon, and evening. Say them slowly, then tell them again a little faster."
+            }
+          ]
+        },
+        {
+          "id": "a1-2",
+          "title": "A1 — Getting around my neighbourhood",
+          "lessons": [
+            {
+              "id": "a1-2-1",
+              "title": "Lesson 1 — Taking the bus",
+              "body": "Learn: Bus words help you travel on your own. Learn: bus stop, bus driver, ticket, bus pass, get on, get off, next stop. Ask: Excuse me, does this bus go to the library? Listen for yes, no, and the stop name.\n\nExamples:\nI get on the bus at the bus stop near my home.\nExcuse me, does this bus go downtown?\nI get off at the library stop.\n\nTry it: Practise this question three times: Excuse me, does this bus go to ___? Fill in a real place: the library, the school, or the clinic."
+            },
+            {
+              "id": "a1-2-2",
+              "title": "Lesson 2 — Asking for directions",
+              "body": "Learn: Direction words help you find a place. Learn: left, right, straight, near, far, next to, across from, turn. Use 'Where is' and 'How do I get to': Where is the park? How do I get to the school?\n\nExamples:\nGo straight, then turn left.\nThe park is next to the library.\nThe school is across from the shop.\n\nTry it: Draw a small map of your street. Point to a place and give directions: Go straight, turn right. Then ask a friend for directions to your home."
+            },
+            {
+              "id": "a1-2-3",
+              "title": "Lesson 3 — Places in my neighbourhood",
+              "body": "Learn: Place words help you say where you go each week. Learn: library, park, school, clinic, bank, shop, community centre, post office. Use 'I go to' and 'on Monday' or 'every week': I go to the library on Monday.\n\nExamples:\nI go to the park with my children on Sunday.\nThe clinic is near the library.\nWe go to the community centre every week.\n\nTry it: Say three places you go to each week and the day you go. Then ask a friend: Where do you go on Saturday?"
+            },
+            {
+              "id": "a1-2-4",
+              "title": "Lesson 4 — Weather and seasons",
+              "body": "Learn: Weather words help you dress right and make small talk. Learn: sunny, cloudy, rainy, snowy, windy, cold, warm, hot. Use 'It is' and 'Today is': It is cold today. In Canada, winter is cold and snowy, and summer is warm.\n\nExamples:\nIt is sunny today. I wear a light jacket.\nIt is snowing. I wear boots and a warm coat.\nTomorrow it will be rainy, so I take an umbrella.\n\nTry it: Look outside and say the weather in one sentence. Then say what you wear today and what the weather is like in your home country."
+            }
+          ]
+        },
+        {
+          "id": "a1-3",
+          "title": "A1 — Shopping and money",
+          "lessons": [
+            {
+              "id": "a1-3-1",
+              "title": "Lesson 1 — In the grocery store",
+              "body": "Learn: Store words help you buy food with confidence. Learn: apples, bananas, bread, milk, rice, eggs, soap, bag. Ask: Where is the bread, please? Say: I want two bags of rice, please. Listen for the price in dollars.\n\nExamples:\nWhere is the milk, please? It is in aisle three.\nI want one bag of apples, please.\nThank you. That is ten dollars.\n\nTry it: Make a shopping list of five foods. Practise asking for each one: Where is the ___, please? Then practise the answer: It is over there."
+            },
+            {
+              "id": "a1-3-2",
+              "title": "Lesson 2 — Prices and paying",
+              "body": "Learn: Price words help you understand and pay. Learn: How much is this? How much are these? dollar, cents, change, cash, card. Say: I pay by card. Ask for change: Can I have my change, please?\n\nExamples:\nHow much is this bread? It is four dollars.\nHow much are these apples? They are six dollars.\nI pay by card. Thank you.\n\nTry it: Practise prices: pick five things at home and say their price in dollars. Then practise paying: Here is twenty dollars. Thank you."
+            },
+            {
+              "id": "a1-3-3",
+              "title": "Lesson 3 — Clothes and sizes",
+              "body": "Learn: Clothes words help you buy what fits. Learn: shirt, pants, dress, jacket, shoes, hat, gloves, small, medium, large. Ask: Do you have this in medium? Can I try it on, please? Say: It fits well, or: It is too small.\n\nExamples:\nDo you have this jacket in large?\nCan I try it on, please? Yes, the fitting room is over there.\nIt fits well. I will take it.\n\nTry it: Say what you are wearing today, piece by piece. Then practise: Do you have this in ___? with small, medium, and large."
+            },
+            {
+              "id": "a1-3-4",
+              "title": "Lesson 4 — At the checkout: polite phrases",
+              "body": "Learn: Polite phrases make shopping easy and friendly. Learn: Excuse me, please, thank you, sorry, I need a bag, please. At the checkout, the cashier may ask: Do you need a bag? You can answer: Yes, please, or: No, thank you.\n\nExamples:\nExcuse me, can you help me, please?\nDo you need a bag? Yes, please.\nThank you. Have a nice day! You too.\n\nTry it: Practise a full checkout talk with a friend: greet, ask for a bag, pay, and say thank you. Swap roles and try it again."
+            }
+          ]
+        },
+        {
+          "id": "a1-4",
+          "title": "A1 — Talking to people",
+          "lessons": [
+            {
+              "id": "a1-4-1",
+              "title": "Lesson 1 — Meeting new people",
+              "body": "Learn: Meeting words help you start a friendship. Learn: Hello, Hi, Nice to meet you, What is your name? Where are you from? Say your name slowly and clearly. A smile and a slow, clear voice help a lot.\n\nExamples:\nHello, my name is Sara. What is your name?\nMy name is Omar. Nice to meet you.\nNice to meet you too. Where are you from?\n\nTry it: Practise meeting someone: say hello, your name, and where you are from. Then ask their name. Do it three times, a little faster each time."
+            },
+            {
+              "id": "a1-4-2",
+              "title": "Lesson 2 — Simple questions and answers",
+              "body": "Learn: Short questions help you every day. Learn: What is this? Where is the library? When is the lesson? Who is that? How are you? Answer in short sentences: It is a book. It is on Main Street. I am fine, thank you.\n\nExamples:\nWhat is this? It is a bus ticket.\nWhere is the school? It is next to the park.\nWhen is the lesson? It is on Monday at ten.\n\nTry it: Ask a friend five short questions with what, where, when, who, and how. Then answer five questions from your friend."
+            },
+            {
+              "id": "a1-4-3",
+              "title": "Lesson 3 — On the phone: simple calls",
+              "body": "Learn: Phone words help you make a short, clear call. Learn: Hello, this is ___, May I speak to ___, please? Sorry, I do not understand. Can you say that again, please? Speak slowly, and write down names and times.\n\nExamples:\nHello, this is Sara. May I speak to the teacher, please?\nSorry, I do not understand. Can you say that again, please?\nThank you. Goodbye.\n\nTry it: Practise a phone call: say hello, your name, and one question. Then practise: Sorry, can you say that again, please? It is a very useful sentence."
+            },
+            {
+              "id": "a1-4-4",
+              "title": "Lesson 4 — Saying sorry and asking for help",
+              "body": "Learn: Help words help you when English is hard. Learn: Sorry, I do not understand. Can you help me, please? Can you speak slowly, please? What does this word mean? It is fine to ask. People are usually glad to help.\n\nExamples:\nSorry, I do not understand. Can you speak slowly, please?\nCan you help me, please? Yes, of course.\nWhat does this word mean? It means a place to read and study.\n\nTry it: Practise asking for help in three ways: Can you help me? Can you speak slowly? What does this mean? Use them this week in a real situation."
+            }
+          ]
+        }
+      ],
+      "id": "a1",
+      "name": "English level A1",
+      "description": "Beginner English: everyday words, simple sentences, and basic conversation."
+    },
+    {
+      "courses": [
+        {
+          "id": "a2-1",
+          "title": "A2 — My home and housing",
+          "lessons": [
+            {
+              "id": "a2-1-1",
+              "title": "Lesson 1 — Renting a home: key words",
+              "body": "Learn: Housing words help you understand your home. Learn: rent, landlord, tenant, lease, apartment, deposit, keys, move in, move out. Your lease is the written agreement for your home. Read it slowly, and ask about any word you do not know.\n\nExamples:\nI pay rent on the first day of the month.\nMy landlord gave me the keys on moving day.\nOur lease is for one year.\n\nTry it: Write three sentences about your home: how many rooms, what floor, and when you moved in. Use rent, lease, and landlord in your sentences."
+            },
+            {
+              "id": "a2-1-2",
+              "title": "Lesson 2 — Asking for a repair",
+              "body": "Learn: Repair words help you tell your landlord about a problem. Learn: broken, leaking, not working, tap, heater, light, lock. Be clear and polite: Hello, the tap in the kitchen is leaking. Can you fix it, please?\n\nExamples:\nHello, the heater in the bedroom is not working.\nThe lock on the front door is broken.\nCan you send someone to fix it, please? Thank you.\n\nTry it: Write a short repair message: say what is broken, where it is, and when you saw it. Keep it polite and clear, in three or four sentences."
+            },
+            {
+              "id": "a2-1-3",
+              "title": "Lesson 3 — Living with neighbours",
+              "body": "Learn: Neighbour words help you live well in a building. Learn: neighbour, quiet hours, shared laundry, garbage, recycling, hallway. Be friendly: say hello, keep noise down in the evening, and put garbage in the right bin.\n\nExamples:\nMy neighbours are friendly. We say hello in the hallway.\nPlease keep quiet after ten in the evening.\nWe put recycling in the blue bin.\n\nTry it: Write three good-neighbour rules for your building. Then practise a friendly greeting: Hello, how are you? I am your new neighbour."
+            },
+            {
+              "id": "a2-1-4",
+              "title": "Lesson 4 — Moving and changing address",
+              "body": "Learn: Moving words help you plan a move. Learn: moving day, boxes, moving company, new address, change my address, mail. Tell your bank, your school, and your landlord your new address, and ask the post office about mail forwarding.\n\nExamples:\nWe are moving on Saturday. We have ten boxes.\nPlease change my address to 45 King Street.\nI told my bank and my children's school.\n\nTry it: Write a short moving list: five things to do before moving day. Then write one sentence telling someone your new address."
+            }
+          ]
+        },
+        {
+          "id": "a2-2",
+          "title": "A2 — Work and job search basics",
+          "lessons": [
+            {
+              "id": "a2-2-1",
+              "title": "Lesson 1 — Jobs and workplaces",
+              "body": "Learn: Job words help you talk about work. Learn: job, workplace, boss, coworker, shift, full-time, part-time, salary, break. Use present simple: I work in a shop. I work from nine to five. My boss is kind.\n\nExamples:\nI work part-time in a restaurant.\nMy shift starts at eight in the morning.\nMy coworkers help me when I have a question.\n\nTry it: Say where you work or want to work, your hours, and one thing you like about the job. Use three sentences, all in present simple."
+            },
+            {
+              "id": "a2-2-2",
+              "title": "Lesson 2 — Writing a simple resume",
+              "body": "Learn: A resume is a short list of your skills and past jobs. Learn: name, phone number, email, experience, skills, education, languages. Write clearly: one job per line, with the place and the dates. Keep it to one page if you can.\n\nExamples:\nName: Sara Ahmed. Phone: 204-555-0134.\nExperience: Cook, Sunrise Restaurant, 2023–2025.\nLanguages: Arabic, English. Skills: cooking, teamwork.\n\nTry it: Write your own simple resume: name, contact, two jobs or skills, and languages. Ask a friend or teacher to read it and check for mistakes."
+            },
+            {
+              "id": "a2-2-3",
+              "title": "Lesson 3 — A simple job interview",
+              "body": "Learn: Interview words help you answer with confidence. Learn: Tell me about yourself. Why do you want this job? What are your strengths? Practise short answers: I am hardworking. I like helping customers. I learn quickly.\n\nExamples:\nTell me about yourself. I worked in a shop for two years.\nWhy do you want this job? I like working with people.\nThank you for the interview. I look forward to hearing from you.\n\nTry it: Practise answering three interview questions out loud. Keep each answer to two or three sentences. Then practise asking: When will you decide?"
+            },
+            {
+              "id": "a2-2-4",
+              "title": "Lesson 4 — At work: polite requests",
+              "body": "Learn: Polite requests help you at work every day. Learn: Could you help me, please? Can I ask a question? Sorry, I did not understand. Could you show me again, please? Say thank you when a coworker helps you.\n\nExamples:\nCould you help me with this box, please?\nSorry, I did not understand. Could you say that again, please?\nCan I take my break now? Yes, of course.\n\nTry it: Practise four polite requests for work: asking for help, asking a question, asking to repeat, and asking for a break. Say each one twice."
+            }
+          ]
+        },
+        {
+          "id": "a2-3",
+          "title": "A2 — Health and appointments",
+          "lessons": [
+            {
+              "id": "a2-3-1",
+              "title": "Lesson 1 — Parts of the body and symptoms",
+              "body": "Learn: Body words help you explain how you feel. Learn: head, stomach, back, arm, leg, throat, tooth, fever, cough, headache, stomachache. Say: I have a headache. My back hurts. I feel sick.\n\nExamples:\nI have a cough and a sore throat.\nMy stomach hurts. I feel sick.\nHer arm hurts. She needs to see a doctor.\n\nTry it: Point to five parts of your body and name each one. Then say: I have a ___ and My ___ hurts, with two real or practice examples."
+            },
+            {
+              "id": "a2-3-2",
+              "title": "Lesson 2 — Booking a doctor's appointment",
+              "body": "Learn: Appointment words help you see a doctor. Learn: appointment, clinic, doctor, nurse, health card, available, morning, afternoon. Say: Hello, I would like to book an appointment, please. Bring your health card with you.\n\nExamples:\nHello, I would like to book an appointment with Dr. Lee, please.\nAre you available on Thursday morning?\nYes, Thursday at ten. Please bring your health card.\n\nTry it: Practise booking an appointment by phone: greet, ask for an appointment, say a day and time, and confirm: So, Thursday at ten. Thank you."
+            },
+            {
+              "id": "a2-3-3",
+              "title": "Lesson 3 — At the pharmacy",
+              "body": "Learn: Pharmacy words help you get medicine safely. Learn: pharmacy, pharmacist, prescription, medicine, tablets, dose, once a day, twice a day, before meals. Always ask: How do I take this medicine? Listen carefully to the answer.\n\nExamples:\nI have a prescription from my doctor.\nHow do I take this medicine? Take one tablet twice a day.\nDo I take it before meals? Yes, before breakfast and dinner.\n\nTry it: Practise asking a pharmacist three questions: How do I take this? How many times a day? Before or after meals? Write the answers in your notebook."
+            },
+            {
+              "id": "a2-3-4",
+              "title": "Lesson 4 — When to get urgent help",
+              "body": "Learn: Urgent words help you in an emergency. Learn: emergency, ambulance, hospital, emergency room, I need help, It hurts a lot. In Canada, call 911 for a serious emergency. Stay calm, give your address, and say what happened.\n\nExamples:\nI need help. My friend fell and cannot stand up.\nPlease call an ambulance. We are at 45 King Street.\nStay on the phone. Help is on the way.\n\nTry it: Practise saying your address clearly, three times. Then practise an emergency sentence: I need help. Please call an ambulance. We are at ___."
+            }
+          ]
+        },
+        {
+          "id": "a2-4",
+          "title": "A2 — School and children",
+          "lessons": [
+            {
+              "id": "a2-4-1",
+              "title": "Lesson 1 — Talking to your child's teacher",
+              "body": "Learn: School words help you support your child. Learn: teacher, classroom, homework, report card, parent-teacher meeting, progress. Ask: How is my child doing? What can we practise at home? Thank the teacher at the end.\n\nExamples:\nHello, I am Sara's mother. How is Sara doing in class?\nShe is doing well. She reads every day.\nThank you. What can we practise at home?\n\nTry it: Write three questions for a parent-teacher meeting. Practise asking them politely, and practise saying: Thank you for your help."
+            },
+            {
+              "id": "a2-4-2",
+              "title": "Lesson 2 — Reading school notes and letters",
+              "body": "Learn: School notes tell you about trips, meetings, and holidays. Learn: field trip, permission form, school holiday, early dismissal, sign, return by. Read the date first, then the action: sign the form, return it by Friday.\n\nExamples:\nThere is a field trip on Friday, May 8.\nPlease sign the permission form and return it by Wednesday.\nSchool closes early on Thursday at two.\n\nTry it: Read a school note slowly and find: the date, the place, and what parents must do. Write the three answers in your notebook."
+            },
+            {
+              "id": "a2-4-3",
+              "title": "Lesson 3 — Homework and studying at home",
+              "body": "Learn: Homework words help your child learn at home. Learn: homework, read aloud, practise, spelling, math, project, due. Make a quiet time each day: thirty minutes for homework, then a break. Praise effort, not only correct answers.\n\nExamples:\nMy son does his homework after dinner.\nPlease read this page aloud, then practise the spelling words.\nThe project is due on Monday.\n\nTry it: Make a homework plan with your child: a time, a place, and a short break. Write it in three sentences and put it on the fridge."
+            },
+            {
+              "id": "a2-4-4",
+              "title": "Lesson 4 — School routines and absences",
+              "body": "Learn: Routine words help you tell the school about your child. Learn: absent, sick, late, excuse, school office, call the school. If your child is sick, call the school in the morning: Hello, my daughter Sara is sick today. She will stay home.\n\nExamples:\nHello, this is Sara's father. Sara is sick today.\nShe will not come to school. Thank you.\nPlease call the school office if your child will be late.\n\nTry it: Practise an absence call: your name, your child's name, the reason, and thank you. Keep it short and clear, under thirty seconds."
+            }
+          ]
+        }
+      ],
+      "id": "a2",
+      "name": "English level A2",
+      "description": "Elementary English: everyday life, work, and simple past and future sentences."
+    },
+    {
+      "courses": [
+        {
+          "id": "b1-1",
+          "title": "B1 — Renting and your rights",
+          "lessons": [
+            {
+              "id": "b1-1-1",
+              "title": "Lesson 1 — Understanding your lease",
+              "body": "Learn: A lease sets out rent, rules, and responsibilities. Read it before you sign: how much is the rent, when is it due, how long is the term, and what happens if you need to leave early? If a sentence is unclear, ask for an explanation in writing and keep a copy of everything you sign.\n\nExamples:\nThe rent is $1,200 per month, due on the first.\nThe lease term is twelve months, from May 1 to April 30.\nThe tenant must give notice in writing before moving out.\n\nTry it: Read one section of a sample lease and write down three facts: the rent, the term, and one rule. Then write one question you would ask the landlord."
+            },
+            {
+              "id": "b1-1-2",
+              "title": "Lesson 2 — Writing to your landlord",
+              "body": "Learn: A clear written message protects both sides. Start politely, state the problem and the date, say what you need, and keep a copy. Example opening: Dear Ms. Lee, I am writing about the leaking tap in the kitchen, first noticed on March 3. Could you please arrange a repair?\n\nExamples:\nDear Mr. Chen, I am writing about the broken heater in the bedroom.\nIt stopped working on January 12. Could you please send someone this week?\nThank you for your help. Sara Ahmed, Unit 12.\n\nTry it: Write a short message to a landlord about a repair: greeting, problem and date, request, and thanks. Keep it under ten sentences and check your spelling."
+            },
+            {
+              "id": "b1-1-3",
+              "title": "Lesson 3 — Giving notice and moving out",
+              "body": "Learn: When you plan to leave, notice rules matter. Most leases ask for written notice a set time before the end of the term, often one or two months. State your name, unit, and last day clearly, and ask for a move-out inspection and the return of your deposit in writing.\n\nExamples:\nDear landlord, I am giving notice that I will move out on June 30.\nMy name is Omar Hassan, Unit 211.\nCould we arrange a move-out inspection, please?\n\nTry it: Write a notice message with your name, unit, and moving date. Then list three things to do on moving day: clean, return keys, and take photos of the rooms."
+            },
+            {
+              "id": "b1-1-4",
+              "title": "Lesson 4 — Where to get help with housing",
+              "body": "Learn: If a housing problem is not solved, you do not have to face it alone. Settlement agencies, tenant associations, and community legal clinics can explain your rights and help you write letters. Bring your lease, photos, and copies of messages to your appointment.\n\nExamples:\nI have a problem with a repair. Can you help me understand my rights?\nPlease bring your lease and photos to the appointment.\nThe clinic helped me write a letter to my landlord.\n\nTry it: Find one local settlement or tenant help service and write down its name, address, and phone number. Practise explaining your problem in three sentences."
+            }
+          ]
+        },
+        {
+          "id": "b1-2",
+          "title": "B1 — Finding work and interviews",
+          "lessons": [
+            {
+              "id": "b1-2-1",
+              "title": "Lesson 1 — Searching for jobs",
+              "body": "Learn: A good job search uses several routes: online job boards, employment centres, settlement agencies, and people you know. Read each posting carefully: the duties, the hours, the location, and how to apply. Apply only for jobs you can really do, and keep a list of where you applied.\n\nExamples:\nI found this job on a job board. The hours are full-time, Monday to Friday.\nThe posting asks for two years of experience and good English.\nI applied on Tuesday and wrote the date in my list.\n\nTry it: Find one real job posting and write down the job title, duties, hours, and how to apply. Then write one sentence explaining why the job fits you."
+            },
+            {
+              "id": "b1-2-2",
+              "title": "Lesson 2 — Writing a cover letter",
+              "body": "Learn: A cover letter explains why you want a job and what you offer. Keep it short: one paragraph about the job, one about your experience, and one closing line. Use the job title and the company name, and end with: Thank you for considering my application.\n\nExamples:\nDear hiring manager, I am applying for the cook position at Sunrise Restaurant.\nI have three years of experience in busy kitchens and I work well in a team.\nThank you for considering my application. I look forward to hearing from you.\n\nTry it: Write a short cover letter for a job you would like: three paragraphs, each two or three sentences. Ask a friend to check it for clear, polite language."
+            },
+            {
+              "id": "b1-2-3",
+              "title": "Lesson 3 — Answering interview questions",
+              "body": "Learn: Strong interview answers use real examples. For 'Tell me about a challenge', describe the situation, what you did, and the result, in that order. Speak slowly, listen to the full question, and do not be afraid to pause before answering.\n\nExamples:\nTell me about a difficult day at work. One busy evening, two cooks were sick.\nI organized the orders and helped at two stations.\nWe served every customer on time, and my manager thanked me.\n\nTry it: Prepare answers for three questions: about yourself, a challenge, and teamwork. Practise each answer out loud in under one minute."
+            },
+            {
+              "id": "b1-2-4",
+              "title": "Lesson 4 — Starting a new job well",
+              "body": "Learn: The first weeks at a new job are for learning. Ask about safety rules, break times, and who to ask when you are unsure. Write down new words and procedures, arrive on time, and tell your supervisor early if you do not understand a task.\n\nExamples:\nOn my first day, my supervisor showed me the safety rules.\nI wrote down the break times and the name of my trainer.\nIf I do not understand, I ask: Could you show me again, please?\n\nTry it: Write five questions to ask on your first day at a new job: about safety, breaks, duties, training, and who to ask for help."
+            }
+          ]
+        },
+        {
+          "id": "b1-3",
+          "title": "B1 — Health care in Canada",
+          "lessons": [
+            {
+              "id": "b1-3-1",
+              "title": "Lesson 1 — Finding a family doctor",
+              "body": "Learn: A family doctor knows your health history and can refer you to specialists. Ask a settlement agency, a clinic, or friends for names, and check whether the doctor is accepting new patients. Bring your health card and a list of medicines to your first visit.\n\nExamples:\nHello, is Dr. Lee accepting new patients?\nI am new to Winnipeg and I need a family doctor.\nMy first appointment is on Tuesday. I will bring my health card.\n\nTry it: Write a short phone script for finding a doctor: greeting, your situation, the question about new patients, and thanks. Practise it out loud twice."
+            },
+            {
+              "id": "b1-3-2",
+              "title": "Lesson 2 — Walk-in clinics and emergencies",
+              "body": "Learn: Walk-in clinics help when you cannot see your family doctor soon. For a serious emergency, such as trouble breathing or heavy bleeding, call 911 or go to the emergency room. For a minor problem, a walk-in clinic or pharmacist can often help first.\n\nExamples:\nMy doctor is away this week, so I went to a walk-in clinic.\nI waited one hour and saw a doctor about my cough.\nIf it is an emergency, call 911. Do not drive yourself.\n\nTry it: Write two situations: one for a walk-in clinic and one for 911. Explain your choice in one sentence for each, and share them with a friend."
+            },
+            {
+              "id": "b1-3-3",
+              "title": "Lesson 3 — Understanding prescriptions",
+              "body": "Learn: A prescription tells you the medicine, the dose, and how often to take it. Read the label: the patient's name, the drug name, the dose, and the directions. Ask the pharmacist if anything is unclear, and never share prescription medicine with another person.\n\nExamples:\nTake one tablet in the morning and one at night.\nFinish all the tablets, even if you feel better.\nIf you feel dizzy, call the pharmacy and ask for advice.\n\nTry it: Read a sample medicine label and write down the drug name, dose, and directions. Then write two questions you would ask the pharmacist."
+            },
+            {
+              "id": "b1-3-4",
+              "title": "Lesson 4 — Mental health and community support",
+              "body": "Learn: Settling in a new country can be stressful, and asking for help is a sign of strength. Community centres, settlement agencies, and health clinics can connect you with counselling and support groups. Talking with someone you trust, keeping a routine, and getting outside can also help.\n\nExamples:\nSince moving here, I have felt lonely and worried.\nA counsellor at the settlement agency helped me make a plan.\nI joined a conversation group and I feel better now.\n\nTry it: Write three things that help you feel calm, and one person or service you could talk to if you feel stressed. Keep this list somewhere you can find it."
+            }
+          ]
+        },
+        {
+          "id": "b1-4",
+          "title": "B1 — Community and daily services",
+          "lessons": [
+            {
+              "id": "b1-4-1",
+              "title": "Lesson 1 — Using the bank",
+              "body": "Learn: Bank words help you manage money safely. Learn: account, savings, chequing, debit card, PIN, deposit, withdraw, statement, branch. Never share your PIN with anyone, and check your statement each month for transactions you do not recognize.\n\nExamples:\nI would like to open a chequing account, please.\nI deposit my paycheque every two weeks.\nPlease do not share your PIN, even with family.\n\nTry it: Practise a bank visit: greet, ask to open an account, and ask what documents you need. Write down the documents you must bring."
+            },
+            {
+              "id": "b1-4-2",
+              "title": "Lesson 2 — The public library",
+              "body": "Learn: Libraries are free and open to everyone. You can borrow books, use computers, study, and join free programs, including conversation groups and help with resumes. Ask staff for a library card: bring identification and proof of address.\n\nExamples:\nI would like a library card, please. Here is my identification.\nYou can borrow books for three weeks.\nThe conversation group meets every Thursday at six.\n\nTry it: Visit a library or its website and write down three free services it offers. Then write one question you would ask library staff."
+            },
+            {
+              "id": "b1-4-3",
+              "title": "Lesson 3 — Community centres and programs",
+              "body": "Learn: Community centres offer sports, classes, childcare programs, and events for all ages. Many programs are free or low-cost for newcomers. Ask about registration, schedules, and whether you need to bring anything, such as indoor shoes or a water bottle.\n\nExamples:\nThe community centre has swimming lessons for children on Saturdays.\nRegistration opens on Monday. Please bring a swimsuit and towel.\nI joined a cooking class and met three new friends.\n\nTry it: Find one program at a community centre near you and write down its name, day, time, and cost. Then tell a friend why you would like to join."
+            },
+            {
+              "id": "b1-4-4",
+              "title": "Lesson 4 — Volunteering in your community",
+              "body": "Learn: Volunteering means giving time to help others, and it is a good way to practise English, meet people, and gain Canadian experience. Food banks, libraries, schools, and festivals all need volunteers. Ask: What tasks do volunteers do, and how many hours per week?\n\nExamples:\nI volunteer at the food bank every Saturday morning.\nI sort food donations and greet visitors.\nVolunteering helped my English and my confidence.\n\nTry it: Write three places where you could volunteer and one skill you could offer each place. Then write a short message asking about volunteering."
+            }
+          ]
+        }
+      ],
+      "id": "b1",
+      "name": "English level B1",
+      "description": "Intermediate English: longer conversations, opinions, and everyday problems."
+    },
+    {
+      "courses": [
+        {
+          "id": "b2-1",
+          "title": "B2 — Workplace communication",
+          "lessons": [
+            {
+              "id": "b2-1-1",
+              "title": "Lesson 1 — Writing professional emails",
+              "body": "Learn: A professional email is short, clear, and polite. Use a clear subject line, a greeting, one main point per paragraph, and a polite closing. Avoid slang and all-caps, and re-read before sending, especially names, dates, and attachments.\n\nExamples:\nSubject: Request for Friday shift change\nDear Ms. Patel, I am writing to ask if I can swap my Friday shift with Sam's.\nI have a medical appointment that morning. Thank you for considering this. Best regards, Sara.\n\nTry it: Write an email asking for a schedule change: subject line, greeting, reason, request, and closing. Keep it under 120 words and re-read it before finishing."
+            },
+            {
+              "id": "b2-1-2",
+              "title": "Lesson 2 — Speaking up in meetings",
+              "body": "Learn: Meetings work better when everyone contributes. Use phrases to join in politely: 'May I add something?' 'I agree, and I would add...' 'Sorry, could you explain that point?' Prepare one point before the meeting, and listen carefully before responding.\n\nExamples:\nMay I add something to that idea? I think customers would like longer hours.\nI agree with Ali, and I would add that weekend hours matter most.\nSorry, could you explain the new schedule again?\n\nTry it: Prepare one point for a practice meeting and express it in three ways: agreeing, adding an idea, and asking for clarification."
+            },
+            {
+              "id": "b2-1-3",
+              "title": "Lesson 3 — Giving and receiving feedback",
+              "body": "Learn: Good feedback is specific, kind, and focused on actions, not people. When you receive feedback, listen fully, thank the person, and ask a clarifying question instead of defending yourself at once. Then decide what you will change and follow up.\n\nExamples:\nYour report was clear, and adding a summary would make it stronger.\nThank you for the feedback. Could you show me an example?\nI will add a short summary to the next report.\n\nTry it: Practise giving feedback on a sample report: one strength, one suggestion, and one question. Then practise receiving feedback without interrupting."
+            },
+            {
+              "id": "b2-1-4",
+              "title": "Lesson 4 — Workplace safety conversations",
+              "body": "Learn: Safety talk must be clear, even when it feels awkward. Report hazards right away, ask about protective equipment, and confirm instructions: 'So I should wear gloves and goggles for this task, correct?' If a task feels unsafe, stop and ask your supervisor before continuing.\n\nExamples:\nI noticed the floor is wet near the entrance. I will put up a sign.\nDo I need gloves for this cleaning product?\nI am not sure this ladder is safe. Could you check it, please?\n\nTry it: Write three safety sentences for your workplace: reporting a hazard, asking about equipment, and confirming an instruction. Practise saying them clearly."
+            }
+          ]
+        },
+        {
+          "id": "b2-2",
+          "title": "B2 — Government services and forms",
+          "lessons": [
+            {
+              "id": "b2-2-1",
+              "title": "Lesson 1 — Your Social Insurance Number",
+              "body": "Learn: A Social Insurance Number, or SIN, is needed to work in Canada and to access government programs. Apply through Service Canada with your immigration documents. Keep your SIN private: share it only with your employer, your bank, and government agencies that need it.\n\nExamples:\nI applied for my SIN at Service Canada with my work permit.\nMy employer asked for my SIN on my first day.\nI keep my SIN card in a safe place and I do not share it online.\n\nTry it: Write a checklist for a SIN appointment: documents to bring, questions to ask, and where you will store your SIN safely afterwards."
+            },
+            {
+              "id": "b2-2-2",
+              "title": "Lesson 2 — Health cards and identification",
+              "body": "Learn: Each province issues its own health card, and you usually need proof of identity and address to apply. Carry your health card to medical appointments, and report a lost card promptly. Keep copies of important documents in a safe place, separate from the originals.\n\nExamples:\nI applied for my Manitoba health card with my passport and lease.\nThe card arrived by mail in four weeks.\nI keep a photocopy at home and the original in my wallet.\n\nTry it: List the documents you used, or would use, to apply for a health card. Then write what you would do first if your card were lost."
+            },
+            {
+              "id": "b2-2-3",
+              "title": "Lesson 3 — Understanding taxes simply",
+              "body": "Learn: Most workers in Canada file a tax return each spring for the previous year. Your employer gives you a T4 slip showing your income and taxes paid. Free community tax clinics can help newcomers file, and filing on time matters even if your income was low.\n\nExamples:\nI received my T4 in February. It shows my income for last year.\nA volunteer at the tax clinic helped me file my return.\nI filed before the deadline, even though my income was small.\n\nTry it: Explain taxes to a friend in five sentences: what a T4 is, when to file, where to get help, and why filing matters. Keep the language simple."
+            },
+            {
+              "id": "b2-2-4",
+              "title": "Lesson 4 — Filling in forms accurately",
+              "body": "Learn: Forms ask for exact information, so copy names and numbers carefully from your documents, not from memory. If a question does not apply, write 'N/A' rather than leaving it blank, and check dates in the order the form asks for: day, month, year, or month, day, year.\n\nExamples:\nPlease print your full legal name exactly as it appears on your passport.\nIf you have no middle name, write N/A in that box.\nDate of birth: please write day, month, then year.\n\nTry it: Practise filling in a sample form with your name, address, and phone number. Then swap with a friend and check each other's work for errors."
+            }
+          ]
+        },
+        {
+          "id": "b2-3",
+          "title": "B2 — Education and training",
+          "lessons": [
+            {
+              "id": "b2-3-1",
+              "title": "Lesson 1 — Choosing an adult course",
+              "body": "Learn: Before choosing a course, ask about the goal, the level, the schedule, the cost, and the certificate. A good course matches your goal: a language course for daily life, a certificate course for a job, or a bridging program for your profession. Ask former students what they thought.\n\nExamples:\nI want a course that prepares me for work in health care.\nThe course runs Tuesday and Thursday evenings for twelve weeks.\nIt costs $200, and there is help for newcomers with low income.\n\nTry it: Choose a real course and write down its goal, level, schedule, cost, and certificate. Then write one sentence explaining why it fits your goal."
+            },
+            {
+              "id": "b2-3-2",
+              "title": "Lesson 2 — Getting credentials recognized",
+              "body": "Learn: If you studied or worked abroad, credential recognition can help employers understand your qualifications. Start by asking a settlement agency which assessment service fits your field. Gather transcripts, diplomas, and work references, and allow several months for the process.\n\nExamples:\nI was an engineer in my home country and I want to work here.\nThe agency advised me to get my degree assessed first.\nI gathered my transcripts and two work references.\n\nTry it: List the documents you would need for a credential assessment in your field. Then write three questions to ask an advisor about the process."
+            },
+            {
+              "id": "b2-3-3",
+              "title": "Lesson 3 — Study skills for busy adults",
+              "body": "Learn: Busy adults learn best in short, regular sessions. Study for twenty-five minutes, take a five-minute break, and review the next day. Use real materials: a work email, a school note, or a news article. Teach what you learned to someone else to check your understanding.\n\nExamples:\nI study English for thirty minutes after dinner, four days a week.\nI read one news article and write down five new words.\nOn Sunday, I explain the week's ideas to my friend.\n\nTry it: Make a study plan for one week: four short sessions, the materials you will use, and one review day. Keep it realistic for your work and family life."
+            },
+            {
+              "id": "b2-3-4",
+              "title": "Lesson 4 — Presenting in class or at work",
+              "body": "Learn: A good short presentation has a clear start, two or three main points, and a clear ending. Open with your topic and why it matters, speak slowly, look at your audience, and end with a summary and a question. Practise out loud at least twice before the real talk.\n\nExamples:\nGood morning. Today I will talk about recycling in our building.\nFirst, I will explain the bins. Second, I will show the schedule.\nIn summary, recycling helps our building and our city. Any questions?\n\nTry it: Prepare a two-minute talk on a topic you know well: opening, two points, and a closing. Practise it out loud and time yourself."
+            }
+          ]
+        },
+        {
+          "id": "b2-4",
+          "title": "B2 — News, opinions and discussion",
+          "lessons": [
+            {
+              "id": "b2-4-1",
+              "title": "Lesson 1 — Reading the news in English",
+              "body": "Learn: News articles usually answer who, what, where, when, and why in the first paragraph. Read the headline and first paragraph first, then look for key facts. Unknown words matter less than the main idea: guess from context, then check only the words that block understanding.\n\nExamples:\nThe city will open a new library downtown next spring.\nThe headline says: New library planned for downtown.\nI did not know one word, but I understood the main idea.\n\nTry it: Read a short news article and write down the five W answers: who, what, where, when, and why. Then write the main idea in one sentence."
+            },
+            {
+              "id": "b2-4-2",
+              "title": "Lesson 2 — Giving your opinion politely",
+              "body": "Learn: Opinions land better with reasons and polite language. Use: 'In my opinion...', 'I think... because...', and 'I see your point, but...'. Give one reason, not five, and listen to the reply before answering. Disagreeing respectfully is a normal part of discussion.\n\nExamples:\nIn my opinion, public transit should run later at night, because many people work evening shifts.\nI see your point, but later buses also cost more.\nThat is a fair point. Perhaps weekend service could come first.\n\nTry it: Write your opinion on a local topic with one reason. Then write a polite reply to someone who disagrees, starting with: I see your point, but..."
+            },
+            {
+              "id": "b2-4-3",
+              "title": "Lesson 3 — Discussing a local issue",
+              "body": "Learn: Local issues, like a new bus route or a park closure, affect daily life. Before a discussion, learn the facts: what is proposed, who decides, and when. Present facts first, then your view, and ask others what they think. A discussion is not a debate to win.\n\nExamples:\nThe city proposes closing the park for repairs in July.\nI think the work is needed, but families need another play area.\nWhat do you think? Would a temporary playground help?\n\nTry it: Pick a local issue and write a discussion opener: one fact, your view with a reason, and a question for others. Practise it with a friend."
+            },
+            {
+              "id": "b2-4-4",
+              "title": "Lesson 4 — Checking facts before sharing",
+              "body": "Learn: Before sharing news online, pause and check: who published it, when, and whether another reliable source reports the same story. Headlines can mislead, photos can be old, and a single post is not proof. Sharing only checked stories protects your friends and your reputation.\n\nExamples:\nThis post claims a new rule, but no news site reports it.\nThe photo is from 2019, not from this week.\nI will not share it until I find a reliable source.\n\nTry it: Take a surprising post you have seen and check it: source, date, and a second source. Write one sentence about what you found and whether you would share it."
+            }
+          ]
+        }
+      ],
+      "id": "b2",
+      "name": "English level B2",
+      "description": "Upper-intermediate English: work, study, and detailed discussion in English."
+    },
+    {
+      "courses": [
+        {
+          "id": "c1-1",
+          "title": "C1 — Professional communication",
+          "lessons": [
+            {
+              "id": "c1-1-1",
+              "title": "Lesson 1 — Formal emails that get results",
+              "body": "Learn: Formal emails respect the reader's time. State your purpose in the first sentence, give only the details needed for a decision, and end with a clear next step and a deadline if one exists. A respectful tone matters more than long, complex sentences: clarity is professionalism.\n\nExamples:\nDear Ms. Thompson, I am writing to confirm our meeting on Thursday, May 14, at 10 a.m.\nPlease let me know if that time still works for you.\nIf I do not hear from you by Wednesday, I will assume the meeting is confirmed.\n\nTry it: Rewrite a vague email into a formal one: purpose first, necessary details only, and a clear next step. Compare the two versions and note what improved."
+            },
+            {
+              "id": "c1-1-2",
+              "title": "Lesson 2 — Writing clear reports",
+              "body": "Learn: A clear report answers three questions: what happened, what it means, and what should happen next. Use headings, short paragraphs, and a summary at the start. Support claims with numbers or examples, and separate facts from recommendations so readers can judge each part.\n\nExamples:\nSummary: Customer complaints fell by 20% after the new schedule began.\nFinding: Most complaints concerned evening wait times.\nRecommendation: Add one evening staff member on Fridays and Saturdays.\n\nTry it: Write a one-page report on a familiar topic: summary, two findings with evidence, and one recommendation. Ask a colleague to check whether the recommendation follows from the findings."
+            },
+            {
+              "id": "c1-1-3",
+              "title": "Lesson 3 — Presenting to a professional audience",
+              "body": "Learn: Professional presentations persuade through structure, not volume. Open with the problem and your main message, support it with two or three pieces of evidence, and close by stating the decision you need. Anticipate one hard question and prepare an honest answer, including what you do not yet know.\n\nExamples:\nOur delivery times have risen by 15% this quarter.\nTwo causes explain most delays: staffing gaps and a new route.\nI recommend hiring one driver and reviewing the route this month.\n\nTry it: Prepare a five-minute presentation: problem, main message, evidence, and a requested decision. Practise answering one difficult question honestly."
+            },
+            {
+              "id": "c1-1-4",
+              "title": "Lesson 4 — Handling difficult conversations",
+              "body": "Learn: Difficult conversations go better with preparation and respect. Describe the situation factually, explain its effect, and invite the other person's view before proposing a solution. Avoid blame language such as 'you always', and focus on a shared goal both sides can accept.\n\nExamples:\nI noticed the last two reports arrived after the deadline, which delayed the team's work.\nCan you tell me what made those weeks difficult?\nLet us agree on a new deadline process that works for both of us.\n\nTry it: Plan a difficult conversation: facts, effect, an open question, and a proposed solution. Role-play it with a friend, then swap roles."
+            }
+          ]
+        },
+        {
+          "id": "c1-2",
+          "title": "C1 — Critical reading and media",
+          "lessons": [
+            {
+              "id": "c1-2-1",
+              "title": "Lesson 1 — Reading for the main argument",
+              "body": "Learn: Strong readers look past details to find the author's main claim and the evidence behind it. Ask: What is the author trying to convince me of? What evidence is offered? What evidence is missing? A text can be well written and still rest on weak evidence.\n\nExamples:\nThe article claims the new program will cut waiting times in half.\nIts evidence is one short trial in a single clinic.\nThe article does not discuss cost, staffing, or larger trials.\n\nTry it: Read an opinion article and write its main claim, its best evidence, and one important piece of missing evidence, each in a single sentence."
+            },
+            {
+              "id": "c1-2-2",
+              "title": "Lesson 2 — Recognizing bias and framing",
+              "body": "Learn: Bias often hides in word choice and in what a text leaves out. Compare how two outlets report the same event: which facts each one leads with, which voices each quotes, and which words describe the same people. Framing changes impressions even when the facts overlap.\n\nExamples:\nOne headline calls the group 'protesters', the other calls them 'residents'.\nOne article quotes officials first; the other quotes families first.\nBoth report the same meeting, but readers may reach different conclusions.\n\nTry it: Compare two reports of one event and note three framing differences: headline words, first voice quoted, and one fact only one report includes."
+            },
+            {
+              "id": "c1-2-3",
+              "title": "Lesson 3 — Evaluating sources",
+              "body": "Learn: Not all sources carry equal weight. Check the author, the publisher, the date, and whether claims link to original data. A government statistics release, a peer-reviewed study, and an anonymous post differ greatly in reliability, even when they discuss the same topic.\n\nExamples:\nThe claim comes from a national statistics release dated last month.\nIt links to the full data tables, which I checked.\nThe anonymous post gives no source, so I will not rely on it.\n\nTry it: Evaluate three sources on one topic: author, publisher, date, and evidence. Rank them by reliability and write one sentence justifying your ranking."
+            },
+            {
+              "id": "c1-2-4",
+              "title": "Lesson 4 — Summarizing without distorting",
+              "body": "Learn: A fair summary keeps the author's meaning, including limits and uncertainty. Keep the main claim, drop examples, and preserve words like 'may', 'suggests', or 'in some cases'. A summary that turns a cautious finding into a certainty has distorted the original.\n\nExamples:\nOriginal: The study suggests the program may help some students.\nFair summary: A study suggests the program may help some students.\nDistorted summary: The program helps students. This drops may and some.\n\nTry it: Summarize a short article in three sentences without dropping its cautions. Then check: does your summary claim more than the original?"
+            }
+          ]
+        },
+        {
+          "id": "c1-3",
+          "title": "C1 — Advocacy and community leadership",
+          "lessons": [
+            {
+              "id": "c1-3-1",
+              "title": "Lesson 1 — Speaking at a public meeting",
+              "body": "Learn: Public meetings give residents a voice in decisions. Prepare a short statement: who you are, the issue in one sentence, your experience or evidence, and a specific request. Speak slowly, stay within the time limit, and thank the chair when you finish.\n\nExamples:\nGood evening. My name is Sara Ahmed and I live on King Street.\nThe proposed bus change would remove evening service our shift workers rely on.\nI ask the council to keep at least one evening bus. Thank you.\n\nTry it: Write a two-minute statement for a public meeting on a local issue: introduction, issue, evidence, and a specific request. Time yourself reading it."
+            },
+            {
+              "id": "c1-3-2",
+              "title": "Lesson 2 — Writing a proposal",
+              "body": "Learn: A proposal turns an idea into action. State the problem, the proposed solution, the people it helps, the resources needed, and how success will be measured. Decision-makers respond to specific, realistic plans more than to general complaints or praise.\n\nExamples:\nProblem: Newcomer parents lack evening conversation practice.\nProposal: A weekly two-hour conversation group at the library.\nResources: One room, two volunteers, and printed materials. Success: Twenty regular participants after three months.\n\nTry it: Write a one-page proposal for a community idea: problem, solution, resources, and one measure of success. Keep each section to three sentences."
+            },
+            {
+              "id": "c1-3-3",
+              "title": "Lesson 3 — Building a coalition",
+              "body": "Learn: Big changes need allies. A coalition brings together people and groups who share a goal but bring different strengths: a school, a faith group, a business, a settlement agency. Agree on a shared goal early, divide tasks clearly, and keep communication regular and respectful.\n\nExamples:\nOur goal is a safe crossing near the school.\nThe parents' group will gather signatures, the school will write a letter, and the community centre will host a meeting.\nWe meet every two weeks and share notes after each meeting.\n\nTry it: Choose a community goal and list four potential allies and what each could contribute. Then write a short invitation message to one of them."
+            },
+            {
+              "id": "c1-3-4",
+              "title": "Lesson 4 — Negotiating with officials",
+              "body": "Learn: Negotiation with officials works best when you understand their limits. Learn what they can decide, what budget or rules bind them, and what alternatives exist. Ask open questions, propose options rather than ultimatums, and confirm any agreement in writing afterwards.\n\nExamples:\nI understand the budget is fixed this year.\nWould a pilot project in one neighbourhood be possible instead?\nThank you. I will send a written summary of what we agreed today.\n\nTry it: Prepare for a negotiation: your goal, your best alternative, two options you could accept, and three questions about the official's limits."
+            }
+          ]
+        },
+        {
+          "id": "c1-4",
+          "title": "C1 — Advanced writing",
+          "lessons": [
+            {
+              "id": "c1-4-1",
+              "title": "Lesson 1 — Structuring an essay",
+              "body": "Learn: A strong essay has a clear thesis, organized paragraphs, and a conclusion that answers the question. Each paragraph should make one point, support it with evidence or an example, and connect to the next idea. An introduction that promises what the essay delivers keeps readers oriented.\n\nExamples:\nThesis: Libraries deserve evening funding because they serve workers, students, and newcomers.\nEach paragraph defends one group with evidence.\nThe conclusion returns to the thesis and states the funding request.\n\nTry it: Outline an essay on a topic you care about: thesis, three paragraph points with evidence, and a conclusion. Write the introduction paragraph only."
+            },
+            {
+              "id": "c1-4-2",
+              "title": "Lesson 2 — Cover letters for professional roles",
+              "body": "Learn: A professional cover letter connects your experience to the employer's needs, not just your history. Research the organization, name the role, and show two achievements with results. Close by stating what you would bring to the team and requesting an interview.\n\nExamples:\nDear hiring committee, I am applying for the community health worker position.\nIn my last role, I supported 40 newcomer families and cut missed appointments by 30%.\nI would bring settlement experience and strong community links to your team.\n\nTry it: Write a cover letter for a professional role: research the organization first, then connect two of your achievements to its needs in under 300 words."
+            },
+            {
+              "id": "c1-4-3",
+              "title": "Lesson 3 — Writing a formal complaint",
+              "body": "Learn: A formal complaint states facts, dates, and the outcome you seek, without anger or exaggeration. Begin with your account details, describe events in order, attach copies of evidence, and state a reasonable deadline for a reply. Keep a copy of everything you send.\n\nExamples:\nDear Sir or Madam, I am writing to complain about a billing error on account 8841.\nOn March 2, I was charged $60 for a service I cancelled on February 10.\nI ask you to correct the bill and confirm in writing within 14 days.\n\nTry it: Write a formal complaint about a fictional billing error: details, events in order, evidence, and a requested outcome with a deadline. Keep the tone calm throughout."
+            },
+            {
+              "id": "c1-4-4",
+              "title": "Lesson 4 — Editing and proofreading your work",
+              "body": "Learn: Good writing is revised writing. After drafting, rest, then read aloud to catch awkward sentences. Check one thing at a time: first ideas and order, then paragraph links, then grammar and spelling. Reading backwards, sentence by sentence, helps you spot errors your eyes otherwise skip.\n\nExamples:\nFirst draft: The meeting was good and people said things about the plan.\nRevised: The meeting produced two decisions: a new schedule and a volunteer list.\nThe revision names the decisions instead of describing the meeting vaguely.\n\nTry it: Take a paragraph you wrote and revise it twice: once for clarity of ideas, once for grammar. Compare all three versions and keep the clearest one."
+            }
+          ]
+        }
+      ],
+      "id": "c1",
+      "name": "English level C1",
+      "description": "Advanced English: clear, detailed English for work and study."
+    },
+    {
+      "courses": [
+        {
+          "id": "c2-1",
+          "title": "C2 — Nuance and idiom",
+          "lessons": [
+            {
+              "id": "c2-1-1",
+              "title": "Lesson 1 — Idioms in everyday Canadian speech",
+              "body": "Learn: Idioms mean more than their words suggest, and Canadians use them constantly. 'Under the weather' means slightly ill, 'break the ice' means ease the start of a conversation, and 'on the same page' means in agreement. Learn idioms in context, not in lists, and notice whether they suit formal or casual settings.\n\nExamples:\nI am feeling under the weather today, so I will stay home.\nLet us break the ice with introductions before the meeting.\nBefore we decide, let us make sure we are all on the same page.\n\nTry it: Collect five idioms you hear this week, note where you heard each one, and write one sentence using each idiom correctly in context."
+            },
+            {
+              "id": "c2-1-2",
+              "title": "Lesson 2 — Tone and register",
+              "body": "Learn: Register is the level of formality you choose for a situation. You write to a friend differently than to a judge, a boss, or a stranger. Tone adds attitude: the same request can sound warm, neutral, or demanding depending on word choice and phrasing. Skilled speakers adjust both deliberately.\n\nExamples:\nCasual: Hey, can you send that file when you get a chance?\nProfessional: Could you please send the file at your earliest convenience?\nBoth ask the same thing, but the register fits a different relationship.\n\nTry it: Rewrite one message in three registers: to a close friend, to a coworker, and to a government office. Note which words changed and why."
+            },
+            {
+              "id": "c2-1-3",
+              "title": "Lesson 3 — Humour and indirect language",
+              "body": "Learn: Canadian humour often uses understatement and gentle irony: saying 'not bad' can mean 'very good', and 'a bit chilly' can mean freezing cold. Indirect language also softens requests and refusals: 'I am not sure that will work' may mean no. Listen for tone and context, not only words.\n\nExamples:\nHow was the exam? Not bad, actually. (It went very well.)\nIt is a bit chilly today. (It is minus twenty.)\nI am not sure Friday works for me. (Friday does not work.)\n\nTry it: Listen for understatement or indirect refusals this week and write down three examples with what the speaker probably meant."
+            },
+            {
+              "id": "c2-1-4",
+              "title": "Lesson 4 — Politeness strategies",
+              "body": "Learn: Polite English often softens directness: 'Would you mind...?', 'I was wondering if...', and 'Perhaps we could...' all make requests easier to accept. The more you ask of someone, or the less well you know them, the more indirect the language usually becomes. Over-politeness, though, can confuse: clarity still matters.\n\nExamples:\nWould you mind closing the window?\nI was wondering if you could review this report by Friday.\nPerhaps we could meet next week to discuss the plan.\n\nTry it: Turn four direct orders into polite requests using different softening phrases. Then decide which version is clearest, not just politest."
+            }
+          ]
+        },
+        {
+          "id": "c2-2",
+          "title": "C2 — Negotiation and persuasion",
+          "lessons": [
+            {
+              "id": "c2-2-1",
+              "title": "Lesson 1 — Preparing to negotiate",
+              "body": "Learn: Preparation decides most negotiations. Know your goal, your minimum acceptable outcome, and your best alternative if talks fail. Research the other side's interests, not only their stated position: a landlord who refuses a lower rent might accept a longer lease or earlier payment.\n\nExamples:\nMy goal is a rent of $1,300. My minimum is $1,400.\nMy alternative is a smaller apartment nearby.\nThe landlord wants reliable, long-term tenants, which I can offer.\n\nTry it: Prepare for a negotiation you may face: goal, minimum, alternative, and two interests the other side may hold. Write them down before any meeting."
+            },
+            {
+              "id": "c2-2-2",
+              "title": "Lesson 2 — Persuasive language",
+              "body": "Learn: Persuasion combines logic, credibility, and emotion, but in professional settings logic and evidence carry most weight. Use data, precedent, and shared interests: 'Last year, similar buildings...' is stronger than 'I feel this is unfair.' Concede a small point to gain credibility on a larger one.\n\nExamples:\nLast year, three similar apartments on this street rented for $1,250.\nI have paid on time for two years and kept the unit in good condition.\nI understand costs have risen, and I am open to a twelve-month lease.\n\nTry it: Write a persuasive paragraph for a rent discussion using one fact, one precedent, and one concession. Keep it under 100 words."
+            },
+            {
+              "id": "c2-2-3",
+              "title": "Lesson 3 — Handling objections",
+              "body": "Learn: Objections are information, not rejection. Listen fully, restate the concern to show you understood, and answer the real worry behind it. If you cannot answer at once, say so honestly and promise a specific follow-up time. Rushing past an objection usually makes it return stronger.\n\nExamples:\nYou are worried the schedule change will burden evening staff.\nLet me check the numbers and come back to you by Thursday.\nIf the burden is real, we can adjust the plan together.\n\nTry it: Role-play an objection: one person raises a concern, the other restates it, answers it, and offers a follow-up. Swap roles and try a harder objection."
+            },
+            {
+              "id": "c2-2-4",
+              "title": "Lesson 4 — Closing an agreement well",
+              "body": "Learn: A good close confirms what both sides agreed, in plain language, and in writing. Summarize the terms, the dates, and each side's next steps, and thank the other party. Written confirmation prevents most later disputes, which usually come from memory, not bad faith.\n\nExamples:\nTo confirm: rent of $1,350 from June 1, for twelve months, with parking included.\nI will sign the updated lease by Friday.\nThank you for working through this with me.\n\nTry it: Write a confirmation message for a fictional agreement: terms, dates, next steps for each side, and thanks. Keep it short enough to send by email."
+            }
+          ]
+        },
+        {
+          "id": "c2-3",
+          "title": "C2 — Academic and professional English",
+          "lessons": [
+            {
+              "id": "c2-3-1",
+              "title": "Lesson 1 — Summarizing research",
+              "body": "Learn: A research summary states the question, the method in brief, the main finding, and its limits. Avoid copying sentences: restate ideas in your own words and name the source. A summary that omits limits misleads readers, however accurate its other sentences are.\n\nExamples:\nThe study asked whether evening classes improve language retention.\nIt followed 120 adult learners for six months.\nEvening learners retained 15% more vocabulary, but the sample was small and urban only.\n\nTry it: Summarize a short research article in four sentences: question, method, finding, and one limit. Then check that no sentence copies the original wording."
+            },
+            {
+              "id": "c2-3-2",
+              "title": "Lesson 2 — Citing sources honestly",
+              "body": "Learn: Citations show where ideas came from and let readers verify them. Cite any idea, number, or quotation that is not your own, and distinguish your interpretation from the source's claim. Paraphrasing without a citation is still using someone else's work, even with different words.\n\nExamples:\nAccording to Statistics Canada (2024), the city's population grew by 3%.\nThis growth, I argue, explains pressure on rental housing.\nThe number is the source's; the explanation is mine.\n\nTry it: Write a paragraph using two sources: cite each claim, then add one sentence of your own interpretation, clearly marked as yours."
+            },
+            {
+              "id": "c2-3-3",
+              "title": "Lesson 3 — Seminar discussion skills",
+              "body": "Learn: Seminars reward participants who build on others' ideas. Use phrases such as 'Building on Sara's point...', 'That raises a question...', and 'I would challenge that reading because...'. Refer to the text by page or section, and invite quieter voices in rather than dominating the discussion.\n\nExamples:\nBuilding on Sara's point about funding, the data on page 12 supports her claim.\nThat raises a question: does the same pattern hold in rural areas?\nI would challenge that reading, because the author's sample excludes small towns.\n\nTry it: Practise three seminar moves on a short text: building on a point, raising a question, and respectfully challenging a reading, each with a text reference."
+            },
+            {
+              "id": "c2-3-4",
+              "title": "Lesson 4 — Abstracts and executive summaries",
+              "body": "Learn: An abstract compresses a longer work into its essentials: purpose, method, key results, and conclusion, usually in under 250 words. An executive summary adds a recommendation for decision-makers. Both must stand alone: a reader who reads only the summary should grasp the whole argument.\n\nExamples:\nPurpose: To test whether mentorship helps newcomer job seekers.\nMethod: Interviews with 30 participants over one year.\nResult: Mentored job seekers found work two months sooner on average.\nConclusion: Fund mentorship in settlement programs.\n\nTry it: Write a 100-word abstract for a report you know well: purpose, method, result, and conclusion. Then cut it to 50 words without losing the conclusion."
+            }
+          ]
+        },
+        {
+          "id": "c2-4",
+          "title": "C2 — Cultural fluency and storytelling",
+          "lessons": [
+            {
+              "id": "c2-4-1",
+              "title": "Lesson 1 — Telling your story in English",
+              "body": "Learn: A personal story told well connects across cultures. Choose one moment, set the scene briefly, show what changed, and end with what it means to you now. Details make stories vivid: a place, a sound, a small decision. Avoid explaining every cultural reference; let the story carry its meaning.\n\nExamples:\nWhen I arrived in January, snow was falling and I had never seen it.\nMy neighbour brought soup and showed me how to dress for minus thirty.\nThat evening I understood that winter here is survived together, not alone.\n\nTry it: Write a 150-word story about one moment in your Canadian life: scene, change, and meaning. Read it aloud and cut any sentence the story does not need."
+            },
+            {
+              "id": "c2-4-2",
+              "title": "Lesson 2 — Discussing culture with sensitivity",
+              "body": "Learn: Cultural discussions need curiosity and care. Ask open questions, avoid generalizing about whole groups, and describe practices you have observed rather than assuming motives. If you make a mistake, apologize simply, learn, and move on: most people value honest interest over perfect wording.\n\nExamples:\nI noticed families gather differently here than in my home country.\nCould you tell me more about how holidays work in your family?\nThank you. I did not know that, and I appreciate you explaining it.\n\nTry it: Write three open, respectful questions about a cultural practice you are curious about. Check each one: does it generalize, or does it ask about experience?"
+            },
+            {
+              "id": "c2-4-3",
+              "title": "Lesson 3 — Canadian history in plain language",
+              "body": "Learn: Canada's history includes Indigenous peoples who have lived here for thousands of years, French and British settlement, Confederation in 1867, and waves of immigration that continue today. Learning this history, including its difficult chapters such as residential schools, helps newcomers understand the country they now call home.\n\nExamples:\nIndigenous peoples lived on these lands long before European arrival.\nConfederation united several colonies into Canada in 1867.\nNewcomers continue to shape Canada's cities, workplaces, and culture.\n\nTry it: Summarize one chapter of Canadian history in five sentences, in your own words. Then write one question you would like to explore further."
+            },
+            {
+              "id": "c2-4-4",
+              "title": "Lesson 4 — Adapting without losing yourself",
+              "body": "Learn: Adapting to a new country does not mean abandoning who you are. Many newcomers blend languages, foods, holidays, and values from two homes, and raise children who move between cultures. Naming what you keep, what you change, and why gives you control over the process.\n\nExamples:\nAt home we speak Arabic and cook the food I grew up with.\nAt work I speak English and follow Canadian workplace customs.\nMy children move between both worlds, and I am proud of that.\n\nTry it: Write three sentences: one thing you keep from your first culture, one thing you have adopted here, and one thing you are still deciding. Keep it honest and personal."
+            }
+          ]
+        }
+      ],
+      "id": "c2",
+      "name": "English level C2",
+      "description": "Mastery English: precise, flexible English for complex topics."
+    },
+    {
+      "courses": [
+        {
+          "id": "grammar-01",
+          "title": "Present simple",
+          "lessons": [
+            {
+              "id": "grammar-01-1",
+              "title": "Lesson 1 — Present simple",
+              "body": "Learn: Use present simple for habits, routines, and facts. For I, you, we, and they, use the base verb: I work, they live. For he, she, and it, add -s or -es: She works, He watches. Examples: I wake up at seven. She wakes up at seven. We live in Winnipeg. He lives in Winnipeg. The bus stops here every day. Try it: Say three sentences about your routine. Use one sentence with he or she, and remember the -s: for example, My sister works in a shop."
+            },
+            {
+              "id": "grammar-01-2",
+              "title": "Lesson 2 — Present simple",
+              "body": "Learn: Use do and does to make questions and negatives. I, you, we, they use do. He, she, it use does, and then the verb has no -s. Examples: Do you speak English? Does she speak English? I do not work on Sunday. He does not work on Sunday. Try it: Ask a friend: Do you live near here? Then answer for another person: No, she does not live near here. Practice again: Say the examples out loud, slowly, then write them in your notebook. Repeat each new word three times, and use it in a new sentence about your own day in Canada."
+            },
+            {
+              "id": "grammar-01-3",
+              "title": "Lesson 3 — Present simple",
+              "body": "Learn: Use time words with present simple: always, usually, sometimes, never, every day, on Monday. Examples: I always eat breakfast. She usually walks to school. They never drive at night. We go to the library every Saturday. Try it: Write four sentences about your week. Use always, usually, sometimes, and never, one in each sentence. Practice again: Say the examples out loud, slowly, then write them in your notebook. Repeat each new word three times, and use it in a new sentence about your own day in Canada."
+            },
+            {
+              "id": "grammar-01-4",
+              "title": "Lesson 4 — Present simple",
+              "body": "Learn: Be careful with spelling: verbs ending in -y after a consonant change y to i and add -es: study becomes studies, try becomes tries. Verbs ending in -s, -x, -ch, or -sh add -es: watch becomes watches. Examples: She studies English. He tries a new word every day. The teacher watches the class. My friend fixes the chair. Try it: Change these verbs for he: study, try, watch, fix. Then say a full sentence with each one."
+            }
+          ]
+        },
+        {
+          "id": "grammar-02",
+          "title": "Present continuous",
+          "lessons": [
+            {
+              "id": "grammar-02-1",
+              "title": "Lesson 1 — Present continuous",
+              "body": "Learn: Use present continuous for actions happening now, or around now. Form: am, is, or are + verb + -ing. I am reading. She is reading. They are reading. Examples: I am writing now. He is cooking dinner. We are learning English this year. The baby is sleeping. Try it: Look around you. Say three things happening now, for example: I am sitting. My friend is talking. Practice again: Say the examples out loud, slowly, then write them in your notebook. Repeat each new word three times, and use it in a new sentence about your own day in Canada."
+            },
+            {
+              "id": "grammar-02-2",
+              "title": "Lesson 2 — Present continuous",
+              "body": "Learn: Use is not and are not, and am not, for negatives. I am not working today. She is not watching TV. They are not playing now. Examples: It is not raining now. He is not driving today. We are not studying at night. Try it: Say two things you are not doing now, and two things a friend is not doing now. Practice again: Say the examples out loud, slowly, then write them in your notebook. Repeat each new word three times, and use it in a new sentence about your own day in Canada."
+            },
+            {
+              "id": "grammar-02-3",
+              "title": "Lesson 3 — Present continuous",
+              "body": "Learn: Use present continuous for plans in the near future, especially with a time word: tomorrow, tonight, on Friday. Examples: I am meeting my teacher tomorrow. We are going to the library tonight. She is visiting her family on Friday. Try it: Tell a friend two plans for this week. Use tomorrow or on Friday in each sentence. Practice again: Say the examples out loud, slowly, then write them in your notebook. Repeat each new word three times, and use it in a new sentence about your own day in Canada."
+            },
+            {
+              "id": "grammar-02-4",
+              "title": "Lesson 4 — Present continuous",
+              "body": "Learn: Some verbs are not usually used in continuous form, because they describe a state, not an action: know, like, love, want, need, understand. Examples: I know the answer. She likes tea. We want help. Do not say: I am knowing the answer. Try it: Say five sentences with know, like, love, want, and need. Do not add -ing to these verbs. Practice again: Say the examples out loud, slowly, then write them in your notebook. Repeat each new word three times, and use it in a new sentence about your own day in Canada."
+            }
+          ]
+        },
+        {
+          "id": "grammar-03",
+          "title": "Past simple",
+          "lessons": [
+            {
+              "id": "grammar-03-1",
+              "title": "Lesson 1 — Past simple",
+              "body": "Learn: Use past simple for a finished action in the past. Regular verbs add -ed: walk becomes walked, work becomes worked. Use a past time word: yesterday, last week, last year. Examples: I walked to school yesterday. She worked last Saturday. They lived in Toronto last year. Try it: Tell a friend what you did yesterday, in three sentences. Use yesterday in the first sentence. Practice again: Say the examples out loud, slowly, then write them in your notebook. Repeat each new word three times, and use it in a new sentence about your own day in Canada."
+            },
+            {
+              "id": "grammar-03-2",
+              "title": "Lesson 2 — Past simple",
+              "body": "Learn: Many common verbs are irregular in past simple: go becomes went, eat becomes ate, see becomes saw, have becomes had, buy becomes bought. Examples: We went to the park. I ate lunch at noon. She saw her friend. He bought a book. Try it: Say five sentences about last weekend. Use went, ate, saw, had, and bought, one in each sentence. Practice again: Say the examples out loud, slowly, then write them in your notebook. Repeat each new word three times, and use it in a new sentence about your own day in Canada."
+            },
+            {
+              "id": "grammar-03-3",
+              "title": "Lesson 3 — Past simple",
+              "body": "Learn: Use did to make past questions and negatives. After did, use the base verb, not the past form: Did you go? I did not go. Examples: Did she call you? No, she did not call me. Did they work yesterday? They did not work yesterday. Try it: Ask a friend three questions about yesterday. Start each one with Did you, and answer with did or did not. Practice again: Say the examples out loud, slowly, then write them in your notebook. Repeat each new word three times, and use it in a new sentence about your own day in Canada."
+            },
+            {
+              "id": "grammar-03-4",
+              "title": "Lesson 4 — Past simple",
+              "body": "Learn: Be careful with spelling: verbs ending in -e add only -d: live becomes lived. Verbs ending in -y after a consonant change y to i and add -ed: study becomes studied. Examples: He lived here last year. She studied English in the evening. We danced at the party. I closed the door. Try it: Write the past form of live, study, dance, close, and carry. Then say a sentence with each past form. Practice again: Say the examples out loud, slowly, then write them in your notebook. Repeat each new word three times, and use it in a new sentence about your own day in Canada."
+            }
+          ]
+        },
+        {
+          "id": "grammar-04",
+          "title": "Past continuous",
+          "lessons": [
+            {
+              "id": "grammar-04-1",
+              "title": "Lesson 1 — Past continuous",
+              "body": "Learn: Use past continuous for an action in progress at a time in the past. Form: was or were + verb + -ing. I was reading at eight. They were reading at eight. Examples: She was cooking at six. We were walking in the park. It was raining yesterday morning. Try it: Think about yesterday at eight in the evening. Say what you were doing, and what a family member was doing. Practice again: Say the examples out loud, slowly, then write them in your notebook. Repeat each new word three times, and use it in a new sentence about your own day in Canada."
+            },
+            {
+              "id": "grammar-04-2",
+              "title": "Lesson 2 — Past continuous",
+              "body": "Learn: Use past continuous with past simple to show a long action and a short action that interrupted it. The long action uses was or were + -ing. The short action uses past simple. Examples: I was walking home when it started to rain. She was reading when the phone rang. They were playing when their teacher arrived. Try it: Write two sentences like this: one long action, and one short action with when. Use was or were in the long part."
+            },
+            {
+              "id": "grammar-04-3",
+              "title": "Lesson 3 — Past continuous",
+              "body": "Learn: Use while for two actions happening at the same time in the past. Both parts can use past continuous. Examples: While I was cooking, he was cleaning the kitchen. While she was studying, her brother was watching TV. Try it: Tell a friend what two people were doing at the same time yesterday evening. Start with While. Practice again: Say the examples out loud, slowly, then write them in your notebook. Repeat each new word three times, and use it in a new sentence about your own day in Canada."
+            },
+            {
+              "id": "grammar-04-4",
+              "title": "Lesson 4 — Past continuous",
+              "body": "Learn: Use was not and were not for negatives. I was not sleeping at ten. She was not working last night. They were not driving in the rain. Examples: He was not listening to music. We were not playing outside. It was not snowing yesterday. Try it: Say three things you were not doing last night, and one thing a friend was not doing. Practice again: Say the examples out loud, slowly, then write them in your notebook. Repeat each new word three times, and use it in a new sentence about your own day in Canada."
+            }
+          ]
+        },
+        {
+          "id": "grammar-05",
+          "title": "Present perfect",
+          "lessons": [
+            {
+              "id": "grammar-05-1",
+              "title": "Lesson 1 — Present perfect",
+              "body": "Learn: Use present perfect to connect the past and now. Form: have or has + past participle. I have lived here for two years. She has lived here for two years. Examples: I have studied English since January. He has worked in this shop for one year. We have lived in Canada since 2024. Try it: Say one sentence about yourself with have or has, and for or since. For example: I have lived here for one year."
+            },
+            {
+              "id": "grammar-05-2",
+              "title": "Lesson 2 — Present perfect",
+              "body": "Learn: Use have or has + past participle for life experience, with ever or never. The exact time is not important. Examples: I have visited Toronto. She has never visited Vancouver. Have you ever taken a bus in Canada? Yes, I have. Try it: Ask a friend: Have you ever cooked a new food? Then answer with have or have not, and one place you have visited. Practice again: Say the examples out loud, slowly, then write them in your notebook. Repeat each new word three times, and use it in a new sentence about your own day in Canada."
+            },
+            {
+              "id": "grammar-05-3",
+              "title": "Lesson 3 — Present perfect",
+              "body": "Learn: Use just, already, and yet with present perfect. Just means a very short time ago. Already means before now. Yet is used in questions and negatives, at the end. Examples: I have just finished my homework. She has already eaten lunch. Have you finished yet? No, I have not finished yet. Try it: Say three sentences: one with just, one with already, and one question with yet. Practice again: Say the examples out loud, slowly, then write them in your notebook. Repeat each new word three times, and use it in a new sentence about your own day in Canada."
+            },
+            {
+              "id": "grammar-05-4",
+              "title": "Lesson 4 — Present perfect",
+              "body": "Learn: Do not use a finished past time word like yesterday or last week with present perfect. Use present perfect with for, since, just, already, yet, ever, and never. Examples: Correct: I have lived here since January. Not correct: I have lived here yesterday. Correct past simple: I lived here last year. Try it: Fix these sentences if needed: I have watched a film yesterday. She has worked here since June. They have played football last week."
+            }
+          ]
+        },
+        {
+          "id": "grammar-06",
+          "title": "Past perfect",
+          "lessons": [
+            {
+              "id": "grammar-06-1",
+              "title": "Lesson 1 — Past perfect",
+              "body": "Learn: Past perfect talks about an earlier past action before another past action. Form: had + past participle. Use it to show order in the past, for example when one thing happened before another thing. Examples: I had eaten lunch before my friend arrived. She had finished her homework before the lesson started. Try it: Say two sentences about yesterday, using had + a past participle in the first one, for example: I had read the book before I watched the film."
+            },
+            {
+              "id": "grammar-06-2",
+              "title": "Lesson 2 — Past perfect",
+              "body": "Learn: Past perfect is often used with before, after, and by the time. It helps the listener know which action came first. Examples: By the time I got home, my brother had cooked dinner. After I had washed my hands, I ate my lunch. Try it: Practise with before: I had studied English before I moved to Canada. Now make your own sentence with by the time."
+            },
+            {
+              "id": "grammar-06-3",
+              "title": "Lesson 3 — Past perfect",
+              "body": "Learn: Do not use past perfect for a single past action with no earlier action. Use past simple for that action, and past perfect only for the earlier one. Examples: I watched a film yesterday. (past simple, one action) I had watched the film before, so I knew the story. (past perfect for the earlier action) Try it: Choose the right form: I ___ (see) the shop before I went there again. Answer: had seen."
+            },
+            {
+              "id": "grammar-06-4",
+              "title": "Lesson 4 — Past perfect",
+              "body": "Learn: Past perfect questions use Had + subject + past participle. Short answers are Yes, I had. / No, I had not. Examples: Had you visited Winnipeg before you moved here? Yes, I had. / No, I had not. Try it: Ask a friend: Had you studied English before today? Listen for a short answer, then say a full sentence about it."
+            }
+          ]
+        },
+        {
+          "id": "grammar-07",
+          "title": "Future forms",
+          "lessons": [
+            {
+              "id": "grammar-07-1",
+              "title": "Lesson 1 — Future forms",
+              "body": "Learn: Future forms talk about later time. Common forms are will, going to, and present continuous for plans. The choice depends on how sure you are and whether it is a plan or a decision now. Examples: I will call you tomorrow. We are meeting the teacher on Monday. Try it: Say three future sentences: one with will, one with going to, and one with present continuous for a plan."
+            },
+            {
+              "id": "grammar-07-2",
+              "title": "Lesson 2 — Future forms",
+              "body": "Learn: Use will for a quick decision, a promise, or an offer. Use going to for a plan you already made, or for something you can see happening. Examples: I will help you with your bag. We are going to visit the library tomorrow. We already planned it. Try it: Practise: I will open the door for you. (offer) / I am going to study tonight. (plan) Now make one offer and one plan."
+            },
+            {
+              "id": "grammar-07-3",
+              "title": "Lesson 3 — Future forms",
+              "body": "Learn: Present continuous for the future is used for fixed plans with a time, often with a person or place. It is not used for a general prediction. Examples: I am seeing a doctor on Friday at ten. They are travelling to Toronto next week. Try it: Make a fixed plan: I am meeting ___ on ___ at ___. Fill in a person, a day, and a time."
+            },
+            {
+              "id": "grammar-07-4",
+              "title": "Lesson 4 — Future forms",
+              "body": "Learn: Will not is won't, and going to is often shortened in speech to gonna, but write going to in school work. Check the time word: tomorrow, next week, on Monday, soon. Examples: I won't be late tomorrow. She is going to start a new job next month. Try it: Write four future sentences, each with a different time word: tomorrow, next week, on Friday, soon."
+            }
+          ]
+        },
+        {
+          "id": "grammar-08",
+          "title": "Going to and will",
+          "lessons": [
+            {
+              "id": "grammar-08-1",
+              "title": "Lesson 1 — Going to and will",
+              "body": "Learn: Going to shows a plan or something you can predict from what you see now. Will shows a decision made now, a promise, or a general future fact. Examples: Look at the clouds. It is going to rain. I will phone you tonight, I promise. Try it: Say a plan with going to, and a promise with will, for example: I am going to study tonight. I will help you tomorrow."
+            },
+            {
+              "id": "grammar-08-2",
+              "title": "Lesson 2 — Going to and will",
+              "body": "Learn: Going to + verb is: am/is/are + going to + verb. Will + verb is: will + verb, for all people, with no change for he, she, or it. Examples: He is going to buy a bus ticket. She will buy a bus ticket too. Try it: Practise the forms: I am going to read. He is going to read. They will read. Now say the same three forms about cooking."
+            },
+            {
+              "id": "grammar-08-3",
+              "title": "Lesson 3 — Going to and will",
+              "body": "Learn: For predictions, going to is strong when you see evidence now. Will is used for opinions and general predictions without clear evidence. Examples: The bus is late. It is going to be a long wait. I think it will be cold tomorrow. Try it: Look outside and make a going to prediction, then make a will opinion, for example: It is going to snow. It will be cold."
+            },
+            {
+              "id": "grammar-08-4",
+              "title": "Lesson 4 — Going to and will",
+              "body": "Learn: Questions: Are you going to study tonight? / Will you study tonight? Short answers: Yes, I am. / No, I'm not. / Yes, I will. / No, I won't. Examples: Are you going to visit the library? Yes, I am. / No, I'm not. Try it: Ask a friend two questions, one with going to and one with will, and listen for short answers."
+            }
+          ]
+        },
+        {
+          "id": "grammar-09",
+          "title": "Articles a, an, the",
+          "lessons": [
+            {
+              "id": "grammar-09-1",
+              "title": "Lesson 1 — Articles a, an, the",
+              "body": "Learn: A and an are used for one, general thing. Use an before a vowel sound (a, e, i, o, u sound), and a before other sounds. The is used for a specific thing both people know. Examples: I have a pen. (one general pen) I have an apple. (an before a vowel sound) Try it: Say a or an for these: book, orange, house, egg. Answers: a book, an orange, a house, an egg."
+            },
+            {
+              "id": "grammar-09-2",
+              "title": "Lesson 2 — Articles a, an, the",
+              "body": "Learn: Use the when there is only one of something, or when you talked about it before. Do not use the for general plural ideas. Examples: The sun is hot today. (only one sun) I saw a dog. The dog was black. (the second time) Try it: Practise: I bought a book. The book is about Canada. Now tell a short story with a first, then the."
+            },
+            {
+              "id": "grammar-09-3",
+              "title": "Lesson 3 — Articles a, an, the",
+              "body": "Learn: No article is used for general plural nouns, school subjects, sports, and most meals. Use the for specific places like the library, when you mean a known place. Examples: I like apples. (general) I go to the library on Mondays. (a known place) Try it: Say three general ideas with no article, for example: I like music. I study English. I play football."
+            },
+            {
+              "id": "grammar-09-4",
+              "title": "Lesson 4 — Articles a, an, the",
+              "body": "Learn: Watch out for a and an with sounds, not letters. An hour starts with a vowel sound, so it is an hour. A university starts with a y sound, so it is a university. Examples: I waited an hour. She goes to a university in Winnipeg. Try it: Choose a or an: hour, university, umbrella, car. Answers: an hour, a university, an umbrella, a car."
+            }
+          ]
+        },
+        {
+          "id": "grammar-10",
+          "title": "Countable and uncountable nouns",
+          "lessons": [
+            {
+              "id": "grammar-10-1",
+              "title": "Lesson 1 — Countable and uncountable nouns",
+              "body": "Learn: Countable nouns can be counted: one book, two books. Uncountable nouns cannot be counted as single items: water, rice, money, information. Use some, any, much, many, and a lot of in the right way. Examples: I have some books. I need some water. Try it: Sort these into countable and uncountable: apple, milk, chair, bread. Answers: countable: apple, chair; uncountable: milk, bread."
+            },
+            {
+              "id": "grammar-10-2",
+              "title": "Lesson 2 — Countable and uncountable nouns",
+              "body": "Learn: Use many with countable nouns and much with uncountable nouns, usually in questions and negatives. Use a lot of with both in positive sentences. Examples: How many books do you have? How much water do you need? / I have a lot of books and a lot of water. Try it: Ask: How many friends do you have? How much time do you have? Answer with a lot of if you can."
+            },
+            {
+              "id": "grammar-10-3",
+              "title": "Lesson 3 — Countable and uncountable nouns",
+              "body": "Learn: Some uncountable nouns can be counted with a container or a piece: a bottle of water, a cup of coffee, a piece of bread, a piece of information. Examples: I want a bottle of water. She gave me a piece of advice. Try it: Say what you want with a container: a cup of tea, a bottle of milk, a piece of cake."
+            },
+            {
+              "id": "grammar-10-4",
+              "title": "Lesson 4 — Countable and uncountable nouns",
+              "body": "Learn: Some nouns change meaning: paper can be uncountable (material) or countable (a newspaper). Hair is usually uncountable, but a hair can mean one strand. Examples: I need some paper to write on. I read a paper this morning. (a newspaper) Try it: Practise: I need paper. (material) / I bought a paper. (newspaper) Now make two sentences with paper in both ways."
+            }
+          ]
+        },
+        {
+          "id": "grammar-11",
+          "title": "Pronouns and possessives",
+          "lessons": [
+            {
+              "id": "grammar-11-1",
+              "title": "Lesson 1 — Pronouns and possessives",
+              "body": "Learn: Pronouns replace nouns: I, you, he, she, it, we, they. Possessives show ownership: my, your, his, her, its, our, their. Use the right pronoun for the person or thing. Examples: I am Sara. She is my friend. This is my book. It is mine. Try it: Say: I am ___. This is my ___. He is my friend. His name is ___."
+            },
+            {
+              "id": "grammar-11-2",
+              "title": "Lesson 2 — Pronouns and possessives",
+              "body": "Learn: Subject pronouns come before the verb, object pronouns after the verb or a preposition: me, you, him, her, it, us, them. Examples: I help him with English. The teacher talks to us every day. Try it: Practise: I see her. She sees me. Now make two sentences with him and us."
+            },
+            {
+              "id": "grammar-11-3",
+              "title": "Lesson 3 — Pronouns and possessives",
+              "body": "Learn: Possessive adjectives come before a noun, possessive pronouns stand alone: my book / mine, your book / yours, his book / his, her book / hers. Examples: This is your pen. That pen is yours. Our house is small. Theirs is bigger. Try it: Choose: This is ___ (my/mine) bag. Answer: my. Then say: This bag is mine."
+            },
+            {
+              "id": "grammar-11-4",
+              "title": "Lesson 4 — Pronouns and possessives",
+              "body": "Learn: Use its for things, not it's, which means it is. Use their for people or things, not there, which means a place. Examples: The cat is eating its food. Their books are on the table. Try it: Correct these: It's food is here. / There books are new. Answers: Its food is here. / Their books are new."
+            }
+          ]
+        },
+        {
+          "id": "grammar-12",
+          "title": "Adjectives and adverbs",
+          "lessons": [
+            {
+              "id": "grammar-12-1",
+              "title": "Lesson 1 — Adjectives and adverbs",
+              "body": "Learn: Adjectives describe nouns: big, small, happy, new. They usually come before the noun, or after be, look, feel, seem. Examples: I have a new book. The book is new. Try it: Describe three things near you with an adjective, for example: a big bag, a warm coat, a happy dog."
+            },
+            {
+              "id": "grammar-12-2",
+              "title": "Lesson 2 — Adjectives and adverbs",
+              "body": "Learn: Adverbs describe verbs, adjectives, or other adverbs. Many adverbs end in -ly: slowly, quickly, carefully. They often come after the verb or before an adjective. Examples: She speaks slowly. He drives carefully. Try it: Make sentences: I walk slowly. I speak carefully. Now say how you study, with an -ly adverb."
+            },
+            {
+              "id": "grammar-12-3",
+              "title": "Lesson 3 — Adjectives and adverbs",
+              "body": "Learn: Adjectives do not change for plural nouns, and adverbs do not change for he, she, or they. Good is an adjective, well is usually an adverb. Examples: They are good students. She speaks English well. Try it: Choose good or well: She is a ___ student. She studies ___. Answers: good, well."
+            },
+            {
+              "id": "grammar-12-4",
+              "title": "Lesson 4 — Adjectives and adverbs",
+              "body": "Learn: Some adverbs of frequency come before the main verb, but after be: always, usually, often, sometimes, never. Examples: I usually study in the morning. She is always on time. Try it: Say how often you study: I always / usually / sometimes / never study in the evening. Pick the true one for you."
+            }
+          ]
+        },
+        {
+          "id": "grammar-13",
+          "title": "Comparatives and superlatives",
+          "lessons": [
+            {
+              "id": "grammar-13-1",
+              "title": "Lesson 1 — Comparatives and superlatives",
+              "body": "Learn: Comparatives compare two things: bigger, smaller, more interesting. For short adjectives, add -er. For long adjectives, use more + adjective. Use than to compare. Examples: Winnipeg is bigger than my town. English is more difficult than my first language. Try it: Compare two places you know: ___ is bigger than ___. / ___ is more beautiful than ___."
+            },
+            {
+              "id": "grammar-13-2",
+              "title": "Lesson 2 — Comparatives and superlatives",
+              "body": "Learn: Superlatives compare three or more things, or a group: the biggest, the most interesting. Use the before a superlative. Examples: This is the biggest library in the city. She is the most helpful teacher. Try it: Say: The ___ is the biggest ___ in my city. Fill in the words for a place you know."
+            },
+            {
+              "id": "grammar-13-3",
+              "title": "Lesson 3 — Comparatives and superlatives",
+              "body": "Learn: Spelling changes: big becomes bigger and biggest, happy becomes happier and happiest, good becomes better and best, bad becomes worse and worst. Examples: This book is better than that book. Today is the worst day for rain. Try it: Practise: good, better, best. Bad, worse, worst. Now compare two books with better and best."
+            },
+            {
+              "id": "grammar-13-4",
+              "title": "Lesson 4 — Comparatives and superlatives",
+              "body": "Learn: Use as + adjective + as to say things are equal, and not as + adjective + as to say they are not equal. Examples: My bag is as big as yours. Her English is not as fast as mine yet. Try it: Make equal and unequal comparisons: My room is as big as yours. My room is not as big as the living room."
+            }
+          ]
+        },
+        {
+          "id": "grammar-14",
+          "title": "Prepositions of place and time",
+          "lessons": [
+            {
+              "id": "grammar-14-1",
+              "title": "Lesson 1 — Prepositions of place and time",
+              "body": "Learn: Prepositions of place tell where: in, on, at, under, next to, between, behind, in front of. In is for inside a place, on is for a surface, at is for a point or address. Examples: The book is on the table. I live at 123 Main Street. Try it: Say where things are: My phone is on the table. My bag is under the chair. Now describe your room."
+            },
+            {
+              "id": "grammar-14-2",
+              "title": "Lesson 2 — Prepositions of place and time",
+              "body": "Learn: Prepositions of time tell when: in for months, years, and morning/afternoon/evening, on for days and dates, at for times and night. Examples: I study in the morning. The lesson is on Monday at ten. Try it: Practise: I was born in ___. My lesson is on ___. I sleep at ___. Fill in your own time words."
+            },
+            {
+              "id": "grammar-14-3",
+              "title": "Lesson 3 — Prepositions of place and time",
+              "body": "Learn: Next to means beside, between means in the middle of two things, behind means at the back, in front of means at the front. Examples: The bank is next to the library. The shop is between the bank and the school. Try it: Describe your street: The ___ is next to the ___. The ___ is between the ___ and the ___."
+            },
+            {
+              "id": "grammar-14-4",
+              "title": "Lesson 4 — Prepositions of place and time",
+              "body": "Learn: Do not use in for a specific day, or on for a month. Check the time word first: in June, on June 5, at 5 p.m., in the morning, on Monday morning. Examples: I will visit in June. I will visit on June 5 at noon. Try it: Choose in, on, or at: ___ Monday, ___ June, ___ 9 a.m. Answers: on Monday, in June, at 9 a.m."
+            }
+          ]
+        },
+        {
+          "id": "grammar-15",
+          "title": "Modal verbs can, could, may, might",
+          "lessons": [
+            {
+              "id": "grammar-15-1",
+              "title": "Lesson 1 — Modal verbs can, could, may, might",
+              "body": "Learn: Can talks about ability and permission now. Could talks about ability in the past, and polite requests now. May and might talk about possibility, and may is also polite permission. Examples: I can speak English. Can I use your pen, please? Try it: Say what you can do, and ask politely: I can read English. Can I borrow your book, please?"
+            },
+            {
+              "id": "grammar-15-2",
+              "title": "Lesson 2 — Modal verbs can, could, may, might",
+              "body": "Learn: Modal verbs do not change for he, she, or it, and they are followed by a verb with no to: He can swim. She might come. Not: He cans swim. / She might to come. Examples: He can cook well. She might visit tomorrow. Try it: Correct these: He can speaks English. / She mights come. Answers: He can speak English. / She might come."
+            },
+            {
+              "id": "grammar-15-3",
+              "title": "Lesson 3 — Modal verbs can, could, may, might",
+              "body": "Learn: Negative forms: cannot or can't, could not or couldn't, may not, might not. Questions: Can you help me? / Could you help me? Could is more polite than can for requests. Examples: I can't swim yet, but I can read. Could you help me, please? Try it: Ask politely: Could you open the door, please? Then answer: Yes, of course. / Sorry, I can't."
+            },
+            {
+              "id": "grammar-15-4",
+              "title": "Lesson 4 — Modal verbs can, could, may, might",
+              "body": "Learn: May and might are similar for possibility, but might is a little less sure. Use may for formal permission, for example in a letter or at school. Examples: It may rain tomorrow. It might rain tomorrow, but I am not sure. Try it: Say a possibility: It may be cold tomorrow. / I might go to the library. Then say which one you are more sure about."
+            }
+          ]
+        },
+        {
+          "id": "grammar-16",
+          "title": "Modal verbs must, should, have to",
+          "lessons": [
+            {
+              "id": "grammar-16-1",
+              "title": "Lesson 1 — Modal verbs must, should, have to",
+              "body": "Learn: Must talks about a strong rule or something you are sure about. Should talks about advice. Have to talks about a rule from outside, like a school or a job. Examples: You must wear a seatbelt in a car. You should study every day. Try it: Say a rule with must, advice with should, and a job rule with have to, for example: I must show my card. I should sleep early. I have to be on time."
+            },
+            {
+              "id": "grammar-16-2",
+              "title": "Lesson 2 — Modal verbs must, should, have to",
+              "body": "Learn: Must not means it is not allowed. Do not have to means it is not necessary, but it is allowed. This is a common mistake, so check the meaning. Examples: You must not smoke here. You don't have to bring food. We have food. Try it: Choose: You ___ bring a pen. It is not necessary. Answer: don't have to. Then say: You must not be late."
+            },
+            {
+              "id": "grammar-16-3",
+              "title": "Lesson 3 — Modal verbs must, should, have to",
+              "body": "Learn: Questions: Must I come? / Do I have to come? / Should I come? Must is formal, have to is common, should asks for advice. Examples: Must I bring my passport? Should I bring my passport? Try it: Ask three questions: Must I ___? Do I have to ___? Should I ___? Fill in a real task, like study or come early."
+            },
+            {
+              "id": "grammar-16-4",
+              "title": "Lesson 4 — Modal verbs must, should, have to",
+              "body": "Learn: In the past, had to is used for must and have to. Should have + past participle talks about a past mistake or missed advice, but use it carefully and simply. Examples: I had to wait yesterday. I should have studied more. Try it: Say: Yesterday I had to ___. Now make a simple past advice sentence: I should have ___."
+            }
+          ]
+        },
+        {
+          "id": "grammar-17",
+          "title": "Conditionals zero and first",
+          "lessons": [
+            {
+              "id": "grammar-17-1",
+              "title": "Lesson 1 — Conditionals zero and first",
+              "body": "Learn: Zero conditional talks about facts that are always true: If + present simple, present simple. First conditional talks about a real future possibility: If + present simple, will + verb. Examples: If you heat water, it boils. If it rains tomorrow, I will stay home. Try it: Make a fact and a future plan: If I study, I learn. If I study tonight, I will pass the test."
+            },
+            {
+              "id": "grammar-17-2",
+              "title": "Lesson 2 — Conditionals zero and first",
+              "body": "Learn: In first conditional, the if part uses present simple, not will. The result part uses will. You can swap the order, but keep the same verb forms. Examples: If you call me, I will help you. I will help you if you call me. Try it: Correct this: If you will call me, I will help you. Answer: If you call me, I will help you."
+            },
+            {
+              "id": "grammar-17-3",
+              "title": "Lesson 3 — Conditionals zero and first",
+              "body": "Learn: Use unless to mean if not: Unless you study, you will not pass. Unless is followed by a positive verb, not a negative one. Examples: Unless it rains, we will go to the park. I will come unless I am sick. Try it: Say: Unless I am busy, I will ___. Then say the same idea with if not: If I am not busy, I will ___."
+            },
+            {
+              "id": "grammar-17-4",
+              "title": "Lesson 4 — Conditionals zero and first",
+              "body": "Learn: Zero conditional is for science and general truths. First conditional is for plans and warnings. Check if the result is always true, or only in the future. Examples: If you mix red and blue, you get purple. If you don't eat, you will be hungry. Try it: Make two sentences: one always true, one future: If I press this button, the light turns on. If I press it tomorrow, I will see the light."
+            }
+          ]
+        },
+        {
+          "id": "grammar-18",
+          "title": "Conditionals second and third",
+          "lessons": [
+            {
+              "id": "grammar-18-1",
+              "title": "Lesson 1 — Conditionals second and third",
+              "body": "Learn: Second conditional talks about an unreal present or future situation: If + past simple, would + verb. It is not about the past, it is about a dream or an unreal idea now. Examples: If I had more time, I would study more. If I lived in Toronto, I would visit the library every day. Try it: Make a dream sentence: If I had ___, I would ___. Fill in something you wish for."
+            },
+            {
+              "id": "grammar-18-2",
+              "title": "Lesson 2 — Conditionals second and third",
+              "body": "Learn: Third conditional talks about an unreal past: If + past perfect, would have + past participle. It talks about a past that did not happen, and a different result. Examples: If I had studied more, I would have passed. If I had left earlier, I would not have missed the bus. Try it: Say a past regret simply: If I had ___, I would have ___. Use a real small example, like left early or studied."
+            },
+            {
+              "id": "grammar-18-3",
+              "title": "Lesson 3 — Conditionals second and third",
+              "body": "Learn: Second and third conditionals use would, not will. Would have is for the past, would is for the present or future dream. Do not mix will into the if part. Examples: If I won the lottery, I would travel. If I had won the lottery, I would have travelled. Try it: Practise: If I had money, I would buy a car. If I had had money, I would have bought a car. Say both slowly."
+            },
+            {
+              "id": "grammar-18-4",
+              "title": "Lesson 4 — Conditionals second and third",
+              "body": "Learn: Questions: What would you do if you had more time? / What would you have done if you had known? Short answers can be simple: I would study. / I would have studied. Examples: What would you do if it rained tomorrow? I would stay home. Try it: Ask a friend: What would you do if you had a free day? Listen, then say: If I had a free day, I would ___."
+            }
+          ]
+        },
+        {
+          "id": "grammar-19",
+          "title": "Passive voice",
+          "lessons": [
+            {
+              "id": "grammar-19-1",
+              "title": "Lesson 1 — Passive voice",
+              "body": "Learn: Passive voice is used when the action is more important than who did it, or when we do not know who did it. Form: be + past participle. The subject receives the action. Examples: The room is cleaned every day. The letter was sent yesterday. Try it: Change to passive: People clean the room every day. Answer: The room is cleaned every day."
+            },
+            {
+              "id": "grammar-19-2",
+              "title": "Lesson 2 — Passive voice",
+              "body": "Learn: Present simple passive: am/is/are + past participle. Past simple passive: was/were + past participle. Future passive: will be + past participle. Examples: English is spoken in Canada. The house was built in 2001. Try it: Practise: The book is read by many students. The book was read last week. The book will be read next week."
+            },
+            {
+              "id": "grammar-19-3",
+              "title": "Lesson 3 — Passive voice",
+              "body": "Learn: Use by + person only when the person is important. Often we leave by out in passive sentences, especially in instructions and news. Examples: The cake was made by my mother. The road is closed today. (no by, person not important) Try it: Say two passive sentences without by, for example: The door is locked. The homework is checked every day."
+            },
+            {
+              "id": "grammar-19-4",
+              "title": "Lesson 4 — Passive voice",
+              "body": "Learn: Active voice is better when the person is important and clear: My mother made the cake. Passive is better when the action or result is the focus, like in a report or a rule. Examples: Active: The teacher checked the homework. Passive: The homework was checked. Try it: Choose active or passive: The teacher is important, so use active. The result is important, so use passive. Now make one of each."
+            }
+          ]
+        },
+        {
+          "id": "grammar-20",
+          "title": "Reported speech",
+          "lessons": [
+            {
+              "id": "grammar-20-1",
+              "title": "Lesson 1 — Reported speech",
+              "body": "Learn: Reported speech talks about what someone said, without quoting exact words. When the reporting verb is in the past, verbs often move back one step: present becomes past, past becomes past perfect. Examples: She said, I am happy. -> She said she was happy. He said, I live in Winnipeg. -> He said he lived in Winnipeg. Try it: Report: I am tired. Answer: She said she was tired. Now report: I live in Canada."
+            },
+            {
+              "id": "grammar-20-2",
+              "title": "Lesson 2 — Reported speech",
+              "body": "Learn: Pronouns and time words change too: I becomes he or she, my becomes his or her, here becomes there, today becomes that day, tomorrow becomes the next day. Examples: I will come tomorrow. -> He said he would come the next day. I am here today. -> She said she was there that day. Try it: Report: I will help you tomorrow. Answer: He said he would help me the next day."
+            },
+            {
+              "id": "grammar-20-3",
+              "title": "Lesson 3 — Reported speech",
+              "body": "Learn: Reported questions use if or whether for yes/no questions, and the question word for wh- questions. The word order becomes like a statement, not a question. Examples: Are you happy? -> He asked if I was happy. Where do you live? -> She asked where I lived. Try it: Report: Where are you from? Answer: He asked where I was from. Now report: Do you speak English?"
+            },
+            {
+              "id": "grammar-20-4",
+              "title": "Lesson 4 — Reported speech",
+              "body": "Learn: Reported commands use told + person + to + verb, and told + person + not to + verb for negatives. Said is used without a person, told is used with a person. Examples: Open the door. -> She told me to open the door. Don't be late. -> He told me not to be late. Try it: Report: Study every day. Answer: She told me to study every day. Now report: Don't forget your book."
+            }
+          ]
+        },
+        {
+          "id": "grammar-21",
+          "title": "Questions and question words",
+          "lessons": [
+            {
+              "id": "grammar-21-1",
+              "title": "Lesson 1 — Questions and question words",
+              "body": "Learn: Question words ask for different information: who for a person, what for a thing, where for a place, when for a time, why for a reason, how for a way, which for a choice. Examples: Who is your teacher? Where do you live? Try it: Ask and answer: Who is your friend? What is your job? Where are you from? When is your lesson? Why do you study English?"
+            },
+            {
+              "id": "grammar-21-2",
+              "title": "Lesson 2 — Questions and question words",
+              "body": "Learn: Yes/no questions start with be, do, or a modal: Are you ready? Do you speak English? Can you help me? Wh- questions start with a question word, then be, do, or a modal. Examples: Are you from Canada? What do you do? Try it: Make a yes/no question and a wh- question about your day, for example: Do you study today? What do you study today?"
+            },
+            {
+              "id": "grammar-21-3",
+              "title": "Lesson 3 — Questions and question words",
+              "body": "Learn: In questions, the subject comes after be, do, or a modal: Where are you? / What do you want? In a statement, the subject comes first: You are here. / You want tea. Examples: Where is the library? The library is there. Try it: Change to a question: You are happy. Answer: Are you happy? Now change: You live in Winnipeg. Answer: Where do you live?"
+            },
+            {
+              "id": "grammar-21-4",
+              "title": "Lesson 4 — Questions and question words",
+              "body": "Learn: Prepositions can come at the end of a question in everyday English: Who are you talking to? What are you looking for? In formal writing, the preposition can come first, but everyday English is fine for class. Examples: Who are you waiting for? What are you thinking about? Try it: Ask: Who are you talking to? What are you looking at? Answer with a person or a thing."
+            }
+          ]
+        },
+        {
+          "id": "grammar-22",
+          "title": "Gerunds and infinitives",
+          "lessons": [
+            {
+              "id": "grammar-22-1",
+              "title": "Lesson 1 — Gerunds and infinitives",
+              "body": "Learn: Gerunds are verb + -ing used as a noun: swimming, reading, studying. Infinitives are to + verb: to swim, to read, to study. Some verbs take a gerund, some take an infinitive, and some take both with a different meaning. Examples: I like swimming. I want to swim. Try it: Say: I like reading. I want to read. Now say what you like doing, and what you want to do."
+            },
+            {
+              "id": "grammar-22-2",
+              "title": "Lesson 2 — Gerunds and infinitives",
+              "body": "Learn: Common gerund verbs: enjoy, like, love, hate, finish, avoid, practise. Common infinitive verbs: want, need, decide, plan, hope, learn, try. Examples: I enjoy reading. I decided to study English. Try it: Practise: I enjoy ___. I want to ___. I decided to ___. Fill in real verbs for you."
+            },
+            {
+              "id": "grammar-22-3",
+              "title": "Lesson 3 — Gerunds and infinitives",
+              "body": "Learn: After a preposition, use a gerund, not an infinitive: I am good at swimming. Thank you for helping me. After an adjective, use an infinitive: It is easy to learn. I am happy to help. Examples: She is interested in learning English. It is difficult to speak fast. Try it: Correct: I am good at swim. Answer: I am good at swimming. Now say: I am happy to help you."
+            },
+            {
+              "id": "grammar-22-4",
+              "title": "Lesson 4 — Gerunds and infinitives",
+              "body": "Learn: Some verbs change meaning: I stopped smoking means I quit. I stopped to smoke means I stopped another activity in order to smoke. Remember means remember to do in the future, and remember doing in the past. Examples: I remembered to call her. I remember calling her yesterday. Try it: Say: I remembered to study. (future task) / I remember studying yesterday. (past memory) Notice the difference."
+            }
+          ]
+        }
+      ],
+      "description": "22 grammar courses, 4 lessons each, from basic sentences to advanced grammar.",
+      "id": "grammar",
+      "name": "English Grammar"
+    },
+    {
+      "courses": [],
+      "description": "Find a starting level with the placement test, or browse any level freely.",
+      "id": "placement",
+      "name": "Placement test"
+    }
+  ],
+  "note": "English courses for newcomers, from Foundation to C2, with a placement test.",
+  "placement_test": {
+    "questions": [
+      {
+        "question": "Choose the correct sentence: ___ name is Sara.",
+        "options": [
+          "My",
+          "I",
+          "Me",
+          "Mine"
+        ],
+        "answer": "My",
+        "level": "A1"
+      },
+      {
+        "question": "Where is the library? It is ___ the park.",
+        "options": [
+          "next to",
+          "next",
+          "near to",
+          "beside to"
+        ],
+        "answer": "next to",
+        "level": "A1"
+      },
+      {
+        "question": "I ___ breakfast every morning at seven.",
+        "options": [
+          "eat",
+          "eats",
+          "eating",
+          "ate"
+        ],
+        "answer": "eat",
+        "level": "A1"
+      },
+      {
+        "question": "Excuse me, ___ this bus go downtown?",
+        "options": [
+          "does",
+          "do",
+          "is",
+          "are"
+        ],
+        "answer": "does",
+        "level": "A1"
+      },
+      {
+        "question": "She ___ to school yesterday.",
+        "options": [
+          "went",
+          "go",
+          "goes",
+          "going"
+        ],
+        "answer": "went",
+        "level": "A2"
+      },
+      {
+        "question": "I have lived here ___ two years.",
+        "options": [
+          "for",
+          "since",
+          "from",
+          "at"
+        ],
+        "answer": "for",
+        "level": "A2"
+      },
+      {
+        "question": "Could you help me, ___?",
+        "options": [
+          "please",
+          "pleased",
+          "pleasing",
+          "please to"
+        ],
+        "answer": "please",
+        "level": "A2"
+      },
+      {
+        "question": "This book is ___ than that one.",
+        "options": [
+          "more interesting",
+          "interestinger",
+          "most interesting",
+          "interestingest"
+        ],
+        "answer": "more interesting",
+        "level": "A2"
+      },
+      {
+        "question": "If it rains tomorrow, we ___ stay home.",
+        "options": [
+          "will",
+          "would",
+          "will to",
+          "are will"
+        ],
+        "answer": "will",
+        "level": "B1"
+      },
+      {
+        "question": "I have an appointment ___ Thursday at ten.",
+        "options": [
+          "on",
+          "in",
+          "at",
+          "for"
+        ],
+        "answer": "on",
+        "level": "B1"
+      },
+      {
+        "question": "You ___ wear a seatbelt in a car. It is the law.",
+        "options": [
+          "must",
+          "should to",
+          "can to",
+          "may to"
+        ],
+        "answer": "must",
+        "level": "B1"
+      },
+      {
+        "question": "Dear Ms. Lee, I am writing ___ the broken heater.",
+        "options": [
+          "about",
+          "of",
+          "for to",
+          "on to"
+        ],
+        "answer": "about",
+        "level": "B1"
+      },
+      {
+        "question": "The report ___ by the team last week.",
+        "options": [
+          "was written",
+          "wrote",
+          "is write",
+          "written"
+        ],
+        "answer": "was written",
+        "level": "B2"
+      },
+      {
+        "question": "I would appreciate ___ the report by Friday.",
+        "options": [
+          "receiving",
+          "receive",
+          "to receiving",
+          "received"
+        ],
+        "answer": "receiving",
+        "level": "B2"
+      },
+      {
+        "question": "She suggested ___ the meeting to Monday.",
+        "options": [
+          "moving",
+          "to move",
+          "move",
+          "moved"
+        ],
+        "answer": "moving",
+        "level": "B2"
+      },
+      {
+        "question": "___ the rain, we still finished the event on time.",
+        "options": [
+          "Despite",
+          "Although",
+          "However",
+          "Even"
+        ],
+        "answer": "Despite",
+        "level": "B2"
+      },
+      {
+        "question": "The author's main argument rests ___ weak evidence.",
+        "options": [
+          "on",
+          "in",
+          "at",
+          "of"
+        ],
+        "answer": "on",
+        "level": "C1"
+      },
+      {
+        "question": "Choose the most formal sentence.",
+        "options": [
+          "I would be grateful if you could confirm the meeting.",
+          "Hey, confirm the meeting, ok?",
+          "Confirm meeting now.",
+          "You must confirm."
+        ],
+        "answer": "I would be grateful if you could confirm the meeting.",
+        "level": "C1"
+      },
+      {
+        "question": "The proposal ___ the problem, the solution, and the resources needed.",
+        "options": [
+          "sets out",
+          "sets up",
+          "sets in",
+          "sets off"
+        ],
+        "answer": "sets out",
+        "level": "C1"
+      },
+      {
+        "question": "A fair summary preserves the author's ___, such as 'may' and 'suggests'.",
+        "options": [
+          "caution",
+          "cautious",
+          "cautiously",
+          "cautioning"
+        ],
+        "answer": "caution",
+        "level": "C1"
+      },
+      {
+        "question": "By this time next year, she ___ in Canada for five years.",
+        "options": [
+          "will have been living",
+          "will be live",
+          "will living",
+          "will have live"
+        ],
+        "answer": "will have been living",
+        "level": "C2"
+      },
+      {
+        "question": "'Under the weather' means:",
+        "options": [
+          "slightly ill",
+          "very sunny",
+          "raining heavily",
+          "feeling excited"
+        ],
+        "answer": "slightly ill",
+        "level": "C2"
+      },
+      {
+        "question": "Which sentence uses understatement?",
+        "options": [
+          "It is a bit chilly today. (It is minus twenty.)",
+          "It is extremely hot today.",
+          "It is raining cats and dogs.",
+          "It is very cold today."
+        ],
+        "answer": "It is a bit chilly today. (It is minus twenty.)",
+        "level": "C2"
+      },
+      {
+        "question": "Choose the sentence with correct academic citation style.",
+        "options": [
+          "According to Statistics Canada (2024), the population grew by 3%.",
+          "Statistics Canada says population grew, trust me.",
+          "Population grew 3%, someone said.",
+          "Everyone knows the population grew."
+        ],
+        "answer": "According to Statistics Canada (2024), the population grew by 3%.",
+        "level": "C2"
+      }
+    ],
+    "mapping": [
+      {
+        "min": 0,
+        "max": 4,
+        "level": "A1"
+      },
+      {
+        "min": 5,
+        "max": 8,
+        "level": "A2"
+      },
+      {
+        "min": 9,
+        "max": 12,
+        "level": "B1"
+      },
+      {
+        "min": 13,
+        "max": 16,
+        "level": "B2"
+      },
+      {
+        "min": 17,
+        "max": 20,
+        "level": "C1"
+      },
+      {
+        "min": 21,
+        "max": 24,
+        "level": "C2"
+      }
+    ],
+    "note": "This is a study placement guide only, not an official exam. You may browse any level freely."
+  }
+}
